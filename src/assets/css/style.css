@@ -1,0 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+@font-face { font-family: ''; src: url("") format("woff2"), url("") format("woff"); font-weight: normal; font-style: normal; }
+
+*, *:after, *:before { box-sizing: border-box; }
+
+img { max-width: 100%; height: auto; }
+
+body { font-family: 'Raleway', sans-serif; }
+
+.body--light { background-color: #ffffff !important; color: #000000 !important; }
+
+.body--light .logo__plexus { fill: #000000; }
+
+.preloader { height: 100vh; width: 100vw; background-color: #ffffff; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
+
+.preloader__overlay { height: 100%; width: 100%; background-color: #000000; top: 0; left: 0; pointer-events: none; transform: translateY(-100%); position: absolute; z-index: 2; }
+
+.preloader__container { display: none; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; z-index: 3; }
+
+.preloader__letters { display: flex; }
+
+.preloader__letters svg#left, .preloader__letters svg#right, .preloader__letters svg#x { width: 150px; height: 150px; }
+
+.preloader__letters svg#x { margin: 0 -30px; }
+
+.preloader__animation { background-color: black; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
+
+@media screen and (max-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
+
+body { height: 100vh; background-color: #000000; color: #ffffff; display: flex; justify-content: center; align-items: center; transition: 0.25s ease-in-out; }
+
+.logo__plexus { height: 150px; fill: #ffffff; }
+
+.switcher { display: flex; justify-content: center; margin-bottom: 50px; }
+
+.switcher__dark--text, .switcher__light--text { opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
+
+.switcher__dark:hover .switcher__dark--text, .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); }
+
+.lnr { font-size: 2rem; cursor: pointer; margin: 0 10px; }
+
+.switcher__dark, .switcher__light { display: flex; align-items: center; color: #c4c4ac; }
