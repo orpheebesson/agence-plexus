@@ -53,7 +53,7 @@ function preloaderAnimation() {
                 ease: Power4.easeInOut,
             }, '+=0.25')
 
-            .to(preloader, 1.5, {
+            .to(preloader, 1.2, {
                 y: '100%',
                 opacity:'0',
                 ease: Power4.easeInOut,
