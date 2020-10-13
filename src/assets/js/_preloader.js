@@ -47,13 +47,15 @@ function preloaderAnimation() {
         drawTheX();
 
         tl
-            .to(preloaderOverlay, 1.5, {
+            .to(preloaderOverlay, 1.2, {
                 y: '0%',
+                opacity:'1',
                 ease: Power4.easeInOut,
             }, '+=0.25')
 
             .to(preloader, 1.5, {
                 y: '100%',
+                opacity:'0',
                 ease: Power4.easeInOut,
             }, '-=1')
     });

@@ -1,4 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -36,7 +39,7 @@ body { font-family: 'Raleway', sans-serif; }
 
 .preloader__letters svg#left, .preloader__letters svg#right, .preloader__letters svg#x { width: 150px; height: 150px; }
 
-.preloader__letters svg#x { margin: 0 -30px; }
+.preloader__letters #x { margin: 0 -30px; }
 
 .preloader__animation { background-color: black; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
 
