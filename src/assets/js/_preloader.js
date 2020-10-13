@@ -4,7 +4,7 @@ const preloaderContainer = $('.preloader__container');
 const preloaderOverlay = $('.preloader__overlay');
 const svgright = $('img#right');
 const svgleft = $('img#left');
-const svgx = $('svg#x');
+const svgx = $('#x');
 
 function preloaderAnimation() {
     $(window).on('load', () => {
@@ -14,16 +14,16 @@ function preloaderAnimation() {
         let tl = new TimelineMax();
         tl
             .fromTo(svgright, {
-                x: '250px'
+                x: '150%'
             }, {
-                x: '0',
+                x: '0%',
                 duration: 1.5
             })
 
             .fromTo(svgleft, {
-                x: '-250px'
+                x: '-150%'
             }, {
-                x: '0',
+                x: '0%',
                 duration: 1.5
             }, '-=1.5')
 

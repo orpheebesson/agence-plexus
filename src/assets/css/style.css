@@ -35,7 +35,7 @@ body { font-family: 'Raleway', sans-serif; }
 
 .preloader__container { display: none; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; z-index: 3; }
 
-.preloader__letters { display: flex; margin-right: auto; margin-left: auto; width: auto; height: auto; }
+.preloader__letters { display: flex; margin-right: auto; margin-left: auto; width: 450px; height: auto; }
 
 .preloader__letters svg#left, .preloader__letters svg#right, .preloader__letters svg#x { width: 150px; height: 150px; }
 
