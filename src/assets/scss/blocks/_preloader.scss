@@ -32,6 +32,10 @@
 
     &__letters {
         display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        width: auto;
+        height: auto;
 
         svg#left,
         svg#right,
@@ -41,7 +45,7 @@
         }
 
         #x {
-            margin: 0 -30px;
+            margin: 0 -60px;
         }
     }
 
@@ -54,6 +58,13 @@
         top: 0;
         width: 100%;
         z-index: 9000;
+    }
+
+    #left,#right
+    {
+        width: 150px;
+        height: 150px;
+        fill: black;
     }
 }
 @include large() {
