@@ -37,9 +37,9 @@ body { font-family: 'Raleway', sans-serif; }
 
 .preloader__letters { display: flex; margin-right: auto; margin-left: auto; width: 450px; height: auto; }
 
-.preloader__letters svg#left, .preloader__letters svg#right, .preloader__letters svg#x { width: 150px; height: 150px; }
+.preloader__letters svg#left, .preloader__letters svg#right { width: 150px; height: 150px; }
 
-.preloader__letters #x { margin: 0 -60px; }
+.preloader__letters div#x { margin: 0 -30px; width: 150px; height: 150px; }
 
 .preloader__animation { background-color: black; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
 

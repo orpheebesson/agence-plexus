@@ -39,13 +39,15 @@
 
         svg#left,
         svg#right,
-        svg#x {
+        {
             width: 150px;
             height: 150px;
         }
 
-        #x {
-            margin: 0 -60px;
+        div#x {
+            margin: 0 -30px;
+            width: 150px;
+            height: 150px;
         }
     }
 
