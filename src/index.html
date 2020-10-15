@@ -7,7 +7,6 @@
   <title>Plexus | Agence web à La Rochelle</title>
   <meta name="description" content="" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="icon" sizes="32x32" href="assets/img/favicon_32.png" type="image/png">
   <link rel="icon" sizes="64x64" href="assets/img/favicon_64.png" type="image/png">
   <link rel="icon" sizes="96x96" href="assets/img/favicon_96.png" type="image/png">
@@ -24,7 +23,7 @@
     <div class="preloader__overlay"></div>
     <div class="preloader__container">
       <div class="preloader__letters">
-        <img src="assets/svg/left.svg" id="left" alt="lefttpartlogo">
+        <img id="left" src="assets/svg/left.svg" alt="lefttpartlogo">
 
         <div id="x"></div>
 
@@ -32,27 +31,32 @@
 
 
         <!--     <object id="x" type="image/svg+xml" data="assets/svg/x.svg"></object> -->
-        <img src="assets/svg/right.svg" id="right" alt="rightpartlogo">
+        <img id="right" src="assets/svg/right.svg" alt="rightpartlogo">
       </div>
     </div>
     <div class="preloader__animation"></div>
   </div>
-
+  <header class="header">
+    <nav>
+      <ul class="header__list">
+        <li class="header__item"><a href="index.html"><img class="header__item--logo" src="assets/svg/logo_plexus.svg"
+              alt="Logo agence Plexus"></a></li>
+        <li class="header__item">
+          <ul class="header__switcher">
+            <li class="switcher__dark"><span class="switcher__dark--text">Plexus lunaire</span><span
+                class="switcher__icon lnr lnr-moon"></span>
+            </li>
+            <li class="switcher__light"><span class="switcher__icon lnr lnr-sun"></span><span
+                class="switcher__light--text">Plexus
+                solaire</span></li>
+          </ul>
+        </li>
+        <li class="header__item"><span class="header__item--menu lnr lnr-menu"></span></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <ul class="switcher">
-      <li class="switcher__dark"><span class="switcher__dark--text">Plexus lunaire</span><span
-          class="lnr lnr-moon"></span>
-      </li>
-      <li class="switcher__light"><span class="lnr lnr-sun"></span><span class="switcher__light--text">Plexus
-          solaire</span></li>
-    </ul>
-
-
-
-
-    <img class="logo__plexus whitelogo" src="assets/svg/logo_blanc.svg" alt="logo">
-    <img class="logo__plexus darklogo dark-none" src="assets/svg/logo_noir.svg" alt="logo">
-
+    <img class="logo__plexus" src="assets/svg/logo_plexus.svg" alt="Logo agence Plexus">
   </main>
   <script src="assets/js/_libs.js"></script>
   <script src="assets/js/_preloader.js"></script>
