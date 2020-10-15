@@ -1,5 +1,4 @@
-
-<img height="100" src="src/assets/img/logo-noir.png" alt="Logo agence Plexus">
+<img height="100" src="src/assets/img/logo_plexus.png" alt="Logo agence Plexus">
 
 # Installation
 
