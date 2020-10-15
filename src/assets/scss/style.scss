@@ -1,6 +1,7 @@
 @import "vendors/_reset";
 
-@import "config/_medias.scss";
+@import "config/_vars.scss";
+@import "config/_breakpoints.scss";
 @import "config/_colors";
 @import "config/_fonts";
 @import "config/_mixins.scss";
@@ -12,4 +13,5 @@
 @import "global/_light-mode";
 
 @import "blocks/_preloader";
+@import "blocks/_header";
 @import "blocks/_home";

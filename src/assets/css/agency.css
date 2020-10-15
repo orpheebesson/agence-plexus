@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -23,13 +20,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 img { max-width: 100%; height: auto; }
 
-body { font-family: 'Raleway', sans-serif; }
+body { font-family: "Raleway", sans-serif; }
 
 body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out; }
 
 .body--light { background-color: #ffffff !important; color: #000000 !important; }
 
-.body--light .logo__plexus, .body--light .sto { fill: #000000; }
+.body--light .logo__plexus { filter: invert(1); }
 
 .preloader { height: 100vh; width: 100vw; background-color: #ffffff; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
 
@@ -57,13 +54,13 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 
 .header__switcher { display: flex; }
 
-.header__switcher .switcher__icon { font-size: 1.5rem; }
+.header__switcher .switcher__icon { font-size: 1.5rem; margin: 0 10px; }
 
-.header__switcher .switcher__dark--text, .header__switcher .switcher__light--text { margin: 0 5px; opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
+.header__switcher .switcher__dark--text, .header__switcher .switcher__light--text { opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
 
 .header__switcher .switcher__dark:hover .switcher__dark--text, .header__switcher .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); }
 
-.header__switcher .switcher__dark, .header__switcher .switcher__light { display: flex; align-items: center; color: #c4c4ac; margin: 0 10px; cursor: pointer; }
+.header__switcher .switcher__dark, .header__switcher .switcher__light { display: flex; align-items: center; color: #c4c4ac; cursor: pointer; }
 
 .header__item--menu { font-size: 2rem; color: #c4c4ac; }
 
@@ -73,10 +70,10 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 
 .member { height: calc(100vh - 95px); display: flex; justify-content: center; align-items: center; padding: 30px; }
 
-.member__article { margin: 0 50px; width: 500px; }
+.member__article { border-left: 1px solid #ffffff; padding-left: 50px; margin: 0 50px; width: 500px; }
 
 .member__title { font-size: 2rem; font-weight: 800; }
 
-.member__subtitle { font-family: 'Crimson Text', serif; font-size: 1.5rem; font-style: italic; margin: 15px 0; }
+.member__subtitle { font-family: "Crimson Text", serif; font-size: 1.5rem; font-style: italic; margin: 15px 0; }
 
 .member__description { line-height: 1.5rem; text-align: justify; }

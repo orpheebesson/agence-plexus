@@ -18,12 +18,11 @@
 
         .switcher__icon {
             font-size: 1.5rem;
+            margin: 0 10px;
         }
 
         .switcher__dark--text,
         .switcher__light--text {
-            // font-size: ;
-            margin: 0 5px;
             opacity: 0;
             transform: translateY(5px);
             transition: 0.25s ease-in-out;
@@ -40,7 +39,6 @@
             display: flex;
             align-items: center;
             color: $beige;
-            margin: 0 10px;
             cursor: pointer;
         }
     }

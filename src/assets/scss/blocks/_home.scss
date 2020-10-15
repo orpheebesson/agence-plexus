@@ -1,5 +1,5 @@
-body {
-    height: 100vh;
+main {
+    height: calc(100vh - 95px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,45 +7,4 @@ body {
 
 .logo__plexus {
     height: 150px;
-    fill: $white;
-}
-
-.switcher {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.switcher__dark--text,
-.switcher__light--text {
-    opacity: 0;
-    transform: translateY(5px);
-    transition: 0.25s ease-in-out;
-}
-
-.switcher__dark:hover .switcher__dark--text,
-.switcher__light:hover .switcher__light--text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.lnr {
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.switcher__dark,
-.switcher__light {
-    display: flex;
-    align-items: center;
-    color: rgb(196, 196, 172);
-}
-
-.dark-none {
-    display: none;
-}
-
-.light-none {
-    display: none;
 }

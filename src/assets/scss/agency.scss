@@ -1,6 +1,7 @@
 @import "vendors/_reset";
 
-@import "config/_medias.scss";
+@import "config/_vars";
+@import "config/_breakpoints.scss";
 @import "config/_colors";
 @import "config/_fonts";
 @import "config/_mixins.scss";
