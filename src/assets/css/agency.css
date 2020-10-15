@@ -46,20 +46,34 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 
 @media screen and (max-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
 
-body { height: 100vh; display: flex; justify-content: center; align-items: center; }
+.header { background-color: #000000; padding: 20px; transition: 0.25s ease-in-out; }
 
-.logo__plexus { height: 150px; fill: #ffffff; }
+.header__item--logo { width: 200px; }
 
-.switcher { display: flex; justify-content: center; margin-bottom: 50px; }
+.header__list { display: flex; justify-content: space-between; align-items: center; }
 
-.switcher__dark--text, .switcher__light--text { opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
+.header__switcher { display: flex; }
 
-.switcher__dark:hover .switcher__dark--text, .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); }
+.header__switcher .switcher__icon { font-size: 1.5rem; }
 
-.lnr { font-size: 2rem; cursor: pointer; margin: 0 10px; }
+.header__switcher .switcher__dark--text, .header__switcher .switcher__light--text { margin: 0 5px; opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
 
-.switcher__dark, .switcher__light { display: flex; align-items: center; color: #c4c4ac; }
+.header__switcher .switcher__dark:hover .switcher__dark--text, .header__switcher .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); }
 
-.dark-none { display: none; }
+.header__switcher .switcher__dark, .header__switcher .switcher__light { display: flex; align-items: center; color: #c4c4ac; margin: 0 10px; cursor: pointer; }
 
-.light-none { display: none; }
+.header__item--menu { font-size: 2rem; color: #c4c4ac; }
+
+.header:hover { background-color: #ffffff; }
+
+.header:hover .header__item--logo { filter: invert(1); }
+
+.member { height: calc(100vh - 95px); display: flex; justify-content: center; align-items: center; padding: 30px; }
+
+.member__article { margin: 0 50px; width: 500px; }
+
+.member__title { font-size: 2rem; font-weight: 800; }
+
+.member__subtitle { font-family: 'Crimson Text', serif; font-size: 1.5rem; font-style: italic; margin: 15px 0; }
+
+.member__description { line-height: 1.5rem; text-align: justify; }
