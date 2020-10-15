@@ -8,35 +8,3 @@ main {
 .logo__plexus {
     height: 150px;
 }
-
-.switcher {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.switcher__dark--text,
-.switcher__light--text {
-    opacity: 0;
-    transform: translateY(5px);
-    transition: 0.25s ease-in-out;
-}
-
-.switcher__dark:hover .switcher__dark--text,
-.switcher__light:hover .switcher__light--text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.lnr {
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.switcher__dark,
-.switcher__light {
-    display: flex;
-    align-items: center;
-    color: rgb(196, 196, 172);
-}
