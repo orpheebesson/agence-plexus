@@ -4,7 +4,7 @@
     transition: 0.25s ease-in-out;
 
     &__item--logo {
-        width: 200px;
+        width: 150px;
     }
 
     &__list {
@@ -54,5 +54,11 @@
         .header__item--logo {
             filter: invert(1);
         }
+    }
+}
+
+.body--home {
+    .header__list {
+        justify-content: center;
     }
 }

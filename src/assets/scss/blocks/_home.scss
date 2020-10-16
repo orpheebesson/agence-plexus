@@ -3,8 +3,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('./../img/background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .logo__plexus {
-    height: 150px;
+    height: 125px;
 }
