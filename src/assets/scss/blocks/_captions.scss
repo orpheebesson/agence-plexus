@@ -1,0 +1,93 @@
+.caption {
+    position: absolute;
+    max-width: 400px;
+    animation: move 3s linear infinite alternate;
+
+    &:first-child::after {
+        content: "";
+        position: absolute;
+        background: $white;
+        height: 1px;
+        width: 90%;
+        bottom: -50px;
+        left: 40%;
+        transform: translateX(-50%);
+        transform: rotate(20deg);
+    }
+
+    &:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        background: $white;
+        height: 1px;
+        width: 90%;
+        bottom: -50px;
+        right: 40%;
+        transform: translateX(-50%);
+        transform: rotate(-20deg);
+    }
+
+    &:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        background: $white;
+        height: 1px;
+        width: 90%;
+        top: -50px;
+        left: 40%;
+        transform: translateX(-50%);
+        transform: rotate(-20deg);
+    }
+
+    &:last-of-type::before {
+        content: "";
+        position: absolute;
+        background: $white;
+        height: 1px;
+        width: 90%;
+        top: -50px;
+        right: 40%;
+        transform: translateX(-50%);
+        transform: rotate(20deg);
+    }
+
+    &__pretitle {
+        font-family: $serif-font;
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 800;
+        padding: 10px 0;
+    }
+
+    &__button {
+        display: inline-flex;
+        font-family: $serif-font;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-top: 10px;
+    }
+
+    &--agency {
+        top: 150px;
+        left: 100px;
+    }
+
+    &--members {
+        top: 150px;
+        right: 100px;
+    }
+
+    &--projects {
+        bottom: 150px;
+        left: 100px;
+    }
+
+    &--contact {
+        bottom: 150px;
+        right: 100px;
+    }
+}
