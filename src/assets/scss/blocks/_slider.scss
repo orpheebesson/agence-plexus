@@ -33,14 +33,13 @@
             }
 
             &__title {
+                font-family: $title-font;
                 font-size: 2rem;
-                font-weight: 800;
             }
 
             &__subtitle {
-                font-family: $serif-font;
+                font-family: $italic-serif-font;
                 font-size: 1.5rem;
-                font-style: italic;
                 margin: 15px 0;
             }
 
