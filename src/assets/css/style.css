@@ -41,6 +41,8 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 
 .body--light .button { color: #000000; }
 
+.body--light .member__article { border-color: #000000 !important; }
+
 .preloader { height: 100vh; width: 100vw; background-color: #ffffff; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
 
 .preloader__overlay { height: 100%; width: 100%; background-color: #000000; top: 0; left: 0; pointer-events: none; transform: translateY(-100%); position: absolute; z-index: 2; }
