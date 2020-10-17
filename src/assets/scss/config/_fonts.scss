@@ -1,7 +1,11 @@
-@font-face {
-    font-family: '';
-    src: url('') format('woff2'),
-        url('') format('woff');
-    font-weight: normal;
-    font-style: normal;
+$fonts: Raleway-Light Raleway-SemiBold CrimsonText-Regular CrimsonText-Italic Linearicons-Free;
+
+@each $font in $fonts {
+    @font-face {
+        font-family: $font;
+        src: url("./../fonts/#{$font}.woff") format("woff"),
+        url("./../fonts/#{$font}.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+    }
 }

@@ -14,17 +14,33 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-@font-face { font-family: ''; src: url("") format("woff2"), url("") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Raleway-Light; src: url("./../fonts/Raleway-Light.woff") format("woff"), url("./../fonts/Raleway-Light.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: Raleway-SemiBold; src: url("./../fonts/Raleway-SemiBold.woff") format("woff"), url("./../fonts/Raleway-SemiBold.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: CrimsonText-Regular; src: url("./../fonts/CrimsonText-Regular.woff") format("woff"), url("./../fonts/CrimsonText-Regular.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: CrimsonText-Italic; src: url("./../fonts/CrimsonText-Italic.woff") format("woff"), url("./../fonts/CrimsonText-Italic.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: Linearicons-Free; src: url("./../fonts/Linearicons-Free.woff") format("woff"), url("./../fonts/Linearicons-Free.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
 *, *:after, *:before { box-sizing: border-box; }
 
 img { max-width: 100%; height: auto; }
 
-body { font-family: "Raleway", sans-serif; }
+body { font-family: "Raleway-Light", sans-serif; }
 
 a { text-decoration: none; color: #ffffff; }
 
 p { line-height: 1.5rem; }
+
+.icon { font-family: "Linearicons-Free"; speak: none; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon--sun::before { content: "\e807"; }
+
+.icon--moon::before { content: "\e808"; }
+
+.icon--menu::before { content: "\e871"; }
 
 body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out; }
 
@@ -99,11 +115,11 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .caption:last-of-type::before { content: ""; position: absolute; background: #ffffff; height: 1px; width: 90%; top: -50px; right: 40%; transform: translateX(-50%); transform: rotate(20deg); }
 
-.caption__pretitle { font-family: "Crimson Text", serif; font-size: 1.5rem; font-style: italic; }
+.caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; }
 
-.caption__title { font-size: 2rem; font-weight: 800; padding: 10px 0; }
+.caption__title { font-family: "Raleway-SemiBold"; font-size: 2rem; padding: 10px 0; }
 
-.caption__button { display: inline-flex; font-family: "Crimson Text", serif; font-size: 1.5rem; font-style: italic; margin-top: 10px; }
+.caption__button { display: inline-flex; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; margin-top: 10px; }
 
 .caption--agency { top: 150px; left: 100px; }
 

@@ -10,3 +10,25 @@ a {
 p {
     line-height: 1.5rem;
 }
+
+.icon {
+    font-family: $icons-font;
+    speak: none;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &--sun::before {
+        content: "\e807";
+    }
+
+    &--moon::before {
+        content: "\e808";
+    }
+
+    &--menu::before {
+        content: "\e871";
+    }
+}
