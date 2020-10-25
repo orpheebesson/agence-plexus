@@ -42,7 +42,11 @@ p { line-height: 1.5rem; }
 
 .icon--menu::before { content: "\e871"; }
 
+input, select, textarea, button { font-family: inherit; }
+
 body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out; }
+
+a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 @keyframes move { 0% { transform: translate(0px, 0px); }
   20% { transform: translate(-5px, 5px); }
@@ -51,6 +55,11 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
   80% { transform: translate(0px, 0px); }
   100% { transform: translate(-5px, 5px); } }
 
+@keyframes fadeUp { from { opacity: 0;
+    transform: translateY(30px); }
+  to { opacity: 1;
+    transform: translateY(0); } }
+
 .body--light { background-color: #ffffff !important; color: #000000 !important; }
 
 .body--light .logo__plexus { filter: invert(1); }
@@ -58,6 +67,16 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 .body--light .button { color: #000000; }
 
 .body--light .member__article { border-color: #000000 !important; }
+
+.body--light .form input, .body--light .form textarea { color: #000000 !important; }
+
+.body--light .form__field { box-shadow: -10px 10px #000000 !important; border-color: #000000 !important; color: #000000 !important; background-color: #ffffff; }
+
+.body--light .form__field:focus { box-shadow: -10px 10px #c4c4ac !important; }
+
+.body--light .form__submit { color: #000000 !important; background-color: #ffffff !important; }
+
+.body--light .form__submit:hover { color: #ffffff !important; background-color: #000000 !important; box-shadow: -10px 10px #c4c4ac !important; }
 
 .preloader { height: 100vh; width: 100vw; background-color: #ffffff; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
 

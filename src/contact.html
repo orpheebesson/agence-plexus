@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plexus | Agence web à La Rochelle</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="assets/img/favicon_32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="assets/img/favicon_64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="assets/img/favicon_96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="assets/img/favicon_128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="assets/img/favicon_196.png" type="image/png">
+    <link href="assets/css/contact.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul class="header__list">
+                <li class="header__item"><a href="index.html"><img class="header__item--logo"
+                            src="assets/svg/logo_plexus.svg" alt="Logo agence Plexus"></a></li>
+                <li class="header__item">
+                    <ul class="header__switcher">
+                        <li class="switcher__dark"><span class="switcher__dark--text">Plexus lunaire</span><span
+                                class="switcher__icon icon icon--moon"></span>
+                        </li>
+                        <li class="switcher__light"><span class="switcher__icon icon icon--sun"></span><span
+                                class="switcher__light--text">Plexus
+                                solaire</span></li>
+                    </ul>
+                </li>
+                <li class="header__item"><span class="header__item--menu icon icon--menu"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact">
+        <h1 class="contact__title">Contactez-nous</h1>
+        <form class="contact__form" action="form.php" method="POST">
+            <input class="form__field" type="email" name="mail" placeholder="Votre e-mail" required="">
+            <textarea class="form__field" name="message" placeholder="Votre message" cols="30" rows="10" required=""></textarea>
+            <button class="form__field form__submit" type="submit">Envoyer</button>
+        </form>
+    </section>
+    <script src="assets/js/_libs.js"></script>
+    <script src="assets/js/_theme-mode.js"></script>
+</body>
+
+</html>
