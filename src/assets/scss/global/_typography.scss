@@ -32,3 +32,10 @@ p {
         content: "\e871";
     }
 }
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
