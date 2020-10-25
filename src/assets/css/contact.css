@@ -120,22 +120,18 @@ a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 .body--home .header__list { justify-content: center; }
 
-.slider { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; z-index: 1; animation: fadeUp 1.5s ease-in-out; }
+.contact { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 1.5s ease-in-out; }
 
-.slider__container { position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box; }
+.contact__title { font-family: "Raleway-SemiBold"; font-size: 2rem; }
 
-.slider__member { height: calc(100vh - 95px); display: flex; justify-content: center; align-items: center; padding: 0 30px; }
+.contact__form { display: flex; flex-direction: column; max-width: 300px; margin-top: 50px; }
 
-.slider__member .member__article { border-left: 1px solid #ffffff; padding-left: 50px; margin: 0 50px; width: 450px; }
+.contact__form input, .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
 
-.slider__member .member__title { font-family: "Raleway-SemiBold"; font-size: 2rem; }
+.contact__form .form__field { box-shadow: -10px 10px #ffffff; border: 1px solid #ffffff; margin: 20px 0; transition: all 0.25s ease-in-out; }
 
-.slider__member .member__subtitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; margin: 15px 0; }
+.contact__form .form__field:focus { box-shadow: -10px 10px #c4c4ac; color: #000000; background-color: #ffffff; }
 
-.slider__member .member__description { text-align: justify; }
+.contact__form .form__submit { font-family: "CrimsonText-Regular", serif; font-size: 1.3rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 10px; }
 
-.swiper-slide { flex-shrink: 0; position: relative; transition-property: transform; }
-
-.swiper-container-3d { perspective: 1200px; }
-
-.swiper-container-3d .swiper-slide, .swiper-container-3d .slider__container { transform-style: preserve-3d; }
+.contact__form .form__submit:hover { color: #000000; background-color: #ffffff; letter-spacing: 2px; box-shadow: -10px 10px #c4c4ac; }

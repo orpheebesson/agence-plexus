@@ -6,6 +6,7 @@
     list-style: none;
     padding: 0;
     z-index: 1;
+    animation: fadeUp 1.5s ease-in-out;
 
     &__container {
         position: relative;

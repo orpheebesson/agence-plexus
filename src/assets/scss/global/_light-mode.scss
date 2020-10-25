@@ -13,4 +13,34 @@
     .member__article {
         border-color: $black !important;
     }
+
+    .form {
+
+        input,
+        textarea {
+            color: $black !important;
+        }
+
+        &__field {
+            box-shadow: -10px 10px $black !important;
+            border-color: $black !important;
+            color: $black !important;
+            background-color: $white;
+
+            &:focus {
+                box-shadow: -10px 10px $beige !important;
+            }
+        }
+
+        &__submit {
+            color: $black !important;
+            background-color: $white !important;
+
+            &:hover {
+                color: $white !important;
+                background-color: $black !important;
+                box-shadow: -10px 10px $beige !important;
+            }
+        }
+    }
 }
