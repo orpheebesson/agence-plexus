@@ -115,9 +115,6 @@ barba.init({
         pageTransition();
         await delay(1000);
         done();
-
-
-
     },
   }]
 
