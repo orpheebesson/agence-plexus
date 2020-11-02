@@ -1,14 +1,14 @@
 <img height="100" src="src/assets/img/logo_plexus.png" alt="Logo agence Plexus">
 
-# Installation
+# :arrow_down: Installation
 
 `git clone https://gitlab.univ-lr.fr/obesso01/agence-plexus.git`
 
-# Dependencies
+# :warning: Dependencies
 
 `npm install`
 
-# Gulp
+# :hammer_and_wrench: Gulp
 
 Run the following command to launch the "watch" of your files :
 
