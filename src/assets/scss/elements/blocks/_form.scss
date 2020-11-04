@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeUp 1.5s ease-in-out;
+    animation: fadeUp 2s ease-in-out 0s forwards 1;
 
     &__title {
         font-family: $title-font;
