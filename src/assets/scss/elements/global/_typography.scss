@@ -31,6 +31,26 @@ p {
     &--menu::before {
         content: "\e871";
     }
+
+    &--code::before {
+        content: "\e86a";
+    }
+
+    &--layers::before {
+        content: "\e88e";
+    }
+
+    &--screen::before {
+        content: "\e839";
+    }
+
+    &--pencil::before {
+        content: "\e802";
+    }
+
+    &--magnifier::before {
+        content: "\e86f";
+    }
 }
 
 input,
