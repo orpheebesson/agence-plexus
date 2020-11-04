@@ -16,8 +16,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: Roboto-Thin; src: url("./../fonts/Roboto-Thin.woff") format("woff"), url("./../fonts/Roboto-Thin.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: Roboto-Medium; src: url("./../fonts/Roboto-Medium.woff") format("woff"), url("./../fonts/Roboto-Medium.woff2") format("woff2"); font-weight: normal; font-style: normal; }
-
 @font-face { font-family: Raleway-SemiBold; src: url("./../fonts/Raleway-SemiBold.woff") format("woff"), url("./../fonts/Raleway-SemiBold.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: CrimsonText-Regular; src: url("./../fonts/CrimsonText-Regular.woff") format("woff"), url("./../fonts/CrimsonText-Regular.woff2") format("woff2"); font-weight: normal; font-style: normal; }
@@ -192,7 +190,7 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .skill__icon { color: #c4c4ac; font-size: 2rem; }
 
-.skill__title { font-family: "Roboto-Medium"; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
+.skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
 
 .skill p { line-height: 1.75rem; }
 

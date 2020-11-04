@@ -1,4 +1,4 @@
-$fonts: Roboto-Thin Roboto-Medium Raleway-SemiBold CrimsonText-Regular CrimsonText-Italic Linearicons-Free;
+$fonts: Roboto-Thin Raleway-SemiBold CrimsonText-Regular CrimsonText-Italic Linearicons-Free;
 
 @each $font in $fonts {
     @font-face {
