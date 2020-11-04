@@ -44,6 +44,16 @@ p { line-height: 1.5rem; }
 
 .icon--menu::before { content: "\e871"; }
 
+.icon--code::before { content: "\e86a"; }
+
+.icon--layers::before { content: "\e88e"; }
+
+.icon--screen::before { content: "\e839"; }
+
+.icon--pencil::before { content: "\e802"; }
+
+.icon--magnifier::before { content: "\e86f"; }
+
 input, select, textarea, button { font-family: inherit; }
 
 body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out; }
