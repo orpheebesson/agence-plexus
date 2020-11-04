@@ -35,8 +35,6 @@ switcherLight.addEventListener("click", light_mode);
 
 testrecall();
 
-
-
 function delay(n) {
     n = n || 2000;
     return new Promise((done) => {
@@ -91,8 +89,6 @@ function contentAnimation() {
     tl.set(".loading-screen", { left: "-100%" });
 }
 
-
-
 $(function () {
 barba.init({
   sync:true,
@@ -117,6 +113,5 @@ barba.init({
         done();
     },
   }]
-
 });
 });
