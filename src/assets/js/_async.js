@@ -13,6 +13,14 @@ var slider = new Swiper('.slider', {
     },
 });
 
+const menuBurger = document.querySelector('.menu__burger');
+
+function openMenuBurger() {
+    menuBurger.classList.toggle('menu__burger--open');
+}
+
+menuBurger.addEventListener("click", openMenuBurger);
+
 const switcherDark = document.querySelector('.switcher__dark');
 const switcherLight = document.querySelector('.switcher__light');
 
@@ -28,9 +36,6 @@ function light_mode() {
 
 switcherDark.addEventListener("click", dark_mode);
 switcherLight.addEventListener("click", light_mode);
-
-
-
 }
 
 testrecall();
