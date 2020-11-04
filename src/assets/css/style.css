@@ -16,7 +16,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: Roboto-Thin; src: url("./../fonts/Roboto-Thin.woff") format("woff"), url("./../fonts/Roboto-Thin.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: Roboto-Regular; src: url("./../fonts/Roboto-Regular.woff") format("woff"), url("./../fonts/Roboto-Regular.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Roboto-Medium; src: url("./../fonts/Roboto-Medium.woff") format("woff"), url("./../fonts/Roboto-Medium.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: Raleway-SemiBold; src: url("./../fonts/Raleway-SemiBold.woff") format("woff"), url("./../fonts/Raleway-SemiBold.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
@@ -102,7 +102,7 @@ a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 .preloader #left, .preloader #right { width: 150px; height: 150px; fill: black; }
 
-@media screen and (max-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
+@media screen and (min-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
 
 .header { background-color: #000000; padding: 20px; transition: 0.25s ease-in-out; }
 
@@ -153,6 +153,28 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 .caption--projects { bottom: 150px; left: 100px; }
 
 .caption--contact { bottom: 150px; right: 100px; }
+
+@media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
+
+.agency__image { background-image: url("./../img/agency.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); }
+
+.agency__article { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+
+.agency__title { font-family: "Raleway-SemiBold"; font-size: 2rem; margin-bottom: 30px; }
+
+.agency__button { font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; margin-top: 30px; margin-left: 15px; }
+
+.agency__button:hover { color: #000000; background-color: #ffffff; }
+
+.skill { width: 260px; margin: 15px; }
+
+.skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; }
+
+.skill__icon { color: #c4c4ac; font-size: 2rem; }
+
+.skill__title { font-family: "Roboto-Medium"; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
+
+.skill p { line-height: 1.75rem; }
 
 .slider { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; z-index: 1; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 

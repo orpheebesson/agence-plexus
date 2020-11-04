@@ -1,29 +1,42 @@
 @mixin extra-small {
-    @media screen and (max-width: #{$xs}) {
+    @media screen and (min-width: #{$xs}) {
         @content;
     }
 }
 
 @mixin small {
-    @media screen and (max-width: #{$sm}) {
+    @media screen and (min-width: #{$sm}) {
         @content;
     }
 }
 
 @mixin medium {
-    @media screen and (max-width: #{$md}) {
+    @media screen and (min-width: #{$md}) {
         @content;
     }
 }
 
 @mixin large {
-    @media screen and (max-width: #{$lg}) {
+    @media screen and (min-width: #{$lg}) {
         @content;
     }
 }
 
-@mixin extra-large {
-    @media screen and (max-width: #{$xl}) {
+@mixin x-large {
+    @media screen and (min-width: #{$xl}) {
         @content;
+    }
+}
+
+@mixin xx-large {
+    @media screen and (min-width: #{$xxl}) {
+        @content;
+    }
+}
+
+@mixin split {
+    @include x-large {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }

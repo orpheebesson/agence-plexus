@@ -1,0 +1,28 @@
+.skill {
+    width: 260px;
+    margin: 15px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 800px
+    }
+
+    &__icon {
+        color: $beige;
+        font-size: 2rem;
+    }
+
+    &__title {
+        font-family: $subtitle-font;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 15px 0 10px 0;
+    }
+
+    p {
+        line-height: 1.75rem;
+    }
+}
