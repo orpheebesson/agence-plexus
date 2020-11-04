@@ -1,0 +1,43 @@
+.agency {
+    @include split;
+
+    &__image {
+        background-image: url('./../img/agency.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: calc(100vh - 82px);
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+        animation: fadeUp 2s ease-in-out 0s forwards 1;
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        font-family: $serif-font;
+        font-size: 1.2rem;
+        border: 1px solid $white;
+        color: $white;
+        background-color: $black;
+        padding: 18px 36px;
+        align-self: flex-start;
+        margin-top: 30px;
+        margin-left: 15px;
+
+        &:hover {
+            color: $black;
+            background-color: $white;
+        }
+    }
+}
