@@ -14,7 +14,9 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-@font-face { font-family: Raleway-Light; src: url("./../fonts/Raleway-Light.woff") format("woff"), url("./../fonts/Raleway-Light.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Roboto-Thin; src: url("./../fonts/Roboto-Thin.woff") format("woff"), url("./../fonts/Roboto-Thin.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: Roboto-Regular; src: url("./../fonts/Roboto-Regular.woff") format("woff"), url("./../fonts/Roboto-Regular.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: Raleway-SemiBold; src: url("./../fonts/Raleway-SemiBold.woff") format("woff"), url("./../fonts/Raleway-SemiBold.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
@@ -28,7 +30,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 img { max-width: 100%; height: auto; }
 
-body { font-family: "Raleway-Light", sans-serif; }
+body { font-family: "Roboto-Thin", sans-serif; }
 
 a { text-decoration: none; color: #ffffff; }
 
