@@ -13,13 +13,6 @@ var slider = new Swiper('.slider', {
     },
 });
 
-const menuBurger = document.querySelector('.menu__burger');
-
-function openMenuBurger() {
-    menuBurger.classList.toggle('menu__burger--open');
-}
-
-menuBurger.addEventListener("click", openMenuBurger);
 
 const switcherDark = document.querySelector('.switcher__dark');
 const switcherLight = document.querySelector('.switcher__light');
@@ -36,9 +29,36 @@ function light_mode() {
 
 switcherDark.addEventListener("click", dark_mode);
 switcherLight.addEventListener("click", light_mode);
+
+const menuBurger = document.querySelector('.menu__burger');
+const menuRight = document.querySelector('.menuRight');
+
+function openMenuBurger() {
+    menuBurger.classList.toggle('menu__burger--open');
+    menuRight.classList.toggle('menuRight--open');
+}
+
+menuBurger.addEventListener("click", openMenuBurger);
 }
 
 testrecall();
+
+function menu() {
+
+const menuBurger = document.querySelector('.menu__burger');
+const menuRight = document.querySelector('.menuRight');
+
+menuBurger.classList.remove('menu__burger--open');
+
+function openMenuBurger() {
+    menuBurger.classList.toggle('menu__burger--open');
+    menuRight.classList.toggle('menuRight--open');
+}
+
+menuBurger.addEventListener("click", openMenuBurger);
+
+}
+
 
 function delay(n) {
     n = n || 2000;
@@ -109,7 +129,7 @@ barba.init({
     },
     async beforeEnter({ next }) {
       testrecall();
-
+      menu();
     },
     async leave({ next }) {
        const done = this.async();
