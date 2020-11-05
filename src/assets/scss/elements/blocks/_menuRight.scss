@@ -1,0 +1,44 @@
+.menuRight {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    background: #333333;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition-duration: 0.5s;
+    width: 275px;
+
+    &--open {
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+
+    &__list {
+        margin-top: 82px;
+    }
+
+    &__item {
+        font-family: $title-font;
+        font-size: 1.75rem;
+        line-height: 56px;
+        text-align: left;
+        color: $white;
+        padding: 0 25px;
+        transition: 0.25s ease-in-out;
+
+        &:hover {
+            background: $beige;
+            color: black;
+        }
+    }
+
+    a {
+        display: inline-flex;
+        width: 100%;
+    }
+}
