@@ -31,37 +31,32 @@ switcherDark.addEventListener("click", dark_mode);
 switcherLight.addEventListener("click", light_mode);
 
 const menuBurger = document.querySelector('.menu__burger');
-const menuNav = document.querySelector('.menu__nav');
+const menuRight = document.querySelector('.menuRight');
 
 function openMenuBurger() {
     menuBurger.classList.toggle('menu__burger--open');
-    menuNav.classList.toggle('menu__nav--open');
+    menuRight.classList.toggle('menuRight--open');
 }
 
 menuBurger.addEventListener("click", openMenuBurger);
 }
+
 testrecall();
 
+function menu() {
 
-
-
-
-function menu()
-{
-
-      const menuBurger = document.querySelector('.menu__burger');
-const menuNav = document.querySelector('.menu__nav');
-
+const menuBurger = document.querySelector('.menu__burger');
+const menuRight = document.querySelector('.menuRight');
 
 menuBurger.classList.remove('menu__burger--open');
-    menuNav.classList.remove('menu__nav--open');
 
 function openMenuBurger() {
     menuBurger.classList.toggle('menu__burger--open');
-    menuNav.classList.toggle('menu__nav--open');
+    menuRight.classList.toggle('menuRight--open');
 }
 
 menuBurger.addEventListener("click", openMenuBurger);
+
 }
 
 
@@ -134,13 +129,7 @@ barba.init({
     },
     async beforeEnter({ next }) {
       testrecall();
-
       menu();
-
-
-
-
-
     },
     async leave({ next }) {
        const done = this.async();

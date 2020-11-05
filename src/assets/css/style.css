@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -147,15 +144,17 @@ a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 .header .menu__burger--open span:nth-child(3) { transform: rotate(-45deg); }
 
-.menu__nav { background: #333333; position: fixed; top: 80px; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; display: flex; flex-direction: column; width: 20%; height: 100%; }
+.menuRight { display: flex; flex-direction: column; height: 100%; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; width: 275px; }
 
-.menu__nav--open { transform: translateX(0); overflow-y: auto; }
+.menuRight--open { transform: translateX(0); overflow-y: auto; }
 
-.menu__nav ul { margin-top: 30px; }
+.menuRight__list { margin-top: 82px; }
 
-.menu__nav ul li { font-family: Roboto; font-size: 48px; font-style: normal; font-weight: 300; line-height: 56px; text-align: left; padding: 10px 30px; color: white; }
+.menuRight__item { font-family: "Raleway-SemiBold"; font-size: 1.75rem; line-height: 56px; text-align: left; color: #ffffff; padding: 0 25px; transition: 0.25s ease-in-out; }
 
-.menu__nav ul li:hover { background: #F2F2F2; color: black; }
+.menuRight__item:hover { background: #c4c4ac; color: black; }
+
+.menuRight a { display: inline-flex; width: 100%; }
 
 main { height: calc(100vh - 95px); display: flex; justify-content: center; align-items: center; background-image: url("./../img/background.png"); background-size: contain; background-repeat: no-repeat; width: 100%; }
 
