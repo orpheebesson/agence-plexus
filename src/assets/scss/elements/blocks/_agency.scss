@@ -7,6 +7,41 @@
         background-size: cover;
         background-repeat: no-repeat;
         height: calc(100vh - 82px);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__quote {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        padding: 3vh 4vw;
+
+        &>p {
+            font-family: $italic-serif-font;
+            font-size: 1.5rem;
+            position: relative;
+            text-align: center;
+
+            &:before {
+                position: absolute;
+                top: -30px;
+                left: -3vw;
+                content: url('./../img/quote_left.png');
+            }
+
+            &:after {
+                position: absolute;
+                bottom: -30px;
+                right: -3vw;
+                content: url('./../img/quote_right.png');
+            }
+        }
+    }
+
+    .quote__author {
+        font-family: $serif-font;
+        font-size: 1.5rem;
+        text-align: right;
+        margin-top: 40px;
     }
 
     &__article {

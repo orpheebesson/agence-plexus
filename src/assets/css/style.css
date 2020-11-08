@@ -186,7 +186,17 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 @media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
 
-.agency__image { background-image: url("./../img/agency.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); }
+.agency__image { background-image: url("./../img/agency.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); display: flex; align-items: flex-end; }
+
+.agency__quote { background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%); padding: 3vh 4vw; }
+
+.agency__quote > p { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; position: relative; text-align: center; }
+
+.agency__quote > p:before { position: absolute; top: -30px; left: -3vw; content: url("./../img/quote_left.png"); }
+
+.agency__quote > p:after { position: absolute; bottom: -30px; right: -3vw; content: url("./../img/quote_right.png"); }
+
+.agency .quote__author { font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; text-align: right; margin-top: 40px; }
 
 .agency__article { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
