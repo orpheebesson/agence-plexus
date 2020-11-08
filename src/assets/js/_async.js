@@ -11,6 +11,10 @@ var slider = new Swiper('.slider', {
     keyboard: {
         enabled: true,
     },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+    },
 });
 
 
