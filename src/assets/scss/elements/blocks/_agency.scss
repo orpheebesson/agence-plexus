@@ -13,25 +13,26 @@
 
     &__quote {
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-        padding: 3vh 4vw;
+        padding: 3vh 3vw;
 
         &>p {
             font-family: $italic-serif-font;
             font-size: 1.5rem;
             position: relative;
             text-align: center;
+            padding: 0 3vw;
 
             &:before {
                 position: absolute;
                 top: -30px;
-                left: -3vw;
+                left: 0;
                 content: url('./../img/quote_left.png');
             }
 
             &:after {
                 position: absolute;
                 bottom: -30px;
-                right: -3vw;
+                right: 0;
                 content: url('./../img/quote_right.png');
             }
         }
