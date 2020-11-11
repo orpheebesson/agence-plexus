@@ -1,0 +1,12 @@
+.projects {
+    height: calc(100vh - 82px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 2s ease-in-out 0s forwards 1;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
