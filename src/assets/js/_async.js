@@ -1,65 +1,75 @@
 function testrecall() {
 
-var slider = new Swiper('.slider', {
-    effect: 'coverflow',
-    speed: 1000,
-    loop: true,
-    mousewheel: true,
-    fadeEffect: {
-        crossFade: true
-    },
-    keyboard: {
-        enabled: true,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-    },
-});
+    var slider = new Swiper('.slider', {
+        effect: 'coverflow',
+        speed: 1000,
+        loop: true,
+        mousewheel: true,
+        fadeEffect: {
+            crossFade: true
+        },
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+    });
 
 
-const switcherDark = document.querySelector('.switcher__dark');
-const switcherLight = document.querySelector('.switcher__light');
+    const switcherDark = document.querySelector('.switcher__dark');
+    const switcherLight = document.querySelector('.switcher__light');
 
-function dark_mode() {
-    document.body.classList.remove('body--light');
-    document.body.classList.add('body--dark');
-}
+    function dark_mode() {
+        document.body.classList.remove('body--light');
+        document.body.classList.add('body--dark');
+    }
 
-function light_mode() {
-    document.body.classList.remove('body--dark');
-    document.body.classList.add('body--light');
-}
+    function light_mode() {
+        document.body.classList.remove('body--dark');
+        document.body.classList.add('body--light');
+    }
 
-switcherDark.addEventListener("click", dark_mode);
-switcherLight.addEventListener("click", light_mode);
+    switcherDark.addEventListener("click", dark_mode);
+    switcherLight.addEventListener("click", light_mode);
 
-const menuBurger = document.querySelector('.menu__burger');
-const menuRight = document.querySelector('.menuRight');
+    const body = document.querySelector('body');
+    const menuBurger = document.querySelector('.menu__burger');
+    const menuRight = document.querySelector('.menuRight');
 
-function openMenuBurger() {
-    menuBurger.classList.toggle('menu__burger--open');
-    menuRight.classList.toggle('menuRight--open');
-}
+    menuBurger.classList.remove('menu__burger--open');
+    menuRight.classList.remove('menuRight--open');
+    body.classList.add('open');
 
-menuBurger.addEventListener("click", openMenuBurger);
+    function openMenuBurger() {
+        menuBurger.classList.toggle('menu__burger--open');
+        menuRight.classList.toggle('menuRight--open');
+        body.classList.toggle('open');
+    }
+
+    menuBurger.addEventListener("click", openMenuBurger);
 }
 
 testrecall();
 
 function menu() {
 
-const menuBurger = document.querySelector('.menu__burger');
-const menuRight = document.querySelector('.menuRight');
+    const body = document.querySelector('body');
+    const menuBurger = document.querySelector('.menu__burger');
+    const menuRight = document.querySelector('.menuRight');
 
-menuBurger.classList.remove('menu__burger--open');
+    menuBurger.classList.remove('menu__burger--open');
+    menuRight.classList.remove('menuRight--open');
+    body.classList.add('open');
 
-function openMenuBurger() {
-    menuBurger.classList.toggle('menu__burger--open');
-    menuRight.classList.toggle('menuRight--open');
-}
+    function openMenuBurger() {
+        menuBurger.classList.toggle('menu__burger--open');
+        menuRight.classList.toggle('menuRight--open');
+        body.classList.toggle('open');
+    }
 
-menuBurger.addEventListener("click", openMenuBurger);
+    menuBurger.addEventListener("click", openMenuBurger);
 
 }
 
@@ -97,50 +107,50 @@ function contentAnimation() {
     tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
 }
 
-  function pageTransition() {
-   var tl = gsap.timeline();
-    tl.to(".loading-screen", {
-        duration: 1.2,
-        width: "100%",
-        left: "0%",
-        ease: "Expo.easeInOut",
-        backgroundColor:'rgb(255,255,255)'
-    });
+function pageTransition() {
+ var tl = gsap.timeline();
+ tl.to(".loading-screen", {
+    duration: 1.2,
+    width: "100%",
+    left: "0%",
+    ease: "Expo.easeInOut",
+    backgroundColor:'rgb(255,255,255)'
+});
 
-    tl.to(".loading-screen", {
-        duration: 1,
-        width: "100%",
-        left: "100%",
-        ease: "Expo.easeInOut",
-        backgroundColor:'rgb(255,255,255)',
-        delay: 0.3,
-    });
-    tl.set(".loading-screen", { left: "-100%" });
+ tl.to(".loading-screen", {
+    duration: 1,
+    width: "100%",
+    left: "100%",
+    ease: "Expo.easeInOut",
+    backgroundColor:'rgb(255,255,255)',
+    delay: 0.3,
+});
+ tl.set(".loading-screen", { left: "-100%" });
 }
 
 $(function () {
-barba.init({
-  sync:true,
-  transitions: [{
+    barba.init({
+      sync:true,
+      transitions: [{
 
-    async enter({ next }) {
-    contentAnimation();
-    },
+        async enter({ next }) {
+            contentAnimation();
+        },
 
 
-    async once({ next }) {
-      contentAnimation();
-    },
-    async beforeEnter({ next }) {
-      testrecall();
-      menu();
-    },
-    async leave({ next }) {
-       const done = this.async();
-        pageTransition();
-        await delay(1000);
-        done();
-    },
-  }]
+        async once({ next }) {
+          contentAnimation();
+      },
+      async beforeEnter({ next }) {
+          testrecall();
+          menu();
+      },
+      async leave({ next }) {
+         const done = this.async();
+         pageTransition();
+         await delay(1000);
+         done();
+     },
+ }]
 });
 });

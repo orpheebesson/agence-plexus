@@ -1,5 +1,10 @@
 body {
     font-family: $body-font;
+
+    &.open 
+    {
+        overflow: hidden;
+    }
 }
 
 a {
