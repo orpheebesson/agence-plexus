@@ -34,18 +34,16 @@ function testrecall() {
     switcherDark.addEventListener("click", dark_mode);
     switcherLight.addEventListener("click", light_mode);
 
-    const body = document.querySelector('body');
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
-    body.classList.add('open');
-
+    
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
-        body.classList.toggle('open');
+        document.body.classList.toggle('bodyMenu--open');
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
@@ -55,18 +53,16 @@ testrecall();
 
 function menu() {
 
-    const body = document.querySelector('body');
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
-    body.classList.add('open');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
-        body.classList.toggle('open');
+        document.body.classList.toggle('bodyMenu--open');
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
