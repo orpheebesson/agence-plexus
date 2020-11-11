@@ -4,10 +4,8 @@
     flex-direction: column;
     justify-content: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
-    background: url(https://media.giphy.com/media/14w5wo8wy3DbJS/giphy.gif) no-repeat 50% 50%;
-    background-size: cover;
 
-    .menu {
+    &__list {
         font-size: 7vw;
         --offset: 20vw;
         --move-initial: calc(-25% + var(--offset));
@@ -34,7 +32,6 @@
 
         &::before {
             all: initial;
-            counter-increment: menu;
             position: absolute;
             bottom: 60%;
             left: 0;

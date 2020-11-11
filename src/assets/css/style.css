@@ -244,15 +244,15 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .swiper-pagination-fraction { bottom: 10px; left: 0; width: 100%; }
 
-.projects { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; animation: fadeUp 2s ease-in-out 0s forwards 1; background: url(https://media.giphy.com/media/14w5wo8wy3DbJS/giphy.gif) no-repeat 50% 50%; background-size: cover; }
+.projects { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
-.projects .menu { font-size: 7vw; --offset: 20vw; --move-initial: calc(-25% + var(--offset)); --move-final: calc(-50% + var(--offset)); }
+.projects__list { font-size: 7vw; --offset: 20vw; --move-initial: calc(-25% + var(--offset)); --move-final: calc(-50% + var(--offset)); }
 
 .projects__item { position: relative; padding: 0 6vw; }
 
 .projects__link { position: relative; font-family: "Raleway-SemiBold"; display: inline-flex; cursor: pointer; font-size: 7vw; line-height: 1.2; color: transparent; -webkit-text-stroke: 1.5px #ffffff; white-space: nowrap; padding: 0 1vw; transition: opacity 0.4s; }
 
-.projects__link::before { all: initial; counter-increment: menu; position: absolute; bottom: 60%; left: 0; pointer-events: none; }
+.projects__link::before { all: initial; position: absolute; bottom: 60%; left: 0; pointer-events: none; }
 
 .projects__link:hover { transition-duration: 0.1s; opacity: 0; }
 
