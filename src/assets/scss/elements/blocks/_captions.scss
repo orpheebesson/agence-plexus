@@ -72,20 +72,32 @@
     &--agency {
         top: 150px;
         left: 100px;
+        background-image: url('./../img/accueil/illustration_accueil_1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &--members {
         top: 150px;
         right: 100px;
+        background-image: url('./../img/accueil/illustration_accueil_2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &--projects {
         bottom: 150px;
         left: 100px;
+        background-image: url('./../img/accueil/illustration_accueil_3.png');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &--contact {
         bottom: 150px;
         right: 100px;
+        background-image: url('./../img/accueil/illustration_accueil_1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }

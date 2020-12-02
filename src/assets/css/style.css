@@ -178,17 +178,19 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .caption__button { display: inline-flex; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; margin-top: 10px; }
 
-.caption--agency { top: 150px; left: 100px; }
+.caption--agency { top: 150px; left: 100px; background-image: url("./../img/accueil/illustration_accueil_1.png"); background-size: cover; background-repeat: no-repeat; }
 
-.caption--members { top: 150px; right: 100px; }
+.caption--members { top: 150px; right: 100px; background-image: url("./../img/accueil/illustration_accueil_2.png"); background-size: cover; background-repeat: no-repeat; }
 
-.caption--projects { bottom: 150px; left: 100px; }
+.caption--projects { bottom: 150px; left: 100px; background-image: url("./../img/accueil/illustration_accueil_3.png"); background-size: cover; background-repeat: no-repeat; }
 
-.caption--contact { bottom: 150px; right: 100px; }
+.caption--contact { bottom: 150px; right: 100px; background-image: url("./../img/accueil/illustration_accueil_1.png"); background-size: cover; background-repeat: no-repeat; }
+
+.agency { background-color: #ffffff; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
 
-.agency__image { background-image: url("./../img/agency.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); display: flex; align-items: flex-end; }
+.agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); display: flex; align-items: flex-end; }
 
 .agency__quote { background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%); padding: 3vh 3vw; }
 
@@ -200,7 +202,7 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .agency .quote__author { font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; text-align: right; margin-top: 40px; }
 
-.agency__article { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.agency__article { display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #000000; padding: 3vw; }
 
 .agency__title { font-family: "Raleway-SemiBold"; font-size: 2rem; margin-bottom: 30px; }
 
