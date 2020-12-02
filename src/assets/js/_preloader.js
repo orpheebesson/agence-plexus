@@ -37,20 +37,10 @@ function preloaderAnimation() {
 
         function drawTheX() {
 
-/*            new Vivus('x', {
-                file: '../../assets/svg/x.svg',
-              onReady: function (myVivus) {
-    // `el` property is the SVG element
-    myVivus.el.setAttribute('height', 'auto');
-}
-});*/
-
-
-
             new Vivus('x', {
                 start: 'autostart',
                 type: 'scenario',
-                file: '../../assets/svg/x.svg',
+                file: './../../assets/svg/x.svg',
                 animTimingFunction: Vivus.EASE
             })
         }

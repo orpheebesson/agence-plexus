@@ -29,10 +29,14 @@ const paths = {
         src: './src/assets/img/**/*',
         dest: './dist/assets/img/',
     },
+    svg: {
+        src: './src/assets/svg/**/*.svg',
+        dest: './dist/assets/svg/',
+    },
     fonts: {
         src: './src/assets/fonts/**/*',
         dest: './dist/assets/fonts/',
-    },
+    }
 };
 
 function browserSyncDev() {
@@ -112,6 +116,19 @@ function images() {
     );
 }
 
+
+function svg() {
+    return (
+        gulp
+        .src(paths.svg.src)
+        .pipe(plumber())
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.svg.dest))
+        .pipe(browsersync.stream())
+    );
+}
+
+
 function watchFiles() {
     // Ecoute ce qui se passe sur paths.css.src, et lance la fonction css s'il y a des modifs
     gulp.watch(paths.scss.src, scss);
@@ -139,7 +156,7 @@ function fonts() {
     );
 }
 
-const serie = gulp.series(clear, html, scss, css, images, fonts);
+const serie = gulp.series(clear, html, scss, css, images, svg, fonts);
 const build = gulp.series(serie, gulp.parallel(watchFiles, browserSync));
 
 const dev = gulp.series(gulp.series(scss, css, html), gulp.parallel(watch, browserSyncDev));
