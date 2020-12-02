@@ -1,4 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -210,6 +213,8 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .skill { width: 260px; margin: 15px; }
 
+.skill:last-of-type { margin: 15px 15px 15px 7.5px; }
+
 .skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; }
 
 .skill__icon { color: #c4c4ac; font-size: 2rem; }
@@ -217,6 +222,16 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 .skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
 
 .skill p { line-height: 1.75rem; }
+
+.skill .hvr-sweep-to-top { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; background-color: black; }
+
+.skill .hvr-sweep-to-top:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: white; -webkit-transform: scaleY(0); transform: scaleY(0); -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+
+.skill .hvr-sweep-to-top:hover, .skill .hvr-sweep-to-top:focus, .skill .hvr-sweep-to-top:active { color: black; }
+
+.skill .hvr-sweep-to-top:hover:before, .skill .hvr-sweep-to-top:focus:before, .skill .hvr-sweep-to-top:active:before { -webkit-transform: scaleY(1); transform: scaleY(1); }
+
+.skill a { margin: .4em; padding: 1em; cursor: pointer; background: #e1e1e1; text-decoration: none; color: white; font-family: "Raleway-SemiBold"; }
 
 .slider { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; z-index: 1; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
