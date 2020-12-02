@@ -1,8 +1,11 @@
 .agency {
     @include split;
+    background-color: $white;
+    // background-color: #333333;
+    animation: fadeUp 2s ease-in-out 0s forwards 1;
 
     &__image {
-        background-image: url('./../img/agency.jpg');
+        background-image: url('./../img/agence/equipe_agence_plexus.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -50,6 +53,5 @@
         flex-direction: column;
         justify-content: center;
         padding: 3vw;
-        animation: fadeUp 2s ease-in-out 0s forwards 1;
     }
 }
