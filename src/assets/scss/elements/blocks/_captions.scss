@@ -64,9 +64,24 @@
 
     &__button {
         display: inline-flex;
+        position: relative;
+        align-items: center;
         font-family: $serif-font;
         font-size: 1.5rem;
         margin-top: 10px;
+
+        .icon--arrow-right {
+            font-size: 1.4rem;
+            opacity: 0;
+            transition: all 0.25s ease-in-out;
+        }
+
+        &:hover {
+            .icon--arrow-right {
+                opacity: 1;
+                transform: translateX(10px);
+            }
+        }
     }
 
     &--agency {
