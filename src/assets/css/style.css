@@ -60,15 +60,13 @@ bodyMenu--open { overflow: hidden; }
 
 a, button { cursor: pointer; }
 
-.button { font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; }
+.button { display: inline-flex; position: relative; font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; transform: perspective(1px) translateZ(0); transition: color 0.3s; }
 
-.button.slide { display: inline-flex; position: relative; transform: perspective(1px) translateZ(0); transition: color 0.3s; }
+.button:before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0; background-color: #ffffff; transform: scaleY(0); transform-origin: 50% 100%; transition: transform 0.3s ease-in-out; }
 
-.button.slide:before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0; background-color: #ffffff; transform: scaleY(0); transform-origin: 50% 100%; transition: transform 0.3s ease-in-out; }
+.button:hover, .button:focus, .button:active { color: #000000; }
 
-.button.slide:hover, .button.slide:focus, .button.slide:active { color: #000000; }
-
-.button.slide:hover:before, .button.slide:focus:before, .button.slide:active:before { transform: scaleY(1); }
+.button:hover:before, .button:focus:before, .button:active:before { transform: scaleY(1); }
 
 @keyframes move { 0% { transform: translate(0px, 0px); }
   20% { transform: translate(-5px, 5px); }
