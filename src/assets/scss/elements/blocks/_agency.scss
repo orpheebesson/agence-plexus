@@ -52,31 +52,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        background-color: $black;
         padding: 3vw;
-    }
-
-    &__title {
-        font-family: $title-font;
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-
-    &__button {
-        font-family: $serif-font;
-        font-size: 1.2rem;
-        border: 1px solid $white;
-        color: $white;
-        background-color: $black;
-        padding: 18px 36px;
-        align-self: flex-start;
-        margin-top: 30px;
-        margin-left: 15px;
-
-        &:hover {
-            color: $black;
-            background-color: $white;
-        }
     }
 }

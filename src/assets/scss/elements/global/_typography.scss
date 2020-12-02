@@ -11,6 +11,11 @@ p {
     line-height: 1.5rem;
 }
 
+.title {
+    font-family: $title-font;
+    font-size: 2rem;
+}
+
 .icon {
     font-family: $icons-font;
     speak: none;
@@ -50,6 +55,14 @@ p {
 
     &--magnifier::before {
         content: "\e86f";
+    }
+
+    &--arrow-right:before {
+        content: "\e87a";
+    }
+
+    &--arrow-right-circle:before {
+        content: "\e886";
     }
 }
 

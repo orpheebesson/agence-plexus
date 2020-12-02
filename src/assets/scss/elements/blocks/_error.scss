@@ -6,11 +6,6 @@
     align-items: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
 
-    &__title {
-        font-family: $title-font;
-        font-size: 2rem;
-    }
-
     &__caption {
         font-size: 1.2rem;
         text-align: center;
@@ -18,16 +13,6 @@
     }
 
     &__button {
-        font-family: $serif-font;
-        font-size: 1.2rem;
-        border: 1px solid $white;
-        color: $white;
-        background-color: $black;
-        padding: 18px 36px;
-
-        &:hover {
-            color: $black;
-            background-color: $white;
-        }
+        margin: 0 auto;
     }
 }

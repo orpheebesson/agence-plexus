@@ -6,11 +6,6 @@
     align-items: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
 
-    &__title {
-        font-family: $title-font;
-        font-size: 2rem;
-    }
-
     &__form {
         display: flex;
         flex-direction: column;
@@ -42,17 +37,9 @@
             }
 
             &__submit {
-                font-family: $serif-font;
-                font-size: 1.3rem;
-                border: 1px solid $white;
-                color: $white;
-                background-color: $black;
-                padding: 10px;
+                margin: 20px auto;
 
                 &:hover {
-                    color: $black;
-                    background-color: $white;
-                    letter-spacing: 2px;
                     box-shadow: -10px 10px $beige;
                 }
             }
