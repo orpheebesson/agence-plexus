@@ -104,9 +104,9 @@ a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 .preloader__letters { display: flex; margin-right: auto; margin-left: auto; height: auto; }
 
-.preloader__letters svg#left, .preloader__letters svg#right { width: 150px; height: 150px; }
+.preloader__letters #left, .preloader__letters #right { width: 150px; height: 150px; }
 
-.preloader__letters div#x { margin: 0 -30px; width: 150px; height: 150px; }
+.preloader__letters #x { height: 150px; width: 150px; margin: 0 -30px; }
 
 .preloader__animation { background-color: black; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
 
