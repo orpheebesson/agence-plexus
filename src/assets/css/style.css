@@ -262,7 +262,7 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .projects__item { position: relative; padding: 0 6vw; }
 
-.projects__link { position: relative; font-family: "Raleway-SemiBold"; display: inline-flex; cursor: pointer; font-size: 7vw; line-height: 1.2; color: transparent; -webkit-text-stroke: 1.5px #ffffff; white-space: nowrap; padding: 0 1vw; transition: opacity 0.4s; }
+.projects__link { position: relative; font-family: "Raleway-SemiBold"; display: inline-flex; cursor: pointer; font-size: 6vw; line-height: 1.2; color: transparent; -webkit-text-stroke: 1.5px #ffffff; white-space: nowrap; padding: 0 1vw; transition: opacity 0.4s; }
 
 .projects__link::before { all: initial; position: absolute; bottom: 60%; left: 0; pointer-events: none; }
 
@@ -278,7 +278,7 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .projects .repeat__list { display: flex; position: relative; width: fit-content; opacity: 0; transition: opacity 0.1s; animation: repeat 5s linear infinite; animation-play-state: paused; }
 
-.projects .repeat__item { font-family: "Raleway-SemiBold"; font-size: 7vw; font-style: italic; line-height: 1.2; white-space: nowrap; padding: 0 1vw; }
+.projects .repeat__item { font-family: "Raleway-SemiBold"; font-size: 6vw; font-style: italic; line-height: 1.2; white-space: nowrap; padding: 0 1vw; }
 
 @keyframes repeat { 0% { transform: translate3d(var(--move-initial), 0, 0); }
   100% { transform: translate3d(var(--move-final), 0, 0); } }
