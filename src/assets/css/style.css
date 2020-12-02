@@ -158,33 +158,29 @@ a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
 
 .menuRight a { display: inline-flex; width: 100%; }
 
-main { height: calc(100vh - 95px); display: flex; justify-content: center; align-items: center; background-image: url("./../img/background.png"); background-size: contain; background-repeat: no-repeat; width: 100%; }
+main { height: calc(100vh - 95px); position: relative; }
 
-.logo__plexus { height: 125px; }
+.logo__plexus { position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); height: 125px; }
 
-.caption { position: absolute; max-width: 400px; animation: move 3s linear infinite alternate; }
+.captions__list { height: 100%; display: grid; grid-template-columns: 50% 50%; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_1.png"); background-position: top left, top -100px right, bottom -100px right -100px, bottom -50px left; background-size: 50%; background-repeat: no-repeat; }
 
-.caption:first-child::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 90%; bottom: -50px; left: 40%; transform: translateX(-50%); transform: rotate(20deg); }
+.captions__list .caption__item { display: flex; }
 
-.caption:nth-child(2)::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 90%; bottom: -50px; right: 40%; transform: translateX(-50%); transform: rotate(-20deg); }
+.captions__list .caption { position: relative; margin: auto; max-width: 400px; animation: move 3s linear infinite alternate; }
 
-.caption:nth-child(3)::before { content: ""; position: absolute; background: #ffffff; height: 1px; width: 90%; top: -50px; left: 40%; transform: translateX(-50%); transform: rotate(-20deg); }
+.captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; }
 
-.caption:last-of-type::before { content: ""; position: absolute; background: #ffffff; height: 1px; width: 90%; top: -50px; right: 40%; transform: translateX(-50%); transform: rotate(20deg); }
+.captions__list .caption__title { font-family: "Raleway-SemiBold"; font-size: 2rem; padding: 10px 0; }
 
-.caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; }
+.captions__list .caption__button { display: inline-flex; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; margin-top: 10px; }
 
-.caption__title { font-family: "Raleway-SemiBold"; font-size: 2rem; padding: 10px 0; }
+.captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; bottom: -50px; left: 30%; transform: rotate(20deg); }
 
-.caption__button { display: inline-flex; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; margin-top: 10px; }
+.captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; bottom: -50px; right: 30%; transform: rotate(-20deg); }
 
-.caption--agency { top: 150px; left: 100px; background-image: url("./../img/accueil/illustration_accueil_1.png"); background-size: cover; background-repeat: no-repeat; }
+.captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; top: -50px; left: 30%; transform: rotate(-20deg); }
 
-.caption--members { top: 150px; right: 100px; background-image: url("./../img/accueil/illustration_accueil_2.png"); background-size: cover; background-repeat: no-repeat; }
-
-.caption--projects { bottom: 150px; left: 100px; background-image: url("./../img/accueil/illustration_accueil_3.png"); background-size: cover; background-repeat: no-repeat; }
-
-.caption--contact { bottom: 150px; right: 100px; background-image: url("./../img/accueil/illustration_accueil_1.png"); background-size: cover; background-repeat: no-repeat; }
+.captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; top: -50px; right: 30%; transform: rotate(20deg); }
 
 .agency { background-color: #ffffff; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
