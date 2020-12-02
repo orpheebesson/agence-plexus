@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -61,7 +58,17 @@ body { background-color: #000000; color: #ffffff; transition: 0.25s ease-in-out;
 
 bodyMenu--open { overflow: hidden; }
 
-a, button { cursor: pointer; transition: all 0.25s ease-in-out; }
+a, button { cursor: pointer; }
+
+.button { font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; }
+
+.button.slide { display: inline-flex; position: relative; transform: perspective(1px) translateZ(0); transition: color 0.3s; }
+
+.button.slide:before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0; background-color: #ffffff; transform: scaleY(0); transform-origin: 50% 100%; transition: transform 0.3s ease-in-out; }
+
+.button.slide:hover, .button.slide:focus, .button.slide:active { color: #000000; }
+
+.button.slide:hover:before, .button.slide:focus:before, .button.slide:active:before { transform: scaleY(1); }
 
 @keyframes move { 0% { transform: translate(0px, 0px); }
   20% { transform: translate(-5px, 5px); }
@@ -203,35 +210,21 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .agency .quote__author { font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; text-align: right; margin-top: 40px; }
 
-.agency__article { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.agency__article { display: flex; flex-direction: column; justify-content: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .agency__title { font-family: "Raleway-SemiBold"; font-size: 2rem; margin-bottom: 30px; }
 
-.agency__button { font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; margin-top: 30px; margin-left: 15px; }
+.skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; margin-bottom: 30px; }
 
-.agency__button:hover { color: #000000; background-color: #ffffff; }
+.skill__list .skill { flex: 1 1 40%; margin: 25px 25px 25px 0; }
 
-.skill { width: 260px; margin: 15px; }
+.skill__list .skill:last-of-type { margin: 15px 15px 15px 7.5px; }
 
-.skill:last-of-type { margin: 15px 15px 15px 7.5px; }
+.skill__list .skill__icon { color: #c4c4ac; font-size: 2rem; }
 
-.skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; }
+.skill__list .skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
 
-.skill__icon { color: #c4c4ac; font-size: 2rem; }
-
-.skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
-
-.skill p { line-height: 1.75rem; }
-
-.skill .hvr-sweep-to-top { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; background-color: black; }
-
-.skill .hvr-sweep-to-top:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: white; -webkit-transform: scaleY(0); transform: scaleY(0); -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
-
-.skill .hvr-sweep-to-top:hover, .skill .hvr-sweep-to-top:focus, .skill .hvr-sweep-to-top:active { color: black; }
-
-.skill .hvr-sweep-to-top:hover:before, .skill .hvr-sweep-to-top:focus:before, .skill .hvr-sweep-to-top:active:before { -webkit-transform: scaleY(1); transform: scaleY(1); }
-
-.skill a { margin: .4em; padding: 1em; cursor: pointer; background: #e1e1e1; text-decoration: none; color: white; font-family: "Raleway-SemiBold"; }
+.skill__list .skill p { line-height: 1.75rem; }
 
 .slider { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; z-index: 1; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
@@ -245,9 +238,7 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .slider__member .member__subtitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; margin: 15px 0; }
 
-.slider__member .member__description { text-align: justify; }
-
-.slider__member .member__button { font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 18px 36px; align-self: flex-start; margin-top: 30px; }
+.slider__member .member__description { text-align: justify; margin-bottom: 30px; }
 
 .swiper-slide { flex-shrink: 0; position: relative; transition-property: transform; }
 
@@ -261,14 +252,6 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .swiper-pagination-fraction { bottom: 10px; left: 0; width: 100%; }
 
-.hvr-sweep-to-top { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; background-color: black; }
-
-.hvr-sweep-to-top:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: white; -webkit-transform: scaleY(0); transform: scaleY(0); -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
-
-.hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active { color: black; }
-
-.hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before { -webkit-transform: scaleY(1); transform: scaleY(1); }
-
 .contact { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .contact__title { font-family: "Raleway-SemiBold"; font-size: 2rem; }
@@ -281,9 +264,9 @@ main { height: calc(100vh - 95px); display: flex; justify-content: center; align
 
 .contact__form .form__field:focus { box-shadow: -10px 10px #c4c4ac; color: #000000; background-color: #ffffff; }
 
-.contact__form .form__submit { font-family: "CrimsonText-Regular", serif; font-size: 1.3rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 10px; }
+.contact__form .form__submit { margin: 20px auto; }
 
-.contact__form .form__submit:hover { color: #000000; background-color: #ffffff; letter-spacing: 2px; box-shadow: -10px 10px #c4c4ac; }
+.contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
 
 .error { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
