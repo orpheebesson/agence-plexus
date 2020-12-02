@@ -54,12 +54,12 @@
     &__pretitle {
         font-family: $italic-serif-font;
         font-size: 1.5rem;
+        display: inline-flex;
+        margin-bottom: 10px;
     }
 
-    &__title {
-        font-family: $title-font;
-        font-size: 2rem;
-        padding: 10px 0;
+    &__description {
+        margin: 10px 0;
     }
 
     &__button {
@@ -68,7 +68,6 @@
         align-items: center;
         font-family: $serif-font;
         font-size: 1.5rem;
-        margin-top: 10px;
 
         .icon--arrow-right {
             font-size: 1.4rem;

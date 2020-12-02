@@ -23,7 +23,7 @@
         font-family: $title-font;
         display: inline-flex;
         cursor: pointer;
-        font-size: 7vw;
+        font-size: 6vw;
         line-height: 1.2;
         color: transparent;
         -webkit-text-stroke: 1.5px $white;
@@ -89,7 +89,7 @@
 
         &__item {
             font-family: $title-font;
-            font-size: 7vw;
+            font-size: 6vw;
             font-style: italic;
             line-height: 1.2;
             white-space: nowrap;
