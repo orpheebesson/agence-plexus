@@ -11,6 +11,11 @@ p {
     line-height: 1.5rem;
 }
 
+.title {
+    font-family: $title-font;
+    font-size: 2rem;
+}
+
 .icon {
     font-family: $icons-font;
     speak: none;
