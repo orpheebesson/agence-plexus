@@ -42,17 +42,9 @@
             }
 
             &__submit {
-                font-family: $serif-font;
-                font-size: 1.3rem;
-                border: 1px solid $white;
-                color: $white;
-                background-color: $black;
-                padding: 10px;
+                margin: 20px auto;
 
                 &:hover {
-                    color: $black;
-                    background-color: $white;
-                    letter-spacing: 2px;
                     box-shadow: -10px 10px $beige;
                 }
             }

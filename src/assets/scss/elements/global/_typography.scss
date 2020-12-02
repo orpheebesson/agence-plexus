@@ -51,6 +51,14 @@ p {
     &--magnifier::before {
         content: "\e86f";
     }
+
+    &--arrow-right:before {
+        content: "\e87a";
+    }
+
+    &--arrow-right-circle:before {
+        content: "\e886";
+    }
 }
 
 input,
