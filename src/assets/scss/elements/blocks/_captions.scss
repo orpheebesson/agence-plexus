@@ -1,55 +1,29 @@
-.caption {
-    position: absolute;
-    max-width: 400px;
-    animation: move 3s linear infinite alternate;
+.captions__list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-image:
+        url('./../img/accueil/illustration_accueil_1.png'),
+        url('./../img/accueil/illustration_accueil_2.png'),
+        url('./../img/accueil/illustration_accueil_3.png'),
+        url('./../img/accueil/illustration_accueil_1.png');
+    background-position:
+        top left,
+        top -100px right,
+        bottom -100px right -100px,
+        bottom -50px left;
+    background-size: 50%;
+    background-repeat: no-repeat;
 
-    &:first-child::after {
-        content: "";
-        position: absolute;
-        background: $white;
-        height: 1px;
-        width: 90%;
-        bottom: -50px;
-        left: 40%;
-        transform: translateX(-50%);
-        transform: rotate(20deg);
+    .caption__item {
+        display: flex;
     }
 
-    &:nth-child(2)::after {
-        content: "";
-        position: absolute;
-        background: $white;
-        height: 1px;
-        width: 90%;
-        bottom: -50px;
-        right: 40%;
-        transform: translateX(-50%);
-        transform: rotate(-20deg);
-    }
-
-    &:nth-child(3)::before {
-        content: "";
-        position: absolute;
-        background: $white;
-        height: 1px;
-        width: 90%;
-        top: -50px;
-        left: 40%;
-        transform: translateX(-50%);
-        transform: rotate(-20deg);
-    }
-
-    &:last-of-type::before {
-        content: "";
-        position: absolute;
-        background: $white;
-        height: 1px;
-        width: 90%;
-        top: -50px;
-        right: 40%;
-        transform: translateX(-50%);
-        transform: rotate(20deg);
-    }
+    .caption {
+        position: relative;
+        margin: auto;
+        max-width: 400px;
+        animation: move 3s linear infinite alternate;
 
     &__pretitle {
         font-family: $italic-serif-font;
@@ -83,23 +57,57 @@
         }
     }
 
-    &--agency {
-        top: 150px;
-        left: 100px;
-    }
+    &>.caption {
+        &--agency {
+            &>.caption::after {
+                content: "";
+                position: absolute;
+                background: $white;
+                height: 1px;
+                width: 60%;
+                bottom: -50px;
+                left: 30%;
+                transform: rotate(20deg);
+            }
+        }
 
-    &--members {
-        top: 150px;
-        right: 100px;
-    }
+        &--members {
+            &>.caption::after {
+                content: "";
+                position: absolute;
+                background: $white;
+                height: 1px;
+                width: 60%;
+                bottom: -50px;
+                right: 30%;
+                transform: rotate(-20deg);
+            }
+        }
 
-    &--projects {
-        bottom: 150px;
-        left: 100px;
-    }
+        &--projects {
+            &>.caption::after {
+                content: "";
+                position: absolute;
+                background: $white;
+                height: 1px;
+                width: 60%;
+                top: -50px;
+                left: 30%;
+                transform: rotate(-20deg);
+            }
+        }
 
-    &--contact {
-        bottom: 150px;
-        right: 100px;
+        &--contact {
+            &>.caption::after {
+                content: "";
+                position: absolute;
+                background: $white;
+                height: 1px;
+                width: 60%;
+                top: -50px;
+                right: 30%;
+                transform: rotate(20deg);
+            }
+        }
     }
 }
