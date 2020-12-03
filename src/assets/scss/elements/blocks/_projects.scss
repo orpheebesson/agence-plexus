@@ -7,7 +7,6 @@
     overflow: hidden;
 
     &__list {
-        font-size: 7vw;
         --offset: 20vw;
         --move-initial: calc(-25% + var(--offset));
         --move-final: calc(-50% + var(--offset));
@@ -23,10 +22,16 @@
         font-family: $title-font;
         display: inline-flex;
         cursor: pointer;
-        font-size: 6vw;
-        line-height: 1.2;
-        color: transparent;
-        -webkit-text-stroke: 1.5px $white;
+        font-size: 8vw;
+
+        line-height: 1.5;
+        color: $white;
+
+        @include medium {
+            color: transparent;
+            -webkit-text-stroke: 1px $white;
+        }
+
         white-space: nowrap;
         padding: 0 1vw;
         transition: opacity 0.4s;
@@ -39,20 +44,22 @@
             pointer-events: none;
         }
 
-        &:hover {
-            transition-duration: 0.1s;
-            opacity: 0;
+        @include medium {
+            &:hover {
+                transition-duration: 0.1s;
+                opacity: 0;
 
-            &+.projects__image {
-                opacity: 1;
-                transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
-                transition: all 0.4s;
-            }
+                &+.projects__image {
+                    opacity: 1;
+                    transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+                    transition: all 0.4s;
+                }
 
-            &~.repeat .repeat__list {
-                opacity: 1;
-                animation-play-state: running;
-                transition-duration: 0.4s;
+                &~.repeat .repeat__list {
+                    opacity: 1;
+                    animation-play-state: running;
+                    transition-duration: 0.4s;
+                }
             }
         }
     }
@@ -89,9 +96,10 @@
 
         &__item {
             font-family: $title-font;
-            font-size: 6vw;
+            font-size: 8vw;
+
             font-style: italic;
-            line-height: 1.2;
+            line-height: 1.5;
             white-space: nowrap;
             padding: 0 1vw;
         }
