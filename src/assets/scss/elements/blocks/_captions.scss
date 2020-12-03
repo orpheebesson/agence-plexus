@@ -25,34 +25,35 @@
         max-width: 400px;
         animation: move 3s linear infinite alternate;
 
-    &__pretitle {
-        font-family: $italic-serif-font;
-        font-size: 1.5rem;
-        display: inline-flex;
-        margin-bottom: 10px;
-    }
-
-    &__description {
-        margin: 10px 0;
-    }
-
-    &__button {
-        display: inline-flex;
-        position: relative;
-        align-items: center;
-        font-family: $serif-font;
-        font-size: 1.5rem;
-
-        .icon--arrow-right {
-            font-size: 1.4rem;
-            opacity: 0;
-            transition: all 0.25s ease-in-out;
+        &__pretitle {
+            font-family: $italic-serif-font;
+            font-size: 1.5rem;
+            display: inline-flex;
+            margin-bottom: 10px;
         }
 
-        &:hover {
+        &__description {
+            margin: 10px 0;
+        }
+
+        &__button {
+            display: inline-flex;
+            position: relative;
+            align-items: center;
+            font-family: $serif-font;
+            font-size: 1.5rem;
+
             .icon--arrow-right {
-                opacity: 1;
-                transform: translateX(10px);
+                font-size: 1.4rem;
+                opacity: 0;
+                transition: all 0.25s ease-in-out;
+            }
+
+            &:hover {
+                .icon--arrow-right {
+                    opacity: 1;
+                    transform: translateX(10px);
+                }
             }
         }
     }
