@@ -172,7 +172,7 @@ a, button { cursor: pointer; }
 
 .menuRight a { display: inline-flex; width: 100%; }
 
-main { height: calc(100vh - 95px); position: relative; }
+main { height: calc(100vh - 82px); position: relative; }
 
 .logo__plexus { position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); height: 125px; }
 
