@@ -283,15 +283,19 @@ main { height: calc(100vh - 82px); position: relative; }
 
 .contact { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
-.contact__form { display: flex; flex-direction: column; max-width: 300px; margin-top: 50px; }
+.contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
 
 .contact__form input, .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
 
-.contact__form .form__field { box-shadow: -10px 10px #ffffff; border: 1px solid #ffffff; margin: 20px 0; transition: all 0.25s ease-in-out; }
+.contact__form .form__field { max-width: 80vw; box-shadow: -10px 10px #ffffff; border: 1px solid #ffffff; margin: 3vh 0; transition: all 0.25s ease-in-out; }
+
+@media screen and (min-width: 576px) { .contact__form .form__field { max-width: 50vw; } }
+
+@media screen and (min-width: 1500px) { .contact__form .form__field { max-width: 35vw; } }
 
 .contact__form .form__field:focus { box-shadow: -10px 10px #c4c4ac; color: #000000; background-color: #ffffff; }
 
-.contact__form .form__submit { margin: 20px auto; }
+.contact__form .form__submit { margin: 3vh auto; }
 
 .contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
 

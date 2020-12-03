@@ -9,8 +9,7 @@
     &__form {
         display: flex;
         flex-direction: column;
-        max-width: 300px;
-        margin-top: 50px;
+        margin-top: 3vh;
 
         input,
         textarea {
@@ -24,9 +23,19 @@
         .form {
 
             &__field {
+                max-width: 80vw;
+
+                @include small {
+                    max-width: 50vw;
+                }
+
+                @include xx-large {
+                    max-width: 35vw;
+                }
+
                 box-shadow: -10px 10px $white;
                 border: 1px solid $white;
-                margin: 20px 0;
+                margin: 3vh 0;
                 transition: all 0.25s ease-in-out;
 
                 &:focus {
@@ -37,7 +46,7 @@
             }
 
             &__submit {
-                margin: 20px auto;
+                margin: 3vh auto;
 
                 &:hover {
                     box-shadow: -10px 10px $beige;
