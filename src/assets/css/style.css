@@ -182,19 +182,19 @@ main { height: calc(100vh - 95px); position: relative; }
 
 .captions__list .caption { position: relative; margin: auto; max-width: 400px; animation: move 3s linear infinite alternate; }
 
-.captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; }
+.captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; display: inline-flex; margin-bottom: 10px; }
 
-.captions__list .caption__title { font-family: "Raleway-SemiBold"; font-size: 2rem; padding: 10px 0; }
+.captions__list .caption__description { margin: 10px 0; }
 
-.caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; display: inline-flex; margin-bottom: 10px; }
+.captions__list .caption__button { display: inline-flex; position: relative; align-items: center; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; }
 
-.caption__description { margin: 10px 0; }
+.captions__list .caption__button .icon--arrow-right { font-size: 1.4rem; opacity: 0; transition: all 0.25s ease-in-out; }
 
-.caption__button { display: inline-flex; position: relative; align-items: center; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; }
+.captions__list .caption__button:hover .icon--arrow-right { opacity: 1; transform: translateX(10px); }
 
-.caption__button .icon--arrow-right { font-size: 1.4rem; opacity: 0; transition: all 0.25s ease-in-out; }
+.captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; bottom: -50px; left: 30%; transform: rotate(20deg); }
 
-.caption__button:hover .icon--arrow-right { opacity: 1; transform: translateX(10px); }
+.captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; bottom: -50px; right: 30%; transform: rotate(-20deg); }
 
 .captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; top: -50px; left: 30%; transform: rotate(-20deg); }
 
@@ -216,7 +216,7 @@ main { height: calc(100vh - 95px); position: relative; }
 
 .agency .quote__author { font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; text-align: right; margin-top: 40px; }
 
-.agency__article { display: flex; flex-direction: column; justify-content: center; padding: 3vw; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.agency__article { display: flex; flex-direction: column; justify-content: center; background-color: #000000; padding: 3vw; }
 
 .skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; margin: 30px 0; }
 
