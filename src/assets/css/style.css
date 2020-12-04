@@ -178,9 +178,11 @@ a, button { cursor: pointer; }
 
 .menuRight__list { margin-top: 10vh; }
 
-.menuRight__item { font-size: 1.75rem; line-height: 2; text-align: left; color: #ffffff; padding: 0 3vh; opacity: 0; transform: translateX(50px); transition: 0.25s ease-in-out; }
+.menuRight__item { font-size: 1.75rem; line-height: 2; text-align: left; color: #ffffff; opacity: 0; transform: translateX(50px); transition: 0.25s ease-in-out; }
 
-.menuRight a { display: inline-flex; width: 100%; }
+.menuRight div { padding: 0 3vh; transition: 0.25s ease-in-out; }
+
+.menuRight div a { display: inline-flex; width: 100%; transition: 0.25s ease-in-out; }
 
 .menuRight--open { transform: translateX(0); overflow: hidden; }
 
@@ -196,11 +198,9 @@ a, button { cursor: pointer; }
 
 .menuRight--open .menuRight__item:last-child { transition-delay: 0.95s; }
 
-.menuRight--open .menuRight__item a { transition: 0.25s ease-in-out; }
+.menuRight--open .menuRight__item div:hover { background: #c4c4ac; }
 
-.menuRight--open .menuRight__item:hover { background: #c4c4ac; }
-
-.menuRight--open .menuRight__item:hover a { color: #333333; }
+.menuRight--open .menuRight__item div:hover a { color: #333333; }
 
 main { height: 90vh; position: relative; }
 
