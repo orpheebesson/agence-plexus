@@ -4,7 +4,7 @@
     flex-direction: column;
     height: 100vh;
     position: fixed;
-    background: #333333;
+    background: $grey;
     top: 0;
     right: 0;
     bottom: 0;
@@ -26,17 +26,17 @@
     &__item {
         font-family: $title-font;
         font-size: 1.75rem;
-        line-height: 56px;
+        line-height: 2;
         text-align: left;
         color: $white;
-        padding: 0 25px;
+        padding: 0 3vh;
         transition: 0.25s ease-in-out;
 
         &:hover {
             background: $beige;
 
             a {
-                color: #333333;
+                color: $grey;
             }
         }
     }
