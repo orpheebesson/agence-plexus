@@ -52,3 +52,12 @@ button {
         transform: scaleY(1);
     }
 }
+
+[data-barba="wrapper"] {
+    transition: 0.25s ease-in-out;
+
+    &.blur {
+        pointer-events: none;
+        filter: blur(10px);
+    }
+}

@@ -44,13 +44,16 @@ function testrecall() {
 
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
     
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
         document.body.classList.toggle('bodyMenu--open');
     }
 
@@ -63,13 +66,16 @@ function menu() {
 
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
         document.body.classList.toggle('bodyMenu--open');
     }
 
