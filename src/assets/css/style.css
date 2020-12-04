@@ -136,13 +136,15 @@ a, button { cursor: pointer; }
 
 .header { background-color: #000000; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
-.header__item--logo { width: 150px; }
+.header__item--logo { width: 90px; }
+
+@media screen and (min-width: 576px) { .header__item--logo { width: 150px; } }
 
 @media screen and (min-width: 992px) { .header__item--logo { width: 200px; } }
 
-.header__list { display: flex; height: 10vh; justify-content: space-between; align-items: center; }
+.header__list { position: relative; display: flex; height: 10vh; justify-content: space-between; align-items: center; }
 
-.header__switcher { display: flex; }
+.header__switcher { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); display: flex; }
 
 .header__switcher .switcher__icon { font-size: 1.5rem; margin: 0 10px; }
 

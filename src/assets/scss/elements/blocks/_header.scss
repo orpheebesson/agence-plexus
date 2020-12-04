@@ -4,7 +4,11 @@
     transition: 0.25s ease-in-out;
 
     &__item--logo {
-        width: 150px;
+        width: 90px;
+
+        @include small {
+            width: 150px;
+        }
 
         @include large {
             width: 200px;
@@ -12,6 +16,7 @@
     }
 
     &__list {
+        position: relative;
         display: flex;
         height: 10vh;
         justify-content: space-between;
@@ -19,6 +24,10 @@
     }
 
     &__switcher {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
         display: flex;
 
         .switcher__icon {
