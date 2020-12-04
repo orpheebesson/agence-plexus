@@ -132,11 +132,13 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
 
-.header { background-color: #000000; padding: 20px; transition: 0.25s ease-in-out; }
+.header { background-color: #000000; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
 .header__item--logo { width: 150px; }
 
-.header__list { display: flex; justify-content: space-between; align-items: center; }
+@media screen and (min-width: 992px) { .header__item--logo { width: 200px; } }
+
+.header__list { display: flex; height: 10vh; justify-content: space-between; align-items: center; }
 
 .header__switcher { display: flex; }
 
@@ -144,15 +146,15 @@ a, button { cursor: pointer; }
 
 .header__switcher .switcher__dark--text, .header__switcher .switcher__light--text { opacity: 0; transform: translateY(5px); transition: 0.25s ease-in-out; }
 
-.header__switcher .switcher__dark:hover .switcher__dark--text, .header__switcher .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); }
+@media screen and (min-width: 576px) { .header__switcher .switcher__dark:hover .switcher__dark--text, .header__switcher .switcher__light:hover .switcher__light--text { opacity: 1; transform: translateY(0); } }
 
 .header__switcher .switcher__dark, .header__switcher .switcher__light { display: flex; align-items: center; color: #c4c4ac; cursor: pointer; }
 
-.header .menu__burger { height: 20px; width: 30px; position: relative; cursor: pointer; z-index: 20; transform: rotate(0deg); transition: 0.5s ease-in-out; }
+.header .menu__burger { height: 20px; width: 30px; position: relative; cursor: pointer; z-index: 20; transition: 0.5s ease-in-out; }
 
-.header .menu__burger span { height: 2px; width: 100%; position: absolute; background: #ffffff; left: 0; opacity: 1; transform: rotate(0deg); transition: .25s ease-in-out; }
+.header .menu__burger span { height: 2px; width: 100%; position: absolute; background: #ffffff; left: 0; opacity: 1; transition: .25s ease-in-out; }
 
-.header .menu__burger span:nth-child(1) { top: 0px; transform-origin: left center; }
+.header .menu__burger span:nth-child(1) { top: 0; transform-origin: left center; }
 
 .header .menu__burger span:nth-child(2) { top: 10px; transform-origin: left center; }
 
@@ -176,7 +178,7 @@ a, button { cursor: pointer; }
 
 .menuRight a { display: inline-flex; width: 100%; }
 
-main { height: calc(100vh - 82px); position: relative; }
+main { height: 90vh; position: relative; }
 
 .logo__plexus { position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); height: 125px; }
 
@@ -204,15 +206,15 @@ main { height: calc(100vh - 82px); position: relative; }
 
 .captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 60%; top: -50px; right: 30%; transform: rotate(20deg); }
 
-.agency { background-color: #ffffff; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.agency { background-color: #000000; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
 
-.agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 72px); display: flex; align-items: flex-end; }
+.agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: 90vh; display: flex; align-items: flex-end; }
 
 @media screen and (min-width: 1200px) { .agency__image { height: inherit; } }
 
-@media screen and (min-width: 1500px) { .agency__image { height: calc(100vh - 72px); } }
+@media screen and (min-width: 1500px) { .agency__image { height: 90vh; } }
 
 .agency__article { display: flex; flex-direction: column; justify-content: center; background-color: #000000; padding: 5vh 4vh; }
 
@@ -260,7 +262,7 @@ main { height: calc(100vh - 82px); position: relative; }
 
 .slider__member { display: flex; flex-direction: column; align-items: center; }
 
-@media screen and (min-width: 768px) { .slider__member { height: calc(100vh - 95px); flex-direction: row; justify-content: center; align-items: center; } }
+@media screen and (min-width: 768px) { .slider__member { height: 90vh; flex-direction: row; justify-content: center; align-items: center; } }
 
 .slider__member .member__image { transition: 1s; }
 
@@ -304,7 +306,7 @@ main { height: calc(100vh - 82px); position: relative; }
 
 .swiper-pagination-fraction { bottom: 10px; left: 0; width: 100%; }
 
-.projects { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; animation: fadeUp 2s ease-in-out 0s forwards 1; overflow: hidden; }
+.projects { height: 90vh; display: flex; flex-direction: column; justify-content: center; animation: fadeUp 2s ease-in-out 0s forwards 1; overflow: hidden; }
 
 .projects__list { --offset: 20vw; --move-initial: calc(-25% + var(--offset)); --move-final: calc(-50% + var(--offset)); }
 
@@ -331,7 +333,7 @@ main { height: calc(100vh - 82px); position: relative; }
 @keyframes repeat { 0% { transform: translate3d(var(--move-initial), 0, 0); }
   100% { transform: translate3d(var(--move-final), 0, 0); } }
 
-.contact { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.contact { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
 
@@ -349,7 +351,7 @@ main { height: calc(100vh - 82px); position: relative; }
 
 .contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
 
-.error { height: calc(100vh - 82px); display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.error { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .error__caption { font-size: 1.2rem; text-align: center; margin: 25px 0; }
 

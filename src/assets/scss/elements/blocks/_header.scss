@@ -1,14 +1,19 @@
 .header {
     background-color: $black;
-    padding: 20px;
+    padding: 0 2vw;
     transition: 0.25s ease-in-out;
 
     &__item--logo {
         width: 150px;
+
+        @include large {
+            width: 200px;
+        }
     }
 
     &__list {
         display: flex;
+        height: 10vh;
         justify-content: space-between;
         align-items: center;
     }
@@ -28,10 +33,13 @@
             transition: 0.25s ease-in-out;
         }
 
-        .switcher__dark:hover .switcher__dark--text,
-        .switcher__light:hover .switcher__light--text {
-            opacity: 1;
-            transform: translateY(0);
+        @include small {
+
+            .switcher__dark:hover .switcher__dark--text,
+            .switcher__light:hover .switcher__light--text {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .switcher__dark,
@@ -49,7 +57,6 @@
         position: relative;
         cursor: pointer;
         z-index: 20;
-        transform: rotate(0deg);
         transition: 0.5s ease-in-out;
 
         span {
@@ -59,11 +66,10 @@
             background: $white;
             left: 0;
             opacity: 1;
-            transform: rotate(0deg);
             transition: .25s ease-in-out;
 
             &:nth-child(1) {
-                top: 0px;
+                top: 0;
                 transform-origin: left center;
             }
 

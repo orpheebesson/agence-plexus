@@ -3,8 +3,7 @@
         @include split;
     }
 
-    background-color: $white;
-    // background-color: #333333;
+    background-color: $black;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
 
     &__image {
@@ -12,14 +11,14 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: calc(100vh - 72px);
+        height: 90vh;
 
         @include x-large {
             height: inherit;
         }
 
         @include xx-large {
-            height: calc(100vh - 72px);
+            height: 90vh;
         }
 
         display: flex;
