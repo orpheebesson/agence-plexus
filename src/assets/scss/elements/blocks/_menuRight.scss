@@ -29,12 +29,12 @@
     }
 
     div {
-        padding: 0 3vh;
         transition: 0.25s ease-in-out;
 
         a {
             display: inline-flex;
             width: 100%;
+            padding: 0 3vh;
             transition: 0.25s ease-in-out;
         }
     }
