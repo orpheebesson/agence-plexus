@@ -338,9 +338,15 @@ main { height: 90vh; position: relative; }
 
 .projects__item { position: relative; padding: 0 6vw; }
 
-.projects__link { position: relative; font-family: "Raleway-SemiBold"; display: inline-flex; cursor: pointer; font-size: 8vw; line-height: 1.5; color: #ffffff; white-space: nowrap; padding: 0 1vw; transition: opacity 0.4s; }
+.projects__item:nth-child(odd) { border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
 
-@media screen and (min-width: 768px) { .projects__link { color: transparent; -webkit-text-stroke: 1px #ffffff; } }
+.projects__item:nth-child(even) { border-bottom: 1px solid #ffffff; }
+
+.projects__link { position: relative; font-family: "Raleway-SemiBold"; display: inline-flex; cursor: pointer; font-size: 7vw; line-height: 3; color: #ffffff; white-space: nowrap; padding: 0 1vw; transition: opacity 0.4s; }
+
+@media screen and (min-width: 768px) { .projects__link { line-height: 2; color: transparent; -webkit-text-stroke: 1px #ffffff; } }
+
+@media screen and (min-width: 1200px) { .projects__link { font-size: 6vw; } }
 
 .projects__link::before { all: initial; position: absolute; bottom: 60%; left: 0; pointer-events: none; }
 
@@ -354,7 +360,11 @@ main { height: 90vh; position: relative; }
 
 .projects .repeat__list { display: flex; position: relative; width: fit-content; opacity: 0; transition: opacity 0.1s; animation: repeat 5s linear infinite; animation-play-state: paused; }
 
-.projects .repeat__item { font-family: "Raleway-SemiBold"; font-size: 8vw; font-style: italic; line-height: 1.5; white-space: nowrap; padding: 0 1vw; }
+.projects .repeat__item { font-family: "Raleway-SemiBold"; font-size: 7vw; font-style: italic; line-height: 3; white-space: nowrap; padding: 0 1vw; }
+
+@media screen and (min-width: 1200px) { .projects .repeat__item { font-size: 6vw; } }
+
+@media screen and (min-width: 768px) { .projects .repeat__item { line-height: 2; } }
 
 @keyframes repeat { 0% { transform: translate3d(var(--move-initial), 0, 0); }
   100% { transform: translate3d(var(--move-final), 0, 0); } }
