@@ -24,7 +24,7 @@
         align-items: center;
 
         @include medium {
-            height: 90vh;
+            height: 80vh;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -61,9 +61,9 @@
                     padding-left: 5vw;
                 }
 
-                // @include x-large {
-                //     border-left: 1px solid $white;
-                // }
+                @include xx-large {
+                    max-width: 750px;
+                }
             }
 
             &__subtitle {
@@ -76,6 +76,14 @@
                 margin-bottom: 5vh;
             }
         }
+    }
+
+    &__controls {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
     }
 }
 
@@ -106,23 +114,13 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    height: 40px;
-    width: 40px;
     cursor: pointer;
-    font-size: 2vh;
-    color: $black;
-    background-color: rgba($white, 0.9);
+    font-size: 1.75rem;
+    opacity: 0.75;
     transition: all 0.25s ease-in-out;
 
     &:hover {
-        background-color: $white;
+        opacity: 1;
     }
 }
 
@@ -132,32 +130,14 @@
     pointer-events: none;
 }
 
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-    left: 20px;
-    right: auto;
-}
-
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
-    right: 20px;
-    left: auto;
-}
-
 .swiper-pagination {
-    position: absolute;
+    font-size: 1.1rem;
     text-align: center;
-    transition: 300ms opacity;
+    margin: 0 50px;
     transform: translate3d(0, 0, 0);
-    z-index: 10;
+    transition: 300ms opacity;
 }
 
 .swiper-pagination.swiper-pagination-hidden {
     opacity: 0;
-}
-
-.swiper-pagination-fraction {
-    bottom: 10px;
-    left: 0;
-    width: 100%;
 }
