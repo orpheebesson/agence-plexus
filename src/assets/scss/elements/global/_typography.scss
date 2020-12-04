@@ -64,6 +64,14 @@ p {
     &--arrow-right-circle:before {
         content: "\e886";
     }
+
+    &--chevron-left:before {
+        content: "\e875";
+    }
+
+    &--chevron-right:before {
+        content: "\e876";
+    }
 }
 
 input,

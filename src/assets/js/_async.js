@@ -1,22 +1,30 @@
 function testrecall() {
 
-    var slider = new Swiper('.slider', {
-        effect: 'coverflow',
-        speed: 1000,
-        loop: true,
-        mousewheel: true,
-        fadeEffect: {
-            crossFade: true
-        },
-        keyboard: {
-            enabled: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-    });
-
+    if(document.querySelector('.slider')) {
+        var slider = new Swiper('.slider', {
+            effect: 'coverflow',
+            speed: 1000,
+            loop: true,
+            fadeEffect: {
+                crossFade: true
+            },
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        });
+        
+        if (window.innerWidth >= 768) {
+            slider.mousewheel.enable();
+        }
+    }
 
     const switcherDark = document.querySelector('.switcher__dark');
     const switcherLight = document.querySelector('.switcher__light');
