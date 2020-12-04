@@ -11,8 +11,16 @@
     z-index: 10;
     transform: translateX(100%);
     transition-duration: 0.5s;
-    width: 275px;
     overflow: hidden;
+    width: 225px;
+
+    @include extra-small {
+        width: 275px;
+    }
+
+    @include small {
+        width: 300px;
+    }
 
     &__list {
         margin-top: 10vh;

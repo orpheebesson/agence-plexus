@@ -174,7 +174,11 @@ a, button { cursor: pointer; }
 
 .header .menu__burger--open span:nth-child(3) { transform: rotate(-45deg); }
 
-.menuRight { display: flex; flex-direction: column; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; width: 275px; overflow: hidden; }
+.menuRight { display: flex; flex-direction: column; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; overflow: hidden; width: 225px; }
+
+@media screen and (min-width: 480px) { .menuRight { width: 275px; } }
+
+@media screen and (min-width: 576px) { .menuRight { width: 300px; } }
 
 .menuRight__list { margin-top: 10vh; }
 
