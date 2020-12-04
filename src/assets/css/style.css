@@ -200,7 +200,7 @@ a, button { cursor: pointer; }
 
 .menuRight--open .menuRight__item div:hover { background: #c4c4ac; }
 
-.menuRight--open .menuRight__item div:hover a { color: #333333; }
+.menuRight--open .menuRight__item div:hover a { color: #333333; transform: translateX(20px); }
 
 main { height: 90vh; position: relative; }
 
