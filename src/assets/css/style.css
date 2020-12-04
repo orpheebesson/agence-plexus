@@ -174,13 +174,15 @@ a, button { cursor: pointer; }
 
 .menuRight--open { transform: translateX(0); overflow: hidden; }
 
-.menuRight__list { margin-top: 82px; }
+.menuRight__list { margin-top: 10vh; }
 
 .menuRight__item { font-family: "Raleway-SemiBold"; font-size: 1.75rem; line-height: 56px; text-align: left; color: #ffffff; padding: 0 25px; transition: 0.25s ease-in-out; }
 
-.menuRight__item:hover { background: #c4c4ac; color: black; }
+.menuRight__item:hover { background: #c4c4ac; }
 
-.menuRight a { display: inline-flex; width: 100%; }
+.menuRight__item:hover a { color: #333333; }
+
+.menuRight a { display: inline-flex; width: 100%; transition: 0.25s ease-in-out; }
 
 main { height: 90vh; position: relative; }
 

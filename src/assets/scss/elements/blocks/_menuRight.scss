@@ -20,7 +20,7 @@
     }
 
     &__list {
-        margin-top: 82px;
+        margin-top: 10vh;
     }
 
     &__item {
@@ -34,12 +34,16 @@
 
         &:hover {
             background: $beige;
-            color: black;
+
+            a {
+                color: #333333;
+            }
         }
     }
 
     a {
         display: inline-flex;
         width: 100%;
+        transition: 0.25s ease-in-out;
     }
 }
