@@ -1,5 +1,8 @@
 .agency {
-    @include split;
+    @include x-large {
+        @include split;
+    }
+
     background-color: $white;
     // background-color: #333333;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
@@ -9,50 +12,36 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: calc(100vh - 82px);
+        height: calc(100vh - 72px);
+
+        @include x-large {
+            height: inherit;
+        }
+
+        @include xx-large {
+            height: calc(100vh - 72px);
+        }
+
         display: flex;
         align-items: flex-end;
-    }
-
-    &__quote {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-        padding: 3vh 3vw;
-
-        &>p {
-            font-family: $italic-serif-font;
-            font-size: 1.5rem;
-            position: relative;
-            text-align: center;
-            padding: 0 3vw;
-
-            &:before {
-                position: absolute;
-                top: -30px;
-                left: 0;
-                content: url('./../img/quote_left.png');
-            }
-
-            &:after {
-                position: absolute;
-                bottom: -30px;
-                right: 0;
-                content: url('./../img/quote_right.png');
-            }
-        }
-    }
-
-    .quote__author {
-        font-family: $serif-font;
-        font-size: 1.5rem;
-        text-align: right;
-        margin-top: 40px;
     }
 
     &__article {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include xx-large {
+            align-items: center;
+        }
+
         background-color: $black;
-        padding: 3vw;
+        padding: 5vh 4vh;
+
+        a {
+            @include xx-large {
+                margin: 0 auto;
+            }
+        }
     }
 }

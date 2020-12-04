@@ -208,31 +208,51 @@ main { height: calc(100vh - 82px); position: relative; }
 
 @media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
 
-.agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 82px); display: flex; align-items: flex-end; }
+.agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 72px); display: flex; align-items: flex-end; }
 
-.agency__quote { background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%); padding: 3vh 3vw; }
+@media screen and (min-width: 1200px) { .agency__image { height: inherit; } }
 
-.agency__quote > p { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; position: relative; text-align: center; padding: 0 3vw; }
+@media screen and (min-width: 1500px) { .agency__image { height: calc(100vh - 72px); } }
 
-.agency__quote > p:before { position: absolute; top: -30px; left: 0; content: url("./../img/quote_left.png"); }
+.agency__article { display: flex; flex-direction: column; justify-content: center; background-color: #000000; padding: 5vh 4vh; }
 
-.agency__quote > p:after { position: absolute; bottom: -30px; right: 0; content: url("./../img/quote_right.png"); }
+@media screen and (min-width: 1500px) { .agency__article { align-items: center; } }
 
-.agency .quote__author { font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; text-align: right; margin-top: 40px; }
+@media screen and (min-width: 1500px) { .agency__article a { margin: 0 auto; } }
 
-.agency__article { display: flex; flex-direction: column; justify-content: center; background-color: #000000; padding: 3vw; }
+.skill__list { margin-bottom: 3vh; }
 
-.skill__list { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; margin: 30px 0; }
+@media screen and (min-width: 1500px) { .skill__list { max-width: 750px; } }
 
-.skill__list .skill { flex: 1 1 40%; margin: 25px 25px 25px 0; }
+@media screen and (min-width: 768px) { .skill__list { display: flex; flex-wrap: wrap; } }
 
-.skill__list .skill:last-of-type { margin: 15px 15px 15px 7.5px; }
+@media screen and (min-width: 1200px) { .skill__list { display: initial; flex-wrap: unset; } }
+
+@media screen and (min-width: 1500px) { .skill__list { display: flex; flex-wrap: wrap; } }
+
+.skill__list .skill { margin: 4vh 0; }
+
+@media screen and (min-width: 768px) { .skill__list .skill { flex: 1 1 50%; } }
+
+@media screen and (min-width: 1500px) { .skill__list .skill { flex: 1 1 50%; } }
+
+@media screen and (min-width: 768px) { .skill__list .skill:first-child, .skill__list .skill:nth-child(3) { padding-right: 4vh; } }
+
+@media screen and (min-width: 1200px) { .skill__list .skill:first-child, .skill__list .skill:nth-child(3) { padding-right: 0; } }
+
+@media screen and (min-width: 1500px) { .skill__list .skill:first-child, .skill__list .skill:nth-child(3) { padding-right: 4vh; } }
+
+@media screen and (min-width: 768px) { .skill__list .skill:nth-child(2), .skill__list .skill:last-child { padding-left: 4vh; } }
+
+@media screen and (min-width: 1200px) { .skill__list .skill:nth-child(2), .skill__list .skill:last-child { padding-left: 0; } }
+
+@media screen and (min-width: 1500px) { .skill__list .skill:nth-child(2), .skill__list .skill:last-child { padding-left: 4vh; } }
 
 .skill__list .skill__icon { color: #c4c4ac; font-size: 2rem; }
 
-.skill__list .skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0 10px 0; }
+.skill__list .skill__title { font-family: "Raleway-SemiBold"; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 2vh 0; }
 
-.skill__list .skill p { line-height: 1.75rem; }
+.skill__list .skill p { line-height: 1.75; }
 
 .slider { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; z-index: 1; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 

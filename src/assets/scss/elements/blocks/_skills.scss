@@ -1,16 +1,64 @@
 .skill__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 800px;
-    margin: 30px 0;
+    margin-bottom: 3vh;
+
+    @include xx-large {
+        max-width: 750px;
+    }
+
+    @include medium {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include x-large {
+        display: initial;
+        flex-wrap: unset;
+    }
+
+    @include xx-large {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     .skill {
-        flex: 1 1 40%;
-        margin: 25px 25px 25px 0;
+        margin: 4vh 0;
 
-        &:last-of-type {
-            margin: 15px 15px 15px 7.5px;
+        @include medium {
+            flex: 1 1 50%;
+        }
+
+        @include xx-large {
+            flex: 1 1 50%;
+        }
+
+        &:first-child,
+        &:nth-child(3) {
+            @include medium {
+                padding-right: 4vh;
+            }
+
+            @include x-large {
+                padding-right: 0;
+            }
+
+            @include xx-large {
+                padding-right: 4vh;
+            }
+        }
+
+        &:nth-child(2),
+        &:last-child {
+            @include medium {
+                padding-left: 4vh;
+            }
+
+            @include x-large {
+                padding-left: 0;
+            }
+
+            @include xx-large {
+                padding-left: 4vh;
+            }
         }
 
         &__icon {
@@ -23,11 +71,11 @@
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 15px 0 10px 0;
+            padding: 2vh 0;
         }
 
         p {
-            line-height: 1.75rem;
+            line-height: 1.75;
         }
     }
 }
