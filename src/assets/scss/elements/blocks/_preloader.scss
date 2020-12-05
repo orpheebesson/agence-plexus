@@ -32,13 +32,13 @@
 
     &__letters {
         display: flex;
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
         height: auto;
 
         #left,
         #right,
-        {
+            {
             width: 150px;
             height: 150px;
         }
@@ -61,13 +61,14 @@
         z-index: 9000;
     }
 
-    #left,#right
-    {
+    #left,
+    #right {
         width: 150px;
         height: 150px;
         fill: black;
     }
 }
+
 @include large() {
     .opreloader__overlay {
         height: 100%;

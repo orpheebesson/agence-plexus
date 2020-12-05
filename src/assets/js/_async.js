@@ -1,22 +1,30 @@
 function testrecall() {
 
-    var slider = new Swiper('.slider', {
-        effect: 'coverflow',
-        speed: 1000,
-        loop: true,
-        mousewheel: true,
-        fadeEffect: {
-            crossFade: true
-        },
-        keyboard: {
-            enabled: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-    });
-
+    if(document.querySelector('.slider')) {
+        var slider = new Swiper('.slider', {
+            effect: 'coverflow',
+            speed: 1000,
+            loop: true,
+            fadeEffect: {
+                crossFade: true
+            },
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        });
+        
+        if (window.innerWidth >= 768) {
+            slider.mousewheel.enable();
+        }
+    }
 
     const switcherDark = document.querySelector('.switcher__dark');
     const switcherLight = document.querySelector('.switcher__light');
@@ -36,13 +44,16 @@ function testrecall() {
 
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
     
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
         document.body.classList.toggle('bodyMenu--open');
     }
 
@@ -55,13 +66,16 @@ function menu() {
 
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
         document.body.classList.toggle('bodyMenu--open');
     }
 
