@@ -28,6 +28,7 @@
     }
 
     &__item {
+        font-family: $thin-font;
         font-size: 1.75rem;
         line-height: 2;
         text-align: left;
@@ -60,6 +61,7 @@
             }
 
             &__item {
+                font-family: $thin-font;
                 font-size: 0.9rem;
 
                 @include medium {
