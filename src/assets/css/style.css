@@ -140,7 +140,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
 
-.header { padding: 0 2vw; transition: 0.25s ease-in-out; }
+.header { background-color: #000000; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
 .header__item--logo { width: 90px; }
 
