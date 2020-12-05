@@ -1,44 +1,99 @@
 .captions__list {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-image:
-        url('./../img/accueil/illustration_accueil_1.png'),
-        url('./../img/accueil/illustration_accueil_2.png'),
-        url('./../img/accueil/illustration_accueil_3.png'),
-        url('./../img/accueil/illustration_accueil_1.png');
-    background-position:
-        top left,
-        top -100px right,
-        bottom -100px right -100px,
-        bottom -50px left;
-    background-size: 50%;
+    padding: 4vh;
+
+    @include medium {
+        padding: 8vh;
+    }
+
+    @include large {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    background-image: url('./../img/accueil/illustration_accueil_1.png'),
+    url('./../img/accueil/illustration_accueil_2.png'),
+    url('./../img/accueil/illustration_accueil_3.png'),
+    url('./../img/accueil/illustration_accueil_4.png');
+    background-position: top 10vh center,
+    top 65vh center,
+    bottom 70vh center,
+    bottom 10vh center;
+
+    @include large {
+        background-position:
+            top -5vh left,
+            top -5vh right -4vw,
+            bottom -10vh right,
+            bottom -20vh left;
+    }
+
+    background-size: 100%;
+
+    @include extra-small {
+        background-size: 50%;
+    }
+
+    @include large {
+        background-size: 38%;
+    }
+
     background-repeat: no-repeat;
 
     .caption__item {
-        display: flex;
+        margin: 16vh 0;
+
+        &:nth-child(even) {
+            .caption {
+                text-align: right;
+            }
+
+            @include medium {
+                margin: 16vh 0 16vh auto;
+            }
+
+            @include large {
+                margin: initial;
+            }
+        }
+
+        @include small {
+            width: 75%;
+            margin: 16vh auto;
+        }
+
+        @include medium {
+            display: flex;
+            width: 50%;
+            margin: 16vh 0;
+        }
+
+        @include large {
+            width: initial;
+            margin: auto;
+        }
     }
 
     .caption {
-        position: relative;
-        margin: auto;
-        max-width: 400px;
-        animation: move 3s linear infinite alternate;
+
+        @include large {
+            margin: auto;
+            max-width: 375px;
+        }
 
         &__pretitle {
             font-family: $italic-serif-font;
             font-size: 1.5rem;
             display: inline-flex;
-            margin-bottom: 10px;
+            margin-bottom: 1vh;
         }
 
         &__description {
-            margin: 10px 0;
+            margin: 2vh 0;
         }
 
         &__button {
             display: inline-flex;
-            position: relative;
             align-items: center;
             font-family: $serif-font;
             font-size: 1.5rem;
@@ -58,56 +113,68 @@
         }
     }
 
-    &>.caption {
-        &--agency {
-            &>.caption::after {
-                content: "";
-                position: absolute;
-                background: $white;
-                height: 1px;
-                width: 60%;
-                bottom: -50px;
-                left: 30%;
-                transform: rotate(20deg);
-            }
-        }
+    @include large {
+        &>.caption {
+            &--agency {
+                &>.caption {
 
-        &--members {
-            &>.caption::after {
-                content: "";
-                position: absolute;
-                background: $white;
-                height: 1px;
-                width: 60%;
-                bottom: -50px;
-                right: 30%;
-                transform: rotate(-20deg);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $white;
+                        height: 1px;
+                        width: 43%;
+                        bottom: 0;
+                        right: 10%;
+                        transform: rotate(30deg);
+                    }
+                }
             }
-        }
 
-        &--projects {
-            &>.caption::after {
-                content: "";
-                position: absolute;
-                background: $white;
-                height: 1px;
-                width: 60%;
-                top: -50px;
-                left: 30%;
-                transform: rotate(-20deg);
+            &--members {
+                &>.caption {
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $white;
+                        height: 1px;
+                        width: 40%;
+                        bottom: -5px;
+                        left: 15%;
+                        transform: rotate(-22deg);
+                    }
+                }
             }
-        }
 
-        &--contact {
-            &>.caption::after {
-                content: "";
-                position: absolute;
-                background: $white;
-                height: 1px;
-                width: 60%;
-                top: -50px;
-                right: 30%;
-                transform: rotate(20deg);
+            &--projects {
+                &>.caption {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $white;
+                        height: 1px;
+                        width: 43%;
+                        top: 0;
+                        right: 12%;
+                        transform: rotate(-30deg);
+                    }
+                }
+            }
+
+            &--contact {
+                &>.caption {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $white;
+                        height: 1px;
+                        width: 50%;
+                        top: 5px;
+                        left: 16%;
+                        transform: rotate(24deg);
+                    }
+                }
             }
         }
     }

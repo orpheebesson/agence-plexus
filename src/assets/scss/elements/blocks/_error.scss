@@ -1,5 +1,5 @@
 .error {
-    height: calc(100vh - 82px);
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@
     &__caption {
         font-size: 1.2rem;
         text-align: center;
-        margin: 25px 0;
+        margin: 3vh 0;
     }
 
     &__button {
