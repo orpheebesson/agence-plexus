@@ -79,6 +79,7 @@
         @include large {
             margin: auto;
             max-width: 375px;
+            position: relative;
         }
 
         &__pretitle {

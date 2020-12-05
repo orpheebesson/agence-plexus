@@ -238,7 +238,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .captions__list .caption__item { width: initial; margin: auto; } }
 
-@media screen and (min-width: 992px) { .captions__list .caption { margin: auto; max-width: 375px; } }
+@media screen and (min-width: 992px) { .captions__list .caption { margin: auto; max-width: 375px; position: relative; } }
 
 .captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; display: inline-flex; margin-bottom: 1vh; }
 
