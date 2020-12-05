@@ -1,5 +1,5 @@
 .header {
-    background-color: $black;
+    // background-color: $black;
     padding: 0 2vw;
     transition: 0.25s ease-in-out;
 
@@ -37,6 +37,7 @@
 
         .switcher__dark--text,
         .switcher__light--text {
+            font-family: $thin-font;
             opacity: 0;
             transform: translateY(5px);
             transition: 0.25s ease-in-out;
