@@ -1,12 +1,19 @@
 main {
-    height: calc(100vh - 82px);
-    position: relative;
+    @include large {
+        height: 90vh;
+        position: relative;
+    }
 }
 
 .logo__plexus {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    height: 125px;
+    display: none;
+
+    @include large {
+        display: initial;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        height: 115px;
+    }
 }

@@ -24,19 +24,20 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<div class="preloader">
-    <div class="preloader__overlay"></div>
-    <div class="preloader__container">
-        <div class="preloader__letters">
-            <img id="left" src="assets/svg/left.svg" alt="lefttpartlogo">
-            <div id="x"></div>
-            <img id="right" src="assets/svg/right.svg" alt="rightpartlogo">
-        </div>
-    </div>
-    <div class="preloader__animation"></div>
-</div>
-
 <body class="body--home">
+
+    <div class="preloader">
+        <div class="preloader__overlay"></div>
+        <div class="preloader__container">
+            <div class="preloader__letters">
+                <img id="left" src="assets/svg/left.svg" alt="lefttpartlogo">
+                <div id="x"></div>
+                <img id="right" src="assets/svg/right.svg" alt="rightpartlogo">
+            </div>
+        </div>
+        <div class="preloader__animation"></div>
+    </div>
+
     <header class="header">
         <nav>
             <ul class="header__list">
@@ -69,13 +70,31 @@
     <div class="menuRight">
         <nav>
             <ul class="menuRight__list">
-                <li class="menuRight__item"><a href="index.html">Accueil</a></li>
-                <li class="menuRight__item"><a href="agence.html">L'agence</a></li>
-                <li class="menuRight__item"><a href="membres.html">Les membres</a></li>
-                <li class="menuRight__item"><a href="projets.html">Les projets</a></li>
-                <li class="menuRight__item"><a href="contact.html">Contact</a></li>
+                <li class="menuRight__item">
+                    <div><a href="index.html">Accueil</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="agence.html">L'agence</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="membres.html">Les membres</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="projets.html">Les projets</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="contact.html">Contact</a></div>
+                </li>
             </ul>
         </nav>
+        <footer class="menuRight__footer">
+            <nav>
+                <ul class="footer__list">
+                    <li class="footer__item">Plexus © 2020<span class="footer__item--separator">|</span></li>
+                    <li class="footer__item"><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 
     <div class="load-container">
@@ -87,47 +106,55 @@
             <main>
                 <img src="assets/svg/logo_plexus.svg" alt="Logo agence Plexus" class="logo__plexus">
                 <ol class="captions__list">
-                    <li class="caption__item caption--agency">
-                        <figure class="caption">
+                    <li class="caption__item caption--agency" id="scene1">
+                        <figure class="caption" data-depth="0.5">
                             <figcaption>
                                 <span class="caption__pretitle">fig. 1</span>
                                 <h2 class="title">L'agence</h2>
-                                <p class="caption__description">Plexus est une agence web polyvalente et créative. Découvrez les nombreux services que nous proposons à notre clientèle.
+                                <p class="caption__description">Plexus est une agence web polyvalente et créative.
+                                    Découvrez les nombreux services que nous proposons à notre clientèle.
                                 </p>
-                                <a class="caption__button" href="agence.html">en savoir plus<span class="icon icon--arrow-right"></span></a>
+                                <a class="caption__button" href="agence.html">en savoir plus<span
+                                        class="icon icon--arrow-right"></span></a>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="caption__item caption--members">
-                        <figure class="caption">
+                    <li class="caption__item caption--members" id="scene2">
+                        <figure class="caption" data-depth="0.5">
                             <figcaption>
                                 <span class="caption__pretitle">fig. 2</span>
                                 <h2 class="title">Les membres</h2>
-                                <p class="caption__description">L’équipe Plexus réunit plusieurs spécialistes dans les domaines du développement web et du design.
+                                <p class="caption__description">L’équipe Plexus réunit plusieurs spécialistes dans les
+                                    domaines du développement web et du design.
                                 </p>
-                                <a class="caption__button" href="membres.html">en savoir plus<span class="icon icon--arrow-right"></span></a>
+                                <a class="caption__button" href="membres.html">en savoir plus<span
+                                        class="icon icon--arrow-right"></span></a>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="caption__item caption--projects">
-                        <figure class="caption">
+                    <li class="caption__item caption--projects" id="scene3">
+                        <figure class="caption" data-depth="0.5">
                             <figcaption>
                                 <span class="caption__pretitle">fig. 3</span>
                                 <h2 class="title">Les projets</h2>
-                                <p class="caption__description">Jetez un coup d’œil à nos projets réalisés avec toute notre expérience et notre savoir-faire.
+                                <p class="caption__description">Jetez un coup d’œil à nos projets réalisés avec toute
+                                    notre expérience et notre savoir-faire.
                                 </p>
-                                <a class="caption__button" href="projets.html">en savoir plus<span class="icon icon--arrow-right"></span></a>
+                                <a class="caption__button" href="projets.html">en savoir plus<span
+                                        class="icon icon--arrow-right"></span></a>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="caption__item caption--contact">
-                        <figure class="caption">
+                    <li class="caption__item caption--contact" id="scene4">
+                        <figure class="caption" data-depth="0.5">
                             <figcaption>
                                 <span class="caption__pretitle">fig. 4</span>
                                 <h2 class="title">Contact</h2>
-                                <p class="caption__description">Vous souhaitez faire appel à l’agence Plexus pour réaliser votre projet ? N’hésitez plus, contactez-nous dès maintenant !
+                                <p class="caption__description">Vous souhaitez faire appel à l’agence Plexus pour
+                                    réaliser votre projet ? N’hésitez plus, contactez-nous dès maintenant !
                                 </p>
-                                <a class="caption__button" href="contact.html">en savoir plus<span class="icon icon--arrow-right"></span></a>
+                                <a class="caption__button" href="contact.html">en savoir plus<span
+                                        class="icon icon--arrow-right"></span></a>
                             </figcaption>
                         </figure>
                     </li>

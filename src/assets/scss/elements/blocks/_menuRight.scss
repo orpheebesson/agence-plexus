@@ -2,44 +2,122 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
     position: fixed;
-    background: #333333;
+    background: $grey;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
     transform: translateX(100%);
     transition-duration: 0.5s;
-    width: 275px;
     overflow: hidden;
+    width: 245px;
+
+    @include extra-small {
+        width: 275px;
+    }
+
+    @include small {
+        width: 300px;
+    }
+
+    &__list {
+        margin-top: 10vh;
+    }
+
+    &__item {
+        font-size: 1.75rem;
+        line-height: 2;
+        text-align: left;
+        color: $white;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: 0.25s ease-in-out;
+
+        div {
+            transition: 0.25s ease-in-out;
+
+            a {
+                display: inline-flex;
+                width: 100%;
+                padding: 0 3vh;
+                transition: 0.25s ease-in-out;
+            }
+        }
+    }
+
+    &__footer {
+        padding: 1vh 0;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+
+        .footer {
+            &__list {
+                display: flex;
+                justify-content: center;
+            }
+
+            &__item {
+                font-size: 0.9rem;
+
+                @include medium {
+                    font-size: initial;
+                }
+
+                &--separator {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
 
     &--open {
         transform: translateX(0);
         overflow: hidden;
-    }
 
-    &__list {
-        margin-top: 82px;
-    }
+        .menuRight__item {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.2s;
 
-    &__item {
-        font-family: $title-font;
-        font-size: 1.75rem;
-        line-height: 56px;
-        text-align: left;
-        color: $white;
-        padding: 0 25px;
-        transition: 0.25s ease-in-out;
+            &:first-child {
+                transition-delay: 0.35s;
+            }
 
-        &:hover {
-            background: $beige;
-            color: black;
+            &:nth-child(2) {
+                transition-delay: 0.5s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.65s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.8s;
+            }
+
+            &:last-child {
+                transition-delay: 0.95s;
+            }
+
+            div {
+
+                &:hover {
+                    background: $beige;
+
+                    a {
+                        color: $grey;
+                        transform: translateX(20px);
+                    }
+                }
+            }
         }
-    }
 
-    a {
-        display: inline-flex;
-        width: 100%;
+        .menuRight__footer {
+            opacity: 1;
+            transition-delay: 1.3s;
+        }
     }
 }

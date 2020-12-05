@@ -1,23 +1,26 @@
 function testrecall() {
 
-    var slider = new Swiper('.slider', {
-        effect: 'coverflow',
-        speed: 1000,
-        loop: true,
-        mousewheel: true,
-        fadeEffect: {
-            crossFade: true
-        },
-        keyboard: {
-            enabled: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-    });
+    const menuBurger = document.querySelector('.menu__burger');
+    const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
+    menuBurger.classList.remove('menu__burger--open');
+    menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
+    
+    function openMenuBurger() {
+        menuBurger.classList.toggle('menu__burger--open');
+        menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
+        document.body.classList.toggle('bodyMenu--open');
+    }
 
+    menuBurger.addEventListener("click", openMenuBurger);
+}
+
+testrecall();
+
+function lightAndDarkMode() {
     const switcherDark = document.querySelector('.switcher__dark');
     const switcherLight = document.querySelector('.switcher__light');
 
@@ -33,42 +36,91 @@ function testrecall() {
 
     switcherDark.addEventListener("click", dark_mode);
     switcherLight.addEventListener("click", light_mode);
-
-    const menuBurger = document.querySelector('.menu__burger');
-    const menuRight = document.querySelector('.menuRight');
-
-    menuBurger.classList.remove('menu__burger--open');
-    menuRight.classList.remove('menuRight--open');
-    
-    function openMenuBurger() {
-        menuBurger.classList.toggle('menu__burger--open');
-        menuRight.classList.toggle('menuRight--open');
-        document.body.classList.toggle('bodyMenu--open');
-    }
-
-    menuBurger.addEventListener("click", openMenuBurger);
 }
 
-testrecall();
+lightAndDarkMode();
 
 function menu() {
 
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
+    mainContainer.classList.remove('blur');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
+        mainContainer.classList.toggle('blur');
         document.body.classList.toggle('bodyMenu--open');
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
-
 }
 
+function homeParallax() {
+    if( document.getElementById('scene1') &&
+        document.getElementById('scene2') &&
+        document.getElementById('scene3') &&
+        document.getElementById('scene4')) {
+
+        if(window.innerWidth >= 992) {
+            var scene1 = document.getElementById('scene1');
+            var parallaxInstance1 = new Parallax(scene1, {
+                pointerEvents: true
+            });
+
+            var scene2 = document.getElementById('scene2');
+            var parallaxInstance2 = new Parallax(scene2, {
+                pointerEvents: true
+            });
+
+            var scene3 = document.getElementById('scene3');
+            var parallaxInstance3 = new Parallax(scene3, {
+                pointerEvents: true
+            });
+
+            var scene4 = document.getElementById('scene4');
+            var parallaxInstance4 = new Parallax(scene4, {
+                pointerEvents: true
+            });
+        }
+    }
+}
+
+homeParallax();
+
+function membersCarousel() {
+    if(document.querySelector('.slider')) {
+        var slider = new Swiper('.slider', {
+            effect: 'coverflow',
+            speed: 1000,
+            loop: true,
+            fadeEffect: {
+                crossFade: true
+            },
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        });
+        
+        if (window.innerWidth >= 768) {
+            slider.mousewheel.enable();
+        }
+    }
+}
+
+membersCarousel();
 
 function delay(n) {
     n = n || 2000;
@@ -133,13 +185,15 @@ $(function () {
             contentAnimation();
         },
 
-
         async once({ next }) {
           contentAnimation();
       },
       async beforeEnter({ next }) {
           testrecall();
+          lightAndDarkMode();
           menu();
+          membersCarousel();
+          homeParallax();
       },
       async leave({ next }) {
          const done = this.async();

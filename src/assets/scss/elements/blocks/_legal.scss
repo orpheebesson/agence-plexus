@@ -1,0 +1,33 @@
+.legal {
+    padding: 5vh;
+    animation: fadeUp 2s ease-in-out 0s forwards 1;
+
+    h1 {
+        text-align: center;
+    }
+
+    &__article {
+        margin-top: 8vh;
+
+        h2 {
+            margin: 4vh 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 2vh;
+        }
+
+        ul {
+            margin-left: 5vw;
+            margin-bottom: 5vh;
+        }
+
+        li {
+            list-style: disc;
+            font-size: 1.2rem;
+            margin-bottom: 1vh;
+        }
+    }
+}

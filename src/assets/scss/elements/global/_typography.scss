@@ -57,12 +57,24 @@ p {
         content: "\e86f";
     }
 
+    &--arrow-left:before {
+        content: "\e879";
+    }
+
     &--arrow-right:before {
         content: "\e87a";
     }
 
     &--arrow-right-circle:before {
         content: "\e886";
+    }
+
+    &--chevron-left:before {
+        content: "\e875";
+    }
+
+    &--chevron-right:before {
+        content: "\e876";
     }
 }
 

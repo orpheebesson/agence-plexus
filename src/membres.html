@@ -70,13 +70,21 @@
     <div class="menuRight">
         <nav>
             <ul class="menuRight__list">
-                <li class="menuRight__item"><a href="index.html">Accueil</a></li>
-                <li class="menuRight__item"><a href="agence.html">L'agence</a></li>
-                <li class="menuRight__item"><a href="membres.html">Les membres</a></li>
-                <li class="menuRight__item"><a href="projets.html">Les projets</a></li>
-                <li class="menuRight__item"><a href="contact.html">Contact</a></li>
+                <li class="menuRight__item"><div><a href="index.html">Accueil</a></div></li>
+                <li class="menuRight__item"><div><a href="agence.html">L'agence</a></div></li>
+                <li class="menuRight__item"><div><a href="membres.html">Les membres</a></div></li>
+                <li class="menuRight__item"><div><a href="projets.html">Les projets</a></div></li>
+                <li class="menuRight__item"><div><a href="contact.html">Contact</a></div></li>
             </ul>
         </nav>
+        <footer class="menuRight__footer">
+            <nav>
+                <ul class="footer__list">
+                    <li class="footer__item">Plexus © 2020<span class="footer__item--separator">|</span></li>
+                    <li class="footer__item"><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 
     <div class="load-container">
@@ -89,7 +97,7 @@
             <section class="slider">
                 <div class="slider__container swiper-wrapper">
                     <div class="slider__member swiper-slide">
-                        <img src="assets/img/membres/la_joconde.jpg" alt="Photographie portrait Sophie Palmer" width="550">
+                        <img class="member__image" src="assets/img/membres/la_joconde.jpg" alt="Photographie portrait Sophie Palmer">
                         <article class="member__article">
                             <h2 class="title">Sophie Palmer</h2>
                             <h3 class="member__subtitle">Designer | Illustratrice</h3>
@@ -103,11 +111,11 @@
                                 appellamus:
                                 fingentes
                                 ultrix lunari vocabulo.</p>
-                                <a class="button member__button" href="#" target="_blank">Voir son portfolio</a>
+                                <a class="button member__button" href="assets/medias/sophie_palmer_portfolio_2020.pdf" target="_blank">Voir son portfolio</a>
                         </article>
                     </div>
                     <div class="slider__member swiper-slide">
-                        <img src="assets/img/membres/alan_turing.jpg" alt="Photographie portrait Adrien Botuha" width="550">
+                        <img class="member__image" src="assets/img/membres/alan_turing.jpg" alt="Photographie portrait Adrien Botuha">
                         <article class="member__article">
                             <h2 class="title">Adrien Botuha</h2>
                             <h3 class="member__subtitle">Développeur back-end</h3>
@@ -121,11 +129,11 @@
                                 appellamus:
                                 fingentes
                                 ultrix lunari vocabulo.</p>
-                                <a class="button member__button" href="#" target="_blank">Voir son portfolio</a>
+                                <a class="button member__button" href="https://www.linkedin.com/in/adrien-botuha/?challengeId=AQGqFIIAh_BangAAAXYvPtvTUBYtlFhceB8WvGLxbAuItpksW7WojpQlN8sMimQrzep2lZJmszkyuCxDxmHa_JdqCOioyTXFmw&submissionId=551636d2-689a-4d16-72cd-9e76c6937063&originalSubdomain=fr" target="_blank">Voir son profil LinkedIn</a>
                         </article>
                     </div>
                     <div class="slider__member swiper-slide">
-                        <img src="assets/img/membres/stephen_hawking.jpg" alt="Photographie portrait Orphée Besson" width="550">
+                        <img class="member__image" src="assets/img/membres/stephen_hawking.jpg" alt="Photographie portrait Orphée Besson">
                         <article class="member__article">
                             <h2 class="title">Orphée Besson</h2>
                             <h3 class="member__subtitle">Développeur front-end</h3>
@@ -143,8 +151,7 @@
                         </article>
                     </div>
                     <div class="slider__member swiper-slide">
-                        <img src="assets/img/membres/albert_einstein.jpg" alt="Photographie portrait Etienne Pharabot"
-                            width="550">
+                        <img class="member__image" src="assets/img/membres/albert_einstein.jpg" alt="Photographie portrait Etienne Pharabot">
                         <article class="member__article">
                             <h2 class="title">Etienne Pharabot</h2>
                             <h3 class="member__subtitle">Développeur front-end</h3>
@@ -158,11 +165,15 @@
                                 appellamus:
                                 fingentes
                                 ultrix lunari vocabulo.</p>
-                                <a class="button member__button" href="#"  target="_blank">Voir son portfolio</a>
+                                <a class="button member__button" href="https://etiennepharabot.fr"  target="_blank">Voir son portfolio</a>
                         </article>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="slider__controls">
+                    <div class="swiper-button-prev"><span class="icon icon--arrow-left"></span></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"><span class="icon icon--arrow-right"></span></div>
+                </div>
             </section>
 
         </div>
