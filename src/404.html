@@ -26,6 +26,18 @@
 
 <body>
 
+    <div class="preloader">
+        <div class="preloader__overlay"></div>
+        <div class="preloader__container">
+            <div class="preloader__letters">
+                <img id="left" src="assets/svg/left.svg" alt="lefttpartlogo">
+                <div id="x"></div>
+                <img id="right" src="assets/svg/right.svg" alt="rightpartlogo">
+            </div>
+        </div>
+        <div class="preloader__animation"></div>
+    </div>
+
     <header class="header">
         <nav>
             <ul class="header__list">
@@ -58,23 +70,52 @@
     <div class="menuRight">
         <nav>
             <ul class="menuRight__list">
-                <li class="menuRight__item"><div><a href="index.html">Accueil</a></div></li>
-                <li class="menuRight__item"><div><a href="agence.html">L'agence</a></div></li>
-                <li class="menuRight__item"><div><a href="membres.html">Les membres</a></div></li>
-                <li class="menuRight__item"><div><a href="projets.html">Les projets</a></div></li>
-                <li class="menuRight__item"><div><a href="contact.html">Contact</a></div></li>
+                <li class="menuRight__item">
+                    <div><a href="index.html">Accueil</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="agence.html">L'agence</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="membres.html">Les membres</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="projets.html">Les projets</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="contact.html">Contact</a></div>
+                </li>
             </ul>
         </nav>
+        <footer class="menuRight__footer">
+            <nav>
+                <ul class="footer__list">
+                    <li class="footer__item">Plexus © 2020<span class="footer__item--separator">|</span></li>
+                    <li class="footer__item"><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 
-    <section class="error">
-        <h1 class="title">Erreur 404</h1>
-        <p class="error__caption">La page demandée n'existe pas.</p>
-        <a href="index.html" class="error__button button">Revenir à l'accueil</a>
-    </section>
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
+    <div data-barba="wrapper">
+        <div data-barba="container" data-barba-namespace="error">
+
+            <section class="error">
+                <h1 class="title">Erreur 404</h1>
+                <p class="error__caption">La page demandée n'existe pas.</p>
+                <a href="index.html" class="error__button button">Revenir à l'accueil</a>
+            </section>
+
+        </div>
+    </div>
 
     <script src="assets/js/_libs.js"></script>
     <script src="assets/js/_async.js"></script>
+    <script src="assets/js/_preloader.js"></script>
     <script src="assets/js/_theme-mode.js"></script>
 </body>
 
