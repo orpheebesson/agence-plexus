@@ -35,6 +35,6 @@
 }
 
 @mixin split {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
 }
