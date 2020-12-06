@@ -61,12 +61,18 @@ function menu() {
 }
 
 function homeParallax() {
-    if( document.getElementById('scene1') &&
+    if( document.getElementById('scene') &&
+        document.getElementById('scene1') &&
         document.getElementById('scene2') &&
         document.getElementById('scene3') &&
         document.getElementById('scene4')) {
 
         if(window.innerWidth >= 992) {
+            var scene = document.getElementById('scene');
+                var parallaxInstance = new Parallax(scene, {
+                    pointerEvents: true
+            });
+
             var scene1 = document.getElementById('scene1');
             var parallaxInstance1 = new Parallax(scene1, {
                 pointerEvents: true
