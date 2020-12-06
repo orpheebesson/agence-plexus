@@ -9,11 +9,12 @@ main {
     display: none;
 
     @include large {
-        display: initial;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        height: 115px;
+        z-index: 1 !important;
+        display: initial !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translateX(-50%) translateY(-50%) !important;
+        height: 115px !important;
     }
 }

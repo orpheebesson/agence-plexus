@@ -224,7 +224,7 @@ a, button { cursor: pointer; }
 
 .logo__plexus { display: none; }
 
-@media screen and (min-width: 992px) { .logo__plexus { display: initial; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); height: 115px; } }
+@media screen and (min-width: 992px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 115px !important; } }
 
 .captions__list { padding: 4vh; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
 
