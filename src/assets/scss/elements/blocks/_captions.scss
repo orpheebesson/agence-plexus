@@ -1,9 +1,9 @@
 .captions__list {
     padding: 4vh;
-    position: unset !important;
-    display: unset !important;
-    left: unset !important;
-    top: unset !important;
+    position: inherit !important;
+    display: inherit !important;
+    left: inherit !important;
+    top: inherit !important;
 
     @include medium {
         padding: 8vh;

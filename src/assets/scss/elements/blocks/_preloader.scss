@@ -32,21 +32,32 @@
 
     &__letters {
         display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
+        justify-content: center;
+        align-items: center;
 
         #left,
         #right,
             {
-            width: 150px;
-            height: 150px;
+            height: 80px;
+            width: 80px;
+
+            @include medium {
+                height: 150px;
+                width: 150px;
+            }
+
         }
 
         #x {
-            height: 150px;
-            width: 150px;
-            margin: 0 -30px;
+            height: 80px;
+            width: 80px;
+            margin: 0 -15px;
+
+            @include medium {
+                height: 150px;
+                width: 150px;
+                margin: -25px;
+            }
         }
     }
 
@@ -59,25 +70,5 @@
         top: 0;
         width: 100%;
         z-index: 9000;
-    }
-
-    #left,
-    #right {
-        width: 150px;
-        height: 150px;
-        fill: black;
-    }
-}
-
-@include large() {
-    .opreloader__overlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: $black;
-        pointer-events: none;
-        position: absolute;
-        transform: translateY(-100%);
     }
 }
