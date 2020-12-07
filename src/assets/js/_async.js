@@ -121,8 +121,8 @@ function homeParallax() {
 
         if(window.innerWidth >= 992) {
             var scene = document.getElementById('scene');
-                var parallaxInstance = new Parallax(scene, {
-                    pointerEvents: true
+            var parallaxInstance = new Parallax(scene, {
+                pointerEvents: true
             });
 
             var scene1 = document.getElementById('scene1');
@@ -179,6 +179,62 @@ function membersCarousel() {
 }
 
 membersCarousel();
+
+
+function bones() 
+{
+
+
+    var scene, camera,renderer;
+
+
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x000000)
+
+
+    camera = new THREE.PerspectiveCamera(25, window.innerWidth/window.innerHeight);
+    camera.position.set(0,100,1000);
+
+    renderer = new THREE.WebGLRenderer({canvas: document.querySelector(".bones canvas")});
+
+
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    controls.update();
+    var abint = new THREE.AmbientLight(0xffffff,1)
+    scene.add(abint)
+
+    const loader = new THREE.GLTFLoader();
+
+    loader.load('assets/3DObject/scene.gltf', function ( gltf ) {
+
+        scene.add(gltf.scene);
+
+    })
+
+
+    function resizeCanvasToDisplaySize() {
+      const canvas = renderer.domElement;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      if (canvas.width !== width ||canvas.height !== height) {
+    // you must pass false here or three.js sadly fights the browser
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    // set render target sizes here
+}
+}
+
+function animate(){
+    resizeCanvasToDisplaySize();
+    requestAnimationFrame(animate);
+    renderer.render(scene,camera);
+}
+animate()
+}
+
 
 
 function delay(n) {
@@ -249,100 +305,74 @@ $(function () {
     barba.init({
         sync: true,
         transitions: [{
+                async enter({
+            next
+        }) {
+            contentAnimation();
+        },
 
-            async enter({
-                next
-            }) {
-                contentAnimation();
-            },
+        async once({
+            next
+        }) {
+            contentAnimation();
+        },
+        async beforeEnter({
+            next
+        }) {
+            testrecall();
+            lightAndDarkMode();
+            menu();
+            membersCarousel();
+            homeParallax();
+        },
+        async leave({
+            next
+        }) {
+            const done = this.async();
+            pageTransition();
+            await delay(1000);
+            done();
+        },
 
-            async once({
-                next
-            }) {
-                contentAnimation();
-            },
-            async beforeEnter({
-                next
-            }) {
-                testrecall();
-                lightAndDarkMode();
-                menu();
-                membersCarousel();
-                homeParallax();
-                bones();
-            },
-            async leave({
-                next
-            }) {
-                const done = this.async();
-                pageTransition();
-                await delay(1000);
-                done();
-            },
-        }]
-    });
+        }],
+
+        views: [{
+           sync: true,
+           namespace: 'contact',
+
+           async enter({
+            next
+        }) {
+            contentAnimation();
+        },
+
+        async once({
+            next
+        }) {
+            contentAnimation();
+        },
+        async beforeEnter({
+            next
+        }) {
+            testrecall();
+            lightAndDarkMode();
+            menu();
+            membersCarousel();
+            homeParallax();
+            bones();
+        },
+        async leave({
+            next
+        }) {
+            const done = this.async();
+            pageTransition();
+            await delay(1000);
+            done();
+        },
+    }]
+
+
+
+
 });
-
-
-function bones() 
-{
-
-
-var scene, camera,renderer;
-
-
-scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000)
-
-
-camera = new THREE.PerspectiveCamera(25, window.innerWidth/window.innerHeight);
-camera.position.set(0,100,1000);
-
-renderer = new THREE.WebGLRenderer({canvas: document.querySelector(".bones canvas")});
-
-
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-controls.update();
-var abint = new THREE.AmbientLight(0xffffff,1)
-scene.add(abint)
-
-const loader = new THREE.GLTFLoader();
-
-loader.load('assets/3DObject/scene.gltf', function ( gltf ) {
-
-scene.add(gltf.scene);
-
-})
-
-
-/*var objLoader = new THREE.OBJLoader();
-
-objLoader.load('full/second/test.json', function(object) {
-    scene.add(object);
-})*/
-
-
-function resizeCanvasToDisplaySize() {
-  const canvas = renderer.domElement;
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
-  if (canvas.width !== width ||canvas.height !== height) {
-    // you must pass false here or three.js sadly fights the browser
-    renderer.setSize(width, height, false);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-
-    // set render target sizes here
-  }
-}
-
-function animate(){
-    resizeCanvasToDisplaySize();
-    requestAnimationFrame(animate);
-    renderer.render(scene,camera);
-}
-animate()
-}
-
-bones();
+});
