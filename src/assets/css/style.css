@@ -128,6 +128,8 @@ a, button { cursor: pointer; }
 
 .body--light .caption__button .icon--arrow-right { color: #000000; }
 
+.body--light .captions__list { background-image: url("./../img/accueil/illustration_accueil_light_1.png"), url("./../img/accueil/illustration_accueil_light_2.png"), url("./../img/accueil/illustration_accueil_light_3.png"), url("./../img/accueil/illustration_accueil_light_4.png"); }
+
 @media screen and (min-width: 992px) { .body--light .captions__list .caption::after { background: #000000 !important; } }
 
 .body--light .agency__article { background-color: #ffffff; }
