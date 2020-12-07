@@ -264,10 +264,10 @@ a, button { cursor: pointer; }
 
 .captions__list .caption__button:hover .icon--arrow-right { opacity: 1; transform: translateX(10px); }
 
-@media screen and (min-width: 992px) { .captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 43%; bottom: 0; right: 10%; transform: rotate(30deg); }
-  .captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 40%; bottom: -5px; left: 15%; transform: rotate(-22deg); }
-  .captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 43%; top: 0; right: 12%; transform: rotate(-30deg); }
-  .captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 50%; top: 5px; left: 16%; transform: rotate(24deg); } }
+@media screen and (min-width: 992px) { .captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; right: 75px; transform: rotate(30deg); }
+  .captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; left: -50px; transform: rotate(-30deg); }
+  .captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 130px; top: 0; right: 75px; transform: rotate(-22deg); }
+  .captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 200px; top: 0; left: -50px; transform: rotate(22deg); } }
 
 .agency { background-color: #000000; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
