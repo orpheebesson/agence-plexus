@@ -218,7 +218,7 @@ a, button { cursor: pointer; }
 
 .header .menu__burger--open span:nth-child(3) { transform: rotate(-45deg); }
 
-.menuRight { display: flex; flex-direction: column; justify-content: space-between; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; overflow: hidden; width: 245px; }
+.menuRight { display: flex; flex-direction: column; justify-content: space-between; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; overflow: hidden; width: 100vw; }
 
 @media screen and (min-width: 480px) { .menuRight { width: 275px; } }
 
