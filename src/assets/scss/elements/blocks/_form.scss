@@ -1,15 +1,28 @@
 .contact {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
+
+    @include large {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__form {
         display: flex;
         flex-direction: column;
-        margin-top: 3vh;
+        align-items: center;
+        padding: 5vh;
+
+        @include large {
+            padding: 10vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5vh;
+        }
 
         input,
         textarea {
@@ -50,6 +63,33 @@
 
                 &:hover {
                     box-shadow: -10px 10px $beige;
+                }
+            }
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh;
+
+        @include large {
+            padding: 10vh;
+            border-left: 1px solid $white;
+        }
+
+        .address {
+            &__list {
+                text-align: center;
+                margin-top: 5vh;
+            }
+
+            &__item {
+                margin: 2vh 0;
+
+                &:last-child {
+                    margin: 6vh 0;
                 }
             }
         }
