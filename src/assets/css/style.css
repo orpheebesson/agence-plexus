@@ -128,17 +128,17 @@ a, button { cursor: pointer; }
 
 .preloader__container { display: none; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; z-index: 3; }
 
-.preloader__letters { display: flex; margin-left: auto; margin-right: auto; height: auto; }
+.preloader__letters { display: flex; justify-content: center; align-items: center; }
 
-.preloader__letters #left, .preloader__letters #right { width: 150px; height: 150px; }
+.preloader__letters #left, .preloader__letters #right { height: 80px; width: 80px; }
 
-.preloader__letters #x { height: 150px; width: 150px; margin: 0 -30px; }
+@media screen and (min-width: 768px) { .preloader__letters #left, .preloader__letters #right { height: 150px; width: 150px; } }
+
+.preloader__letters #x { height: 80px; width: 80px; margin: 0 -15px; }
+
+@media screen and (min-width: 768px) { .preloader__letters #x { height: 150px; width: 150px; margin: -25px; } }
 
 .preloader__animation { background-color: black; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
-
-.preloader #left, .preloader #right { width: 150px; height: 150px; fill: black; }
-
-@media screen and (min-width: 992px) { .opreloader__overlay { height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; pointer-events: none; position: absolute; transform: translateY(-100%); } }
 
 .header { background-color: #000000; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
@@ -226,7 +226,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 115px !important; } }
 
-.captions__list { padding: 4vh; position: unset !important; display: unset !important; left: unset !important; top: unset !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
+.captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
 
 @media screen and (min-width: 768px) { .captions__list { padding: 8vh; } }
 
