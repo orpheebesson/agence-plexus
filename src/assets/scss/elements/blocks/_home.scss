@@ -2,6 +2,7 @@ main {
     @include large {
         height: 90vh;
         position: relative;
+        overflow: hidden;
     }
 }
 
