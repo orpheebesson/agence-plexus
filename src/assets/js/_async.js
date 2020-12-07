@@ -60,7 +60,7 @@ function lightAndDarkMode() {
     const switcherLight = document.querySelector('.switcher__light');
 
     function dark_mode() {
-        if(!document.body.classList.contains('body--dark')) {
+        if (!document.body.classList.contains('body--dark')) {
             document.body.classList.remove('body--light');
             document.body.classList.add('body--dark');
         } else {
@@ -69,7 +69,7 @@ function lightAndDarkMode() {
     }
 
     function light_mode() {
-        if(!document.body.classList.contains('body--light')) {
+        if (!document.body.classList.contains('body--light')) {
             document.body.classList.remove('body--dark');
             document.body.classList.add('body--light');
         } else {
@@ -256,35 +256,34 @@ $(function () {
     barba.init({
         sync: true,
         transitions: [{
-                async enter({
-            next
-        }) {
-            contentAnimation();
-        },
+            async enter({
+                next
+            }) {
+                contentAnimation();
+            },
 
-        async once({
-            next
-        }) {
-            contentAnimation();
-        },
-        async beforeEnter({
-            next
-        }) {
-            testrecall();
-            lightAndDarkMode();
-            menu();
-            membersCarousel();
-            homeParallax();
-        },
-        async leave({
-            next
-        }) {
-            const done = this.async();
-            pageTransition();
-            await delay(1000);
-            done();
-        },
+            async once({
+                next
+            }) {
+                contentAnimation();
+            },
+            async beforeEnter({
+                next
+            }) {
+                testrecall();
+                menu();
+                membersCarousel();
+                homeParallax();
+            },
+            async leave({
+                next
+            }) {
+                const done = this.async();
+                pageTransition();
+                await delay(1000);
+                done();
+            },
 
         }],
-});
+    });
 });

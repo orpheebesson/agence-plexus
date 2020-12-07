@@ -113,32 +113,45 @@
         }
     }
 
-    .form {
+    .contact {
 
-        input,
-        textarea {
-            color: $black !important;
-        }
+        &__form {
 
-        &__field {
-            box-shadow: -10px 10px $black !important;
-            border-color: $black !important;
-            color: $black !important;
-            background-color: $white;
+            input,
+            textarea {
+                color: $black !important;
+            }
 
-            &:focus {
-                box-shadow: -10px 10px $beige !important;
+            .form__field {
+                box-shadow: -10px 10px $black !important;
+                border-color: $black !important;
+                color: $black !important;
+                background-color: $white;
+
+                &:focus {
+                    box-shadow: -10px 10px $beige !important;
+                }
+            }
+
+            .form__submit {
+                color: $black !important;
+                background-color: $white !important;
+
+                &:hover {
+                    color: $white !important;
+                    background-color: $black !important;
+                    box-shadow: -10px 10px $beige !important;
+                }
             }
         }
 
-        &__submit {
-            color: $black !important;
-            background-color: $white !important;
+        &__address {
+            a {
+                color: $black;
+            }
 
-            &:hover {
-                color: $white !important;
-                background-color: $black !important;
-                box-shadow: -10px 10px $beige !important;
+            @include large {
+                border-color: $black;
             }
         }
     }
