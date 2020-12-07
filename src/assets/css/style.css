@@ -74,9 +74,9 @@ bodyMenu--open { overflow: hidden; }
 
 a, button { cursor: pointer; }
 
-.button { display: inline-flex; position: relative; font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 1.2rem 2.4rem; align-self: flex-start; transform: perspective(1px) translateZ(0); transition: color 0.3s; }
+.button { display: inline-flex; position: relative; font-family: "CrimsonText-Regular", serif; font-size: 1.2rem; border: 1px solid #ffffff; color: #ffffff; background-color: #000000; padding: 1.2rem 2.4rem; align-self: flex-start; transform: perspective(1px) translateZ(0); transition: 0.25s ease-in-out; }
 
-.button:before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0; background-color: #ffffff; transform: scaleY(0); transform-origin: 50% 100%; transition: transform 0.3s ease-in-out; }
+.button:before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0; background-color: #ffffff; transform: scaleY(0); transform-origin: 50% 100%; transition: transform 0.25s ease-in-out; }
 
 .button:hover, .button:focus, .button:active { color: #000000; }
 
@@ -106,11 +106,45 @@ a, button { cursor: pointer; }
 
 .body--light { background-color: #ffffff !important; color: #000000 !important; }
 
+.body--light .header { background-color: #ffffff !important; }
+
+.body--light .header__item--logo { filter: invert(1); }
+
+.body--light .header .menu__burger span { background: #000000; }
+
+.body--light .header .menu__burger--open span { background: #ffffff; }
+
 .body--light .logo__plexus { filter: invert(1); }
 
-.body--light .button { color: #000000; }
+.body--light .button { border-color: #000000; color: #000000; background-color: #ffffff; }
+
+.body--light .button:before { background-color: #000000; }
+
+.body--light .button:hover, .body--light .button:focus, .body--light .button:active { color: #ffffff; }
+
+.body--light .caption .title > a { color: #000000; }
+
+.body--light .caption__button { color: #000000; }
+
+.body--light .caption__button .icon--arrow-right { color: #000000; }
+
+@media screen and (min-width: 992px) { .body--light .captions__list .caption::after { background: #000000 !important; } }
+
+.body--light .agency__article { background-color: #ffffff; }
 
 .body--light .member__article { border-color: #000000 !important; }
+
+.body--light .projects__item:nth-child(odd) { border-top: 1px solid #000000; border-bottom: 1px solid #000000; }
+
+.body--light .projects__item:nth-child(even) { border-bottom: 1px solid #000000; }
+
+.body--light .projects__link { color: #000000; }
+
+@media screen and (min-width: 768px) { .body--light .projects__link { color: transparent; -webkit-text-stroke: 1px #000000; } }
+
+.body--light .projects__image { box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); }
+
+.body--light .projects .repeat { color: #000000; }
 
 .body--light .form input, .body--light .form textarea { color: #000000 !important; }
 
@@ -121,6 +155,8 @@ a, button { cursor: pointer; }
 .body--light .form__submit { color: #000000 !important; background-color: #ffffff !important; }
 
 .body--light .form__submit:hover { color: #ffffff !important; background-color: #000000 !important; box-shadow: -10px 10px #c4c4ac !important; }
+
+.body--light .legal__article a { color: #000000; }
 
 .preloader { height: 100vh; width: 100vw; background-color: #ffffff; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
 
@@ -142,7 +178,7 @@ a, button { cursor: pointer; }
 
 .header { background-color: #000000; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
-.header__item--logo { width: 90px; }
+.header__item--logo { width: 90px; transition: 0.25s ease-in-out; }
 
 @media screen and (min-width: 576px) { .header__item--logo { width: 150px; } }
 
@@ -194,7 +230,7 @@ a, button { cursor: pointer; }
 
 .menuRight__footer .footer__list { display: flex; justify-content: center; }
 
-.menuRight__footer .footer__item { font-family: "Roboto-Thin", sans-serif; font-size: 0.9rem; }
+.menuRight__footer .footer__item { font-family: "Roboto-Thin", sans-serif; font-size: 0.9rem; color: #ffffff; }
 
 @media screen and (min-width: 768px) { .menuRight__footer .footer__item { font-size: initial; } }
 
@@ -254,11 +290,13 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .captions__list .caption { margin: auto; max-width: 375px; position: relative; } }
 
+.captions__list .caption .title > a { transition: 0.5s ease-in-out !important; }
+
 .captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; display: inline-flex; margin-bottom: 1vh; }
 
 .captions__list .caption__description { margin: 2vh 0; }
 
-.captions__list .caption__button { display: inline-flex; align-items: center; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; }
+.captions__list .caption__button { display: inline-flex; align-items: center; font-family: "CrimsonText-Regular", serif; font-size: 1.5rem; transition: all 0.25s ease-in-out !important; }
 
 .captions__list .caption__button .icon--arrow-right { font-size: 1.4rem; opacity: 0; transition: all 0.25s ease-in-out; }
 
@@ -279,7 +317,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 1500px) { .agency__image { height: 90vh; } }
 
-.agency__article { display: flex; flex-direction: column; justify-content: center; background-color: #000000; padding: 5vh 4vh; }
+.agency__article { display: flex; flex-direction: column; justify-content: center; transition: 0.25s ease-in-out; background-color: #000000; padding: 5vh 4vh; }
 
 @media screen and (min-width: 1500px) { .agency__article { align-items: center; } }
 
@@ -435,6 +473,8 @@ a, button { cursor: pointer; }
 .legal__article ul { margin-left: 5vw; margin-bottom: 5vh; }
 
 .legal__article li { list-style: disc; font-size: 1.2rem; margin-bottom: 1vh; }
+
+.legal__article a { font-weight: 600; transition: 0.5s ease-in-out !important; }
 
 .error { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 

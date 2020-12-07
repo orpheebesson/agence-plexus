@@ -63,6 +63,7 @@
             &__item {
                 font-family: $thin-font;
                 font-size: 0.9rem;
+                color: $white;
 
                 @include medium {
                     font-size: initial;
