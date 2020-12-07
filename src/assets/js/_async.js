@@ -60,13 +60,21 @@ function lightAndDarkMode() {
     const switcherLight = document.querySelector('.switcher__light');
 
     function dark_mode() {
-        document.body.classList.remove('body--light');
-        document.body.classList.add('body--dark');
+        if(!document.body.classList.contains('body--dark')) {
+            document.body.classList.remove('body--light');
+            document.body.classList.add('body--dark');
+        } else {
+            alert('Vous êtes dans la lune ! Vous êtes déjà en mode sombre.');
+        }
     }
 
     function light_mode() {
-        document.body.classList.remove('body--dark');
-        document.body.classList.add('body--light');
+        if(!document.body.classList.contains('body--light')) {
+            document.body.classList.remove('body--dark');
+            document.body.classList.add('body--light');
+        } else {
+            alert('Le soleil brille déjà pour vous.');
+        }
     }
 
     switcherDark.addEventListener("click", dark_mode);
@@ -113,16 +121,16 @@ function menu() {
 }
 
 function homeParallax() {
-    if( document.getElementById('scene') &&
+    if (document.getElementById('scene') &&
         document.getElementById('scene1') &&
         document.getElementById('scene2') &&
         document.getElementById('scene3') &&
         document.getElementById('scene4')) {
 
-        if(window.innerWidth >= 992) {
+        if (window.innerWidth >= 992) {
             var scene = document.getElementById('scene');
-                var parallaxInstance = new Parallax(scene, {
-                    pointerEvents: true
+            var parallaxInstance = new Parallax(scene, {
+                pointerEvents: true
             });
 
             var scene1 = document.getElementById('scene1');
