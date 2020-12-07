@@ -146,7 +146,7 @@ a, button { cursor: pointer; }
 
 .body--light .projects__image { box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); }
 
-.body--light .projects .repeat { color: #000000; }
+.body--light .projects .repeat { color: #000000; mix-blend-mode: inherit; }
 
 .body--light .contact__form input, .body--light .contact__form textarea { color: #000000 !important; }
 
