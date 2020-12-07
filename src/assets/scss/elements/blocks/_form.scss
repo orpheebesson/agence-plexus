@@ -1,40 +1,28 @@
-div.flex__contact
-{
-    display: flex;
 .contact {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
-    width: calc(100% / 2);
-    flex-direction: column;
 
-    .title 
-    {
-        text-align: center;
+    @include large {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-
-    h2.title 
-    {
-        margin-bottom: 10vh;
-    }
-
-
-    p 
-    {
-        &:nth-of-type(3)
-        {
-            margin-top: 10vh;
-        }
-    }
-
 
     &__form {
         display: flex;
         flex-direction: column;
-        margin-top: 3vh;
+        align-items: center;
+        padding: 5vh;
+
+        @include large {
+            padding: 10vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5vh;
+        }
 
         input,
         textarea {
@@ -79,5 +67,31 @@ div.flex__contact
             }
         }
     }
-}
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh;
+
+        @include large {
+            padding: 10vh;
+            border-left: 1px solid $white;
+        }
+
+        .address {
+            &__list {
+                text-align: center;
+                margin-top: 5vh;
+            }
+
+            &__item {
+                margin: 2vh 0;
+
+                &:last-child {
+                    margin: 6vh 0;
+                }
+            }
+        }
+    }
 }
