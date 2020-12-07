@@ -226,11 +226,11 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 115px !important; } }
 
-.captions__list { padding: 4vh; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
+.captions__list { padding: 4vh; position: unset !important; display: unset !important; left: unset !important; top: unset !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
 
 @media screen and (min-width: 768px) { .captions__list { padding: 8vh; } }
 
-@media screen and (min-width: 992px) { .captions__list { height: 100%; display: grid; grid-template-columns: 50% 50%; } }
+@media screen and (min-width: 992px) { .captions__list { height: 100%; display: grid !important; grid-template-columns: 50% 50% !important; } }
 
 @media screen and (min-width: 992px) { .captions__list { background-position: top -5vh left, top -5vh right -4vw, bottom -10vh right, bottom -20vh left; } }
 
@@ -271,7 +271,7 @@ a, button { cursor: pointer; }
 
 .agency { background-color: #000000; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
-@media screen and (min-width: 1200px) { .agency { display: grid; grid-template-columns: 50% 50%; } }
+@media screen and (min-width: 1200px) { .agency { display: grid !important; grid-template-columns: 50% 50% !important; } }
 
 .agency__image { background-image: url("./../img/agence/equipe_agence_plexus.png"); background-position: center; background-size: cover; background-repeat: no-repeat; height: 90vh; display: flex; align-items: flex-end; }
 
