@@ -447,17 +447,13 @@ a, button { cursor: pointer; }
 
 div.flex__contact { display: flex; }
 
-div.flex__contact .contact { height: 90vh; display: flex; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; width: calc(100% / 3); flex-direction: column; }
+div.flex__contact .contact { height: 90vh; display: flex; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; width: calc(100% / 2); flex-direction: column; }
 
 div.flex__contact .contact .title { text-align: center; }
 
 div.flex__contact .contact h2.title { margin-bottom: 10vh; }
 
 div.flex__contact .contact p:nth-of-type(3) { margin-top: 10vh; }
-
-div.flex__contact .contact span.bones { height: 100%; width: 100%; display: flex; }
-
-div.flex__contact .contact span.bones canvas { margin-left: auto; width: 100%; }
 
 div.flex__contact .contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
 

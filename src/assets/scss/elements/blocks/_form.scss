@@ -7,7 +7,7 @@ div.flex__contact
     justify-content: center;
     align-items: center;
     animation: fadeUp 2s ease-in-out 0s forwards 1;
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     flex-direction: column;
 
     .title 
@@ -30,20 +30,6 @@ div.flex__contact
         }
     }
 
-
-    span.bones 
-    {
-        height: 100%;
-        width: 100%;
-        display: flex;
-
-
-        canvas
-        {
-            margin-left: auto;
-            width: 100%;
-        }
-    }
 
     &__form {
         display: flex;

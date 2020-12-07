@@ -192,8 +192,8 @@ function bones()
     scene.background = new THREE.Color(0x000000)
 
 
-    camera = new THREE.PerspectiveCamera(25, window.innerWidth/window.innerHeight);
-    camera.position.set(0,100,1000);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight);
+    camera.position.set(0,500,1000);
 
     renderer = new THREE.WebGLRenderer({canvas: document.querySelector(".bones canvas")});
 
