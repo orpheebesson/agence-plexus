@@ -7,7 +7,8 @@ function testrecall() {
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
     mainContainer.classList.remove('blur');
-    
+    document.body.classList.remove('bodyMenu--open');
+
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
@@ -16,6 +17,40 @@ function testrecall() {
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
+
+    function closeMenuBurger() {
+        if (menuRight.classList.contains('menuRight--open')) {
+            menuBurger.classList.remove('menu__burger--open');
+            menuRight.classList.remove('menuRight--open');
+            mainContainer.classList.remove('blur');
+            document.body.classList.remove('bodyMenu--open');
+        }
+    }
+
+    // function closeMenuBurgerOnClickOutside(event) {
+    //     if (!event.target.closest('.menuRight')) {
+    //         closeMenuBurger();
+    //         event.stopImmediatePropagation();
+    //         document.onclick = avoidFirstClick;
+    //     }
+    // }
+
+    function closeMenuBurgerOnPressEscape(event) {
+        if (event.keyCode == 27) {
+            closeMenuBurger();
+        }
+    }
+
+    document.addEventListener("keyup", closeMenuBurgerOnPressEscape);
+
+    // function avoidFirstClick(event) {
+    //     event.stopImmediatePropagation();
+    //     this.removeEventListener("click", avoidFirstClick);
+    //     document.onclick = closeMenuBurgerOnClickOutside;
+    // }
+
+    // menuBurger.addEventListener("click", avoidFirstClick);
+
 }
 
 testrecall();
@@ -58,6 +93,23 @@ function menu() {
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
+
+    function closeMenuBurger() {
+        if (menuRight.classList.contains('menuRight--open')) {
+            menuBurger.classList.remove('menu__burger--open');
+            menuRight.classList.remove('menuRight--open');
+            mainContainer.classList.remove('blur');
+            document.body.classList.remove('bodyMenu--open');
+        }
+    }
+
+    function closeMenuBurgerOnPressEscape(event) {
+        if (event.keyCode == 27) {
+            closeMenuBurger();
+        }
+    }
+
+    document.addEventListener("keyup", closeMenuBurgerOnPressEscape);
 }
 
 function homeParallax() {
@@ -99,7 +151,7 @@ function homeParallax() {
 homeParallax();
 
 function membersCarousel() {
-    if(document.querySelector('.slider')) {
+    if (document.querySelector('.slider')) {
         var slider = new Swiper('.slider', {
             effect: 'coverflow',
             speed: 1000,
@@ -119,7 +171,7 @@ function membersCarousel() {
                 type: 'fraction',
             },
         });
-        
+
         if (window.innerWidth >= 768) {
             slider.mousewheel.enable();
         }
@@ -153,60 +205,78 @@ function pageTransition() {
         ease: "Expo.easeInOut",
         delay: 0.3,
     });
-    tl.set(".loading-screen", { left: "-100%" });
+    tl.set(".loading-screen", {
+        left: "-100%"
+    });
 }
 
 function contentAnimation() {
     var tl = gsap.timeline();
-    tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
+    tl.from(".animate-this", {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        stagger: 0.4,
+        delay: 0.2
+    });
 }
 
 function pageTransition() {
- var tl = gsap.timeline();
- tl.to(".loading-screen", {
-    duration: 1.2,
-    width: "100%",
-    left: "0%",
-    ease: "Expo.easeInOut",
-    backgroundColor:'rgb(255,255,255)'
-});
+    var tl = gsap.timeline();
+    tl.to(".loading-screen", {
+        duration: 1.2,
+        width: "100%",
+        left: "0%",
+        ease: "Expo.easeInOut",
+        backgroundColor: 'rgb(255,255,255)'
+    });
 
- tl.to(".loading-screen", {
-    duration: 1,
-    width: "100%",
-    left: "100%",
-    ease: "Expo.easeInOut",
-    backgroundColor:'rgb(255,255,255)',
-    delay: 0.3,
-});
- tl.set(".loading-screen", { left: "-100%" });
+    tl.to(".loading-screen", {
+        duration: 1,
+        width: "100%",
+        left: "100%",
+        ease: "Expo.easeInOut",
+        backgroundColor: 'rgb(255,255,255)',
+        delay: 0.3,
+    });
+    tl.set(".loading-screen", {
+        left: "-100%"
+    });
 }
 
 $(function () {
     barba.init({
-      sync:true,
-      transitions: [{
+        sync: true,
+        transitions: [{
 
-        async enter({ next }) {
-            contentAnimation();
-        },
+            async enter({
+                next
+            }) {
+                contentAnimation();
+            },
 
-        async once({ next }) {
-          contentAnimation();
-      },
-      async beforeEnter({ next }) {
-          testrecall();
-          lightAndDarkMode();
-          menu();
-          membersCarousel();
-          homeParallax();
-      },
-      async leave({ next }) {
-         const done = this.async();
-         pageTransition();
-         await delay(1000);
-         done();
-     },
- }]
-});
+            async once({
+                next
+            }) {
+                contentAnimation();
+            },
+            async beforeEnter({
+                next
+            }) {
+                testrecall();
+                lightAndDarkMode();
+                menu();
+                membersCarousel();
+                homeParallax();
+            },
+            async leave({
+                next
+            }) {
+                const done = this.async();
+                pageTransition();
+                await delay(1000);
+                done();
+            },
+        }]
+    });
 });
