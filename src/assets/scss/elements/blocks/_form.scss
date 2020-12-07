@@ -30,6 +30,21 @@ div.flex__contact
         }
     }
 
+
+    span.bones 
+    {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+
+        canvas
+        {
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+
     &__form {
         display: flex;
         flex-direction: column;

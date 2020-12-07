@@ -455,6 +455,10 @@ div.flex__contact .contact h2.title { margin-bottom: 10vh; }
 
 div.flex__contact .contact p:nth-of-type(3) { margin-top: 10vh; }
 
+div.flex__contact .contact span.bones { height: 100%; width: 100%; display: flex; }
+
+div.flex__contact .contact span.bones canvas { margin-left: auto; width: 100%; }
+
 div.flex__contact .contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
 
 div.flex__contact .contact__form input, div.flex__contact .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
