@@ -13,7 +13,7 @@
     transform: translateX(100%);
     transition-duration: 0.5s;
     overflow: hidden;
-    width: 245px;
+    width: 100vw;
 
     @include extra-small {
         width: 275px;
