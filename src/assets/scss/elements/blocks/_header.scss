@@ -5,6 +5,7 @@
 
     &__item--logo {
         width: 90px;
+        transition: 0.25s ease-in-out;
 
         @include small {
             width: 150px;
@@ -109,12 +110,4 @@
             }
         }
     }
-
-    // &:hover {
-    //     background-color: $white;
-
-    //     .header__item--logo {
-    //         filter: invert(1);
-    //     }
-    // }
 }

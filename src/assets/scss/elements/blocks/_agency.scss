@@ -29,6 +29,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        transition: 0.25s ease-in-out;
 
         @include xx-large {
             align-items: center;
