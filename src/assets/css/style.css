@@ -444,9 +444,15 @@ a, button { cursor: pointer; }
 @keyframes repeat { 0% { transform: translate3d(var(--move-initial), 0, 0); }
   100% { transform: translate3d(var(--move-final), 0, 0); } }
 
-.contact { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+.contact { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
-.contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
+@media screen and (min-width: 992px) { .contact { height: 90vh; display: flex; justify-content: center; align-items: center; } }
+
+.contact__form { display: flex; flex-direction: column; align-items: center; padding: 5vh; }
+
+@media screen and (min-width: 992px) { .contact__form { padding: 10vh; } }
+
+.contact__form form { display: flex; flex-direction: column; margin-top: 5vh; }
 
 .contact__form input, .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
 
@@ -461,6 +467,16 @@ a, button { cursor: pointer; }
 .contact__form .form__submit { margin: 3vh auto; }
 
 .contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
+
+.contact__address { display: flex; flex-direction: column; align-items: center; padding: 5vh; }
+
+@media screen and (min-width: 992px) { .contact__address { padding: 10vh; border-left: 1px solid #ffffff; } }
+
+.contact__address .address__list { text-align: center; margin-top: 5vh; }
+
+.contact__address .address__item { margin: 2vh 0; }
+
+.contact__address .address__item:last-child { margin: 6vh 0; }
 
 .legal { padding: 5vh; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 

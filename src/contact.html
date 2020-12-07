@@ -69,11 +69,21 @@
     <div class="menuRight">
         <nav>
             <ul class="menuRight__list">
-                <li class="menuRight__item"><div><a href="index.html">Accueil</a></div></li>
-                <li class="menuRight__item"><div><a href="agence.html">L'agence</a></div></li>
-                <li class="menuRight__item"><div><a href="membres.html">Les membres</a></div></li>
-                <li class="menuRight__item"><div><a href="projets.html">Les projets</a></div></li>
-                <li class="menuRight__item"><div><a href="contact.html">Contact</a></div></li>
+                <li class="menuRight__item">
+                    <div><a href="index.html">Accueil</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="agence.html">L'agence</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="membres.html">Les membres</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="projets.html">Les projets</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="contact.html">Contact</a></div>
+                </li>
             </ul>
         </nav>
         <footer class="menuRight__footer">
@@ -94,13 +104,25 @@
         <div data-barba="container" data-barba-namespace="contact">
 
             <section class="contact">
-                <h1 class="title">Contactez-nous</h1>
-                <form class="contact__form" action="form.php" method="POST">
-                    <input class="form__field" type="email" name="mail" placeholder="Votre e-mail" required="">
-                    <textarea class="form__field" name="message" placeholder="Votre message" cols="30" rows="10"
-                        required=""></textarea>
-                    <button class="form__field form__submit button" type="submit">Envoyer</button>
-                </form>
+                <div class="contact__form">
+                    <h1 class="title">Contactez-nous</h1>
+                    <form action="form.php" method="POST">
+                        <input class="form__field" type="email" name="mail" placeholder="Votre e-mail" required="">
+                        <textarea class="form__field" name="message" placeholder="Votre message" cols="30" rows="10"
+                            required=""></textarea>
+                        <button class="form__field form__submit button" type="submit">Envoyer</button>
+                    </form>
+                </div>
+                <div class="contact__address">
+                    <h2 class="title">Retrouvez-nous</h2>
+                    <address class="adress">
+                        <ul class="address__list">
+                            <li class="address__item">44 Avenue Albert Einstein</li>
+                            <li class="address__item">17000 La Rochelle</li>
+                            <li class="address__item"><a href="mailto:agence.plexus@gmail.com">agence.plexus@gmail.com</a></li>
+                        </ul>
+                    </address>
+                </div>
             </section>
 
         </div>

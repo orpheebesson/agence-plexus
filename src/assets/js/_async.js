@@ -256,35 +256,35 @@ $(function () {
     barba.init({
         sync: true,
         transitions: [{
+                async enter({
+            next
+        }) {
+            contentAnimation();
+        },
 
-            async enter({
-                next
-            }) {
-                contentAnimation();
-            },
+        async once({
+            next
+        }) {
+            contentAnimation();
+        },
+        async beforeEnter({
+            next
+        }) {
+            testrecall();
+            lightAndDarkMode();
+            menu();
+            membersCarousel();
+            homeParallax();
+        },
+        async leave({
+            next
+        }) {
+            const done = this.async();
+            pageTransition();
+            await delay(1000);
+            done();
+        },
 
-            async once({
-                next
-            }) {
-                contentAnimation();
-            },
-            async beforeEnter({
-                next
-            }) {
-                testrecall();
-                lightAndDarkMode();
-                menu();
-                membersCarousel();
-                homeParallax();
-            },
-            async leave({
-                next
-            }) {
-                const done = this.async();
-                pageTransition();
-                await delay(1000);
-                done();
-            },
-        }]
-    });
+        }],
+});
 });
