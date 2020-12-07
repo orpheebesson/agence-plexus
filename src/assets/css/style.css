@@ -1,4 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -262,13 +265,13 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 992px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 115px !important; } }
 
-.captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
+.captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
 
 @media screen and (min-width: 768px) { .captions__list { padding: 8vh; } }
 
 @media screen and (min-width: 992px) { .captions__list { height: 100%; display: grid !important; grid-template-columns: 50% 50% !important; } }
 
-@media screen and (min-width: 992px) { .captions__list { background-position: top -5vh left, top -5vh right -4vw, bottom -10vh right, bottom -20vh left; } }
+@media screen and (min-width: 992px) { .captions__list { background-position: top -5vh left, top -5vh right -4vw, bottom -10vh right, bottom -20vh left; } }
 
 @media screen and (min-width: 480px) { .captions__list { background-size: 50%; } }
 
@@ -442,23 +445,31 @@ a, button { cursor: pointer; }
 @keyframes repeat { 0% { transform: translate3d(var(--move-initial), 0, 0); }
   100% { transform: translate3d(var(--move-final), 0, 0); } }
 
-.contact { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; }
+div.flex__contact { display: flex; }
 
-.contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
+div.flex__contact .contact { height: 90vh; display: flex; justify-content: center; align-items: center; animation: fadeUp 2s ease-in-out 0s forwards 1; width: calc(100% / 3); flex-direction: column; }
 
-.contact__form input, .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
+div.flex__contact .contact .title { text-align: center; }
 
-.contact__form .form__field { max-width: 80vw; box-shadow: -10px 10px #ffffff; border: 1px solid #ffffff; margin: 3vh 0; transition: all 0.25s ease-in-out; }
+div.flex__contact .contact h2.title { margin-bottom: 10vh; }
 
-@media screen and (min-width: 576px) { .contact__form .form__field { max-width: 50vw; } }
+div.flex__contact .contact p:nth-of-type(3) { margin-top: 10vh; }
 
-@media screen and (min-width: 1500px) { .contact__form .form__field { max-width: 35vw; } }
+div.flex__contact .contact__form { display: flex; flex-direction: column; margin-top: 3vh; }
 
-.contact__form .form__field:focus { box-shadow: -10px 10px #c4c4ac; color: #000000; background-color: #ffffff; }
+div.flex__contact .contact__form input, div.flex__contact .contact__form textarea { border: none; color: #ffffff; background-color: #000000; font-size: 1.2rem; padding: 10px; }
 
-.contact__form .form__submit { margin: 3vh auto; }
+div.flex__contact .contact__form .form__field { max-width: 80vw; box-shadow: -10px 10px #ffffff; border: 1px solid #ffffff; margin: 3vh 0; transition: all 0.25s ease-in-out; }
 
-.contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
+@media screen and (min-width: 576px) { div.flex__contact .contact__form .form__field { max-width: 50vw; } }
+
+@media screen and (min-width: 1500px) { div.flex__contact .contact__form .form__field { max-width: 35vw; } }
+
+div.flex__contact .contact__form .form__field:focus { box-shadow: -10px 10px #c4c4ac; color: #000000; background-color: #ffffff; }
+
+div.flex__contact .contact__form .form__submit { margin: 3vh auto; }
+
+div.flex__contact .contact__form .form__submit:hover { box-shadow: -10px 10px #c4c4ac; }
 
 .legal { padding: 5vh; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
