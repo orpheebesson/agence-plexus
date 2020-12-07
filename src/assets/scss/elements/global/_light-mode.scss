@@ -59,6 +59,11 @@
     }
 
     .captions__list {
+        background-image: url('./../img/accueil/illustration_accueil_light_1.png'),
+            url('./../img/accueil/illustration_accueil_light_2.png'),
+            url('./../img/accueil/illustration_accueil_light_3.png'),
+            url('./../img/accueil/illustration_accueil_light_4.png');
+
         @include large {
             .caption {
                 &::after {
