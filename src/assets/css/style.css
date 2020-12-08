@@ -114,7 +114,7 @@ a, button { cursor: pointer; }
 
 .body--light .header .menu__burger--open span { background: #ffffff; }
 
-.body--light .logo__plexus { filter: invert(1); }
+.body--light .logo__plexus, .body--light .logo__lines { filter: invert(1); }
 
 .body--light .button { border-color: #000000; color: #000000; background-color: #ffffff; }
 
@@ -274,8 +274,6 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 1200px) { .logo__lines { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 250px !important; } }
 
-@media screen and (min-width: 1500px) { .logo__plexus { height: 115px !important; } }
-
 .captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh left, top 65vh right, bottom 65vh left, bottom 0vh right; background-size: 310px; background-repeat: no-repeat; }
 
 @media screen and (min-width: 768px) { .captions__list { padding: 8vh; } }
@@ -310,7 +308,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 1200px) { .captions__list .caption__item { width: initial; margin: auto; } }
 
-@media screen and (min-width: 1200px) { .captions__list .caption { margin: auto; max-width: 375px; position: relative; } }
+@media screen and (min-width: 1200px) { .captions__list .caption { margin: auto; max-width: 375px; } }
 
 .captions__list .caption .title > a { transition: 0.5s ease-in-out !important; }
 
@@ -323,11 +321,6 @@ a, button { cursor: pointer; }
 .captions__list .caption__button .icon--arrow-right { font-size: 1.4rem; opacity: 0; transition: all 0.25s ease-in-out; }
 
 .captions__list .caption__button:hover .icon--arrow-right { opacity: 1; transform: translateX(10px); }
-
-@media screen and (min-width: 1200px) { .captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; right: 75px; transform: rotate(30deg); }
-  .captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; left: -50px; transform: rotate(-30deg); }
-  .captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 130px; top: 0; right: 75px; transform: rotate(-22deg); }
-  .captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 200px; top: 0; left: -50px; transform: rotate(22deg); } }
 
 .agency { background-color: #000000; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
