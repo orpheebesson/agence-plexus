@@ -15,7 +15,7 @@
     overflow: hidden;
     width: 100vw;
 
-    @include extra-small {
+    @include x-small {
         width: 275px;
     }
 

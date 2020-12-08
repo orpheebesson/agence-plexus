@@ -1,4 +1,10 @@
-@mixin extra-small {
+@mixin xx-small {
+    @media screen and (min-width: #{$xxs}) {
+        @content;
+    }
+}
+
+@mixin x-small {
     @media screen and (min-width: #{$xs}) {
         @content;
     }

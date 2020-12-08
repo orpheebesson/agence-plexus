@@ -1,5 +1,5 @@
 main {
-    @include large {
+    @include x-large {
         height: 90vh;
         position: relative;
         overflow: hidden;
@@ -7,7 +7,7 @@ main {
 }
 
 .logo__plexus {
-    display: none;
+    display: none !important;
 
     @include x-large {
         z-index: 1 !important;
