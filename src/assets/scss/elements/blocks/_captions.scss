@@ -9,7 +9,7 @@
         padding: 8vh;
     }
 
-    @include large {
+    @include x-large {
         height: 100%;
         @include split;
     }
@@ -18,27 +18,69 @@
     url('./../img/accueil/illustration_accueil_2.png'),
     url('./../img/accueil/illustration_accueil_3.png'),
     url('./../img/accueil/illustration_accueil_4.png');
-    background-position: top 10vh center,
-    top 65vh center,
-    bottom 70vh center,
-    bottom 10vh center;
+    background-position: top 10vh left,
+    top 65vh right,
+    bottom 65vh left,
+    bottom 0vh right;
+    background-size: 310px;
+
+    @include xx-small {
+        background-position: top 10vh left,
+            top 60vh right,
+            bottom 55vh left,
+            bottom -5vh right;
+        background-size: 330px;
+    }
+
+    @include x-small {
+        background-position: top 0 left,
+            top 50vh right -5vw,
+            bottom 45vh left,
+            bottom -15vh right -5vw;
+        background-size: 370px;
+    }
+
+    @include small {
+        background-position: top 0 left,
+            top 45vh right -5vw,
+            bottom 45vh left,
+            bottom -15vh right -5vw;
+        background-size: 420px;
+    }
+
+    @include medium {
+        background-position: top 0 left,
+            top 55vh right -5vw,
+            bottom 60vh left,
+            bottom -10vh right -5vw;
+        background-size: 450px;
+    }
 
     @include large {
         background-position:
+            top 0 left,
+            top 45vh right -4vw,
+            bottom 50vh left,
+            bottom -20vh right -5vw;
+        background-size: 470px;
+    }
+
+    @include x-large {
+        background-position:
             top -5vh left,
             top -5vh right -4vw,
+            bottom -5vh right,
+            bottom -5vh left -5vw;
+        background-size: 530px;
+    }
+
+    @include xx-large {
+        background-position:
+            top -5vh left,
+            top -10vh right -4vw,
             bottom -10vh right,
-            bottom -20vh left;
-    }
-
-    background-size: 100%;
-
-    @include extra-small {
-        background-size: 50%;
-    }
-
-    @include large {
-        background-size: 38%;
+            bottom -30vh left -5vw;
+        background-size: 650px;
     }
 
     background-repeat: no-repeat;
@@ -55,7 +97,7 @@
                 margin: 16vh 0 16vh auto;
             }
 
-            @include large {
+            @include x-large {
                 margin: initial;
             }
         }
@@ -71,7 +113,7 @@
             margin: 16vh 0;
         }
 
-        @include large {
+        @include x-large {
             width: initial;
             margin: auto;
         }
@@ -79,7 +121,7 @@
 
     .caption {
 
-        @include large {
+        @include x-large {
             margin: auto;
             max-width: 375px;
             position: relative;
@@ -122,7 +164,7 @@
         }
     }
 
-    @include large {
+    @include x-large {
         &>.caption {
             &--agency {
                 &>.caption {

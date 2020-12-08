@@ -262,23 +262,33 @@ a, button { cursor: pointer; }
 
 .menuRight--open .menuRight__footer { opacity: 1; transition-delay: 1.3s; }
 
-@media screen and (min-width: 992px) { main { height: 90vh; position: relative; overflow: hidden; } }
+@media screen and (min-width: 1200px) { main { height: 90vh; position: relative; overflow: hidden; } }
 
-.logo__plexus { display: none; }
+.logo__plexus { display: none !important; }
 
-@media screen and (min-width: 992px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 115px !important; } }
+@media screen and (min-width: 1200px) { .logo__plexus { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 80px !important; } }
 
-.captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh center, top 65vh center, bottom 70vh center, bottom 10vh center; background-size: 100%; background-repeat: no-repeat; }
+@media screen and (min-width: 1500px) { .logo__plexus { height: 115px !important; } }
+
+.captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh left, top 65vh right, bottom 65vh left, bottom 0vh right; background-size: 310px; background-repeat: no-repeat; }
 
 @media screen and (min-width: 768px) { .captions__list { padding: 8vh; } }
 
-@media screen and (min-width: 992px) { .captions__list { height: 100%; display: grid !important; grid-template-columns: 50% 50% !important; } }
+@media screen and (min-width: 1200px) { .captions__list { height: 100%; display: grid !important; grid-template-columns: 50% 50% !important; } }
 
-@media screen and (min-width: 992px) { .captions__list { background-position: top -5vh left, top -5vh right -4vw, bottom -10vh right, bottom -20vh left; } }
+@media screen and (min-width: 350px) { .captions__list { background-position: top 10vh left, top 60vh right, bottom 55vh left, bottom -5vh right; background-size: 330px; } }
 
-@media screen and (min-width: 480px) { .captions__list { background-size: 50%; } }
+@media screen and (min-width: 480px) { .captions__list { background-position: top 0 left, top 50vh right -5vw, bottom 45vh left, bottom -15vh right -5vw; background-size: 370px; } }
 
-@media screen and (min-width: 992px) { .captions__list { background-size: 38%; } }
+@media screen and (min-width: 576px) { .captions__list { background-position: top 0 left, top 45vh right -5vw, bottom 45vh left, bottom -15vh right -5vw; background-size: 420px; } }
+
+@media screen and (min-width: 768px) { .captions__list { background-position: top 0 left, top 55vh right -5vw, bottom 60vh left, bottom -10vh right -5vw; background-size: 450px; } }
+
+@media screen and (min-width: 992px) { .captions__list { background-position: top 0 left, top 45vh right -4vw, bottom 50vh left, bottom -20vh right -5vw; background-size: 470px; } }
+
+@media screen and (min-width: 1200px) { .captions__list { background-position: top -5vh left, top -5vh right -4vw, bottom -5vh right, bottom -5vh left -5vw; background-size: 530px; } }
+
+@media screen and (min-width: 1500px) { .captions__list { background-position: top -5vh left, top -10vh right -4vw, bottom -10vh right, bottom -30vh left -5vw; background-size: 650px; } }
 
 .captions__list .caption__item { margin: 16vh 0; }
 
@@ -286,15 +296,15 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 768px) { .captions__list .caption__item:nth-child(even) { margin: 16vh 0 16vh auto; } }
 
-@media screen and (min-width: 992px) { .captions__list .caption__item:nth-child(even) { margin: initial; } }
+@media screen and (min-width: 1200px) { .captions__list .caption__item:nth-child(even) { margin: initial; } }
 
 @media screen and (min-width: 576px) { .captions__list .caption__item { width: 75%; margin: 16vh auto; } }
 
 @media screen and (min-width: 768px) { .captions__list .caption__item { display: flex; width: 50%; margin: 16vh 0; } }
 
-@media screen and (min-width: 992px) { .captions__list .caption__item { width: initial; margin: auto; } }
+@media screen and (min-width: 1200px) { .captions__list .caption__item { width: initial; margin: auto; } }
 
-@media screen and (min-width: 992px) { .captions__list .caption { margin: auto; max-width: 375px; position: relative; } }
+@media screen and (min-width: 1200px) { .captions__list .caption { margin: auto; max-width: 375px; position: relative; } }
 
 .captions__list .caption .title > a { transition: 0.5s ease-in-out !important; }
 
@@ -308,7 +318,7 @@ a, button { cursor: pointer; }
 
 .captions__list .caption__button:hover .icon--arrow-right { opacity: 1; transform: translateX(10px); }
 
-@media screen and (min-width: 992px) { .captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; right: 75px; transform: rotate(30deg); }
+@media screen and (min-width: 1200px) { .captions__list > .caption--agency > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; right: 75px; transform: rotate(30deg); }
   .captions__list > .caption--members > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 150px; bottom: 0; left: -50px; transform: rotate(-30deg); }
   .captions__list > .caption--projects > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 130px; top: 0; right: 75px; transform: rotate(-22deg); }
   .captions__list > .caption--contact > .caption::after { content: ""; position: absolute; background: #ffffff; height: 1px; width: 200px; top: 0; left: -50px; transform: rotate(22deg); } }
