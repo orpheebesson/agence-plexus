@@ -130,27 +130,33 @@ function homeParallax() {
         if (window.innerWidth >= 992) {
             var scene = document.getElementById('scene');
             var parallaxInstance = new Parallax(scene, {
-                pointerEvents: true
+                pointerEvents: true,
+                clipRelativeInput: true,
+                originX: -0.5,
             });
 
             var scene1 = document.getElementById('scene1');
             var parallaxInstance1 = new Parallax(scene1, {
-                pointerEvents: true
+                pointerEvents: true,
+                relativeInput: true
             });
 
             var scene2 = document.getElementById('scene2');
             var parallaxInstance2 = new Parallax(scene2, {
-                pointerEvents: true
+                pointerEvents: true,
+                relativeInput: true
             });
 
             var scene3 = document.getElementById('scene3');
             var parallaxInstance3 = new Parallax(scene3, {
-                pointerEvents: true
+                pointerEvents: true,
+                relativeInput: true
             });
 
             var scene4 = document.getElementById('scene4');
             var parallaxInstance4 = new Parallax(scene4, {
-                pointerEvents: true
+                pointerEvents: true,
+                relativeInput: true
             });
         }
     }

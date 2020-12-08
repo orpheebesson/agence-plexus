@@ -82,7 +82,6 @@
         @include large {
             margin: auto;
             max-width: 375px;
-            position: relative;
         }
 
         .title>a {
@@ -117,72 +116,6 @@
                 .icon--arrow-right {
                     opacity: 1;
                     transform: translateX(10px);
-                }
-            }
-        }
-    }
-
-    @include large {
-        &>.caption {
-            &--agency {
-                &>.caption {
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: $white;
-                        height: 1px;
-                        width: 150px;
-                        bottom: 0;
-                        right: 75px;
-                        transform: rotate(30deg);
-                    }
-                }
-            }
-
-            &--members {
-                &>.caption {
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: $white;
-                        height: 1px;
-                        width: 150px;
-                        bottom: 0;
-                        left: -50px;
-                        transform: rotate(-30deg);
-                    }
-                }
-            }
-
-            &--projects {
-                &>.caption {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: $white;
-                        height: 1px;
-                        width: 130px;
-                        top: 0;
-                        right: 75px;
-                        transform: rotate(-22deg);
-                    }
-                }
-            }
-
-            &--contact {
-                &>.caption {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: $white;
-                        height: 1px;
-                        width: 200px;
-                        top: 0;
-                        left: -50px;
-                        transform: rotate(22deg);
-                    }
                 }
             }
         }

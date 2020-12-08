@@ -9,13 +9,31 @@ main {
 .logo__plexus {
     display: none;
 
-    @include large {
+    @include x-large {
         z-index: 1 !important;
         display: initial !important;
         position: absolute !important;
         left: 50% !important;
         top: 50% !important;
         transform: translateX(-50%) translateY(-50%) !important;
+        height: 80px !important;
+    }
+
+    @include xx-large {
         height: 115px !important;
+    }
+}
+
+.logo__lines {
+    display: none;
+
+    @include x-large {
+        z-index: 1 !important;
+        display: initial !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translateX(-50%) translateY(-50%) !important;
+        height: 250px !important;
     }
 }
