@@ -242,7 +242,7 @@ function pageTransition() {
         width: "100%",
         left: "0%",
         ease: "Expo.easeInOut",
-        backgroundColor: 'rgb(255,255,255)'
+        backgroundColor: 'rgb(243, 243, 243)'
     });
 
     tl.to(".loading-screen", {
@@ -250,7 +250,7 @@ function pageTransition() {
         width: "100%",
         left: "100%",
         ease: "Expo.easeInOut",
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(243, 243, 243)',
         delay: 0.3,
     });
     tl.set(".loading-screen", {
@@ -259,37 +259,36 @@ function pageTransition() {
 }
 
 
-    barba.init({
-        sync: true,
-        transitions: [{
-            async enter({
-                next
-            }) {
-                contentAnimation();
-            },
+barba.init({
+    sync: true,
+    transitions: [{
+        async enter({
+            next
+        }) {
+            contentAnimation();
+        },
 
-            async once({
-                next
-            }) {
-                contentAnimation();
-            },
-            async beforeEnter({
-                next
-            }) {
-                testrecall();
-                menu();
-                membersCarousel();
-                homeParallax();
-            },
-            async leave({
-                next
-            }) {
-                const done = this.async();
-                pageTransition();
-                await delay(1000);
-                done();
-            },
+        async once({
+            next
+        }) {
+            contentAnimation();
+        },
+        async beforeEnter({
+            next
+        }) {
+            testrecall();
+            menu();
+            membersCarousel();
+            homeParallax();
+        },
+        async leave({
+            next
+        }) {
+            const done = this.async();
+            pageTransition();
+            await delay(1000);
+            done();
+        },
 
-        }],
-    });
-
+    }],
+});
