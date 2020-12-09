@@ -1,4 +1,6 @@
 main {
+    animation: fadeUp 2s ease-in-out 0s forwards 1;
+
     @include x-large {
         height: 90vh;
         position: relative;

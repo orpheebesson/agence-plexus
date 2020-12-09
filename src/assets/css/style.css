@@ -262,6 +262,8 @@ a, button { cursor: pointer; }
 
 .menuRight--open .menuRight__footer { opacity: 1; transition-delay: 1.3s; }
 
+main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
+
 @media screen and (min-width: 1200px) { main { height: 90vh; position: relative; overflow: hidden; } }
 
 .logo__plexus { display: none !important; }
@@ -422,7 +424,7 @@ a, button { cursor: pointer; }
 
 .swiper-pagination.swiper-pagination-hidden { opacity: 0; }
 
-.projects { height: 90vh; display: flex; flex-direction: column; justify-content: center; animation: fadeUp 2s ease-in-out 0s forwards 1; overflow: hidden; }
+.projects { height: 90vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .projects__list { --offset: 20vw; --move-initial: calc(-25% + var(--offset)); --move-final: calc(-50% + var(--offset)); }
 
