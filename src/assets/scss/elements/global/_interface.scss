@@ -61,3 +61,28 @@ button {
         filter: blur(10px);
     }
 }
+
+.loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    pointer-events: none;
+
+    &__overlay {
+        position: relative;
+        height: 100%;
+        width: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $black;
+    }
+
+    &__icon {
+        height: 125px;
+    }
+}
