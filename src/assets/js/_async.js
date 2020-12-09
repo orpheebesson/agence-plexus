@@ -258,7 +258,7 @@ function pageTransition() {
     });
 }
 
-$(function () {
+
     barba.init({
         sync: true,
         transitions: [{
@@ -292,4 +292,4 @@ $(function () {
 
         }],
     });
-});
+
