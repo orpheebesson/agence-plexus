@@ -27,7 +27,6 @@
     "del": "^6.0.0",
     "gsap": "^3.5.1",
     "gulp-htmlmin": "^5.0.1",
-    "jquery": "^3.5.1",
     "vivus": "^0.4.5"
   },
   "browserslist": [

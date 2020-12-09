@@ -1,16 +1,13 @@
-const body = document.body;
-const preloader = $('.preloader');
-const preloaderContainer = $('.preloader__container');
-const preloaderOverlay = $('.preloader__overlay');
-const svgright = $('img#right');
-const svgleft = $('img#left');
-const svgx = $('#x');
+const preloader = document.querySelector('.preloader');
+const preloaderContainer = document.querySelector('.preloader__container');
+const preloaderOverlay = document.querySelector('.preloader__overlay');
+const svgleft = document.getElementById('left');
+const svgright = document.getElementById('right');
+const svgx = document.getElementById('x');
 
 function preloaderAnimation() {
-    $(window).on('load', () => {
-        preloaderContainer.css({
-            display: 'flex',
-        })
+    window.addEventListener("load", function() {
+        preloaderContainer.style.display = 'flex';
         let tl = new TimelineMax();
         tl
         .fromTo(svgright, {
