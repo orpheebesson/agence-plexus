@@ -74,12 +74,12 @@
         }
     }
 
-    .agency__article {
+    .agency {
         background-color: $white;
-    }
 
-    .member__article {
-        border-color: $black !important;
+        &__image {
+            background-image: url('./../img/agence/equipe_agence_plexus_light.png');
+        }
     }
 
     .projects {
