@@ -205,21 +205,21 @@ function delay(n) {
 
 function pageTransition() {
     var tl = gsap.timeline();
-    tl.to(".loading-screen", {
+    tl.to(".loadingScreen__overlay", {
         duration: 1.2,
         width: "100%",
         left: "0%",
         ease: "Expo.easeInOut",
     });
 
-    tl.to(".loading-screen", {
+    tl.to(".loadingScreen__overlay", {
         duration: 1,
         width: "100%",
         left: "100%",
         ease: "Expo.easeInOut",
         delay: 0.3,
     });
-    tl.set(".loading-screen", {
+    tl.set(".loadingScreen__overlay", {
         left: "-100%"
     });
 }
@@ -237,7 +237,7 @@ function contentAnimation() {
 
 function pageTransition() {
     var tl = gsap.timeline();
-    tl.to(".loading-screen", {
+    tl.to(".loadingScreen__overlay", {
         duration: 1.2,
         width: "100%",
         left: "0%",
@@ -245,7 +245,7 @@ function pageTransition() {
         backgroundColor: 'rgb(243, 243, 243)'
     });
 
-    tl.to(".loading-screen", {
+    tl.to(".loadingScreen__overlay", {
         duration: 1,
         width: "100%",
         left: "100%",
@@ -253,7 +253,7 @@ function pageTransition() {
         backgroundColor: 'rgb(243, 243, 243)',
         delay: 0.3,
     });
-    tl.set(".loading-screen", {
+    tl.set(".loadingScreen__overlay", {
         left: "-100%"
     });
 }

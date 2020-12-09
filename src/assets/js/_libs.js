@@ -1,6 +1,3 @@
-
-
-
 /*!
  * GSAP 3.5.1
  * https://greensock.com
