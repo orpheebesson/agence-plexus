@@ -164,7 +164,7 @@ a, button { cursor: pointer; }
 
 .body--light .legal__article a { color: #111111; }
 
-.preloader { height: 100vh; width: 100vw; background-color: #f3f3f3; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
+.preloader { height: 100vh; width: 100vw; background-color: white; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 9999; }
 
 .preloader__overlay { height: 100%; width: 100%; background-color: #111111; top: 0; left: 0; pointer-events: none; transform: translateY(-100%); position: absolute; z-index: 2; }
 

@@ -289,6 +289,5 @@ barba.init({
             await delay(1000);
             done();
         },
-
     }],
 });
