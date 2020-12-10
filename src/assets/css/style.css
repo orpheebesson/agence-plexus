@@ -90,7 +90,9 @@ a, button { cursor: pointer; }
 
 .loadingScreen__overlay { position: relative; height: 100%; width: 0%; display: flex; justify-content: center; align-items: center; background-color: #111111; }
 
-.loadingScreen__icon { height: 125px; }
+.loadingScreen__icon { height: 80px; }
+
+@media screen and (min-width: 992px) { .loadingScreen__icon { height: 125px; } }
 
 @keyframes move { 0% { transform: translate(0px, 0px); }
   20% { transform: translate(-5px, 5px); }
