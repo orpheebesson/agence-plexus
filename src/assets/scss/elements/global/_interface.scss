@@ -83,6 +83,10 @@ button {
     }
 
     &__icon {
-        height: 125px;
+        height: 80px;
+
+        @include large {
+            height: 125px;
+        }
     }
 }
