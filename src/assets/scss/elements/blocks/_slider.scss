@@ -47,7 +47,7 @@
             }
 
             &__article {
-                padding: 5vh 4vh 10vh 4vh;
+                padding: 5vh 4vh;
                 transition: 0.5s;
 
                 @include small {
@@ -74,6 +74,12 @@
 
             &__description {
                 margin-bottom: 5vh;
+
+                br {
+                    display: flex;
+                    content: "";
+                    margin-bottom: 2vh;
+                }
             }
         }
     }
