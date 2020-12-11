@@ -394,7 +394,7 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 768px) { .slider__member .member__image { padding: 0; height: 50%; width: unset; } }
 
-.slider__member .member__article { padding: 5vh 4vh 10vh 4vh; transition: 0.5s; }
+.slider__member .member__article { padding: 5vh 4vh; transition: 0.5s; }
 
 @media screen and (min-width: 576px) { .slider__member .member__article { width: 60vw; padding: 5vh 0 10vh 0; } }
 
@@ -405,6 +405,8 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 .slider__member .member__subtitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; margin: 2vh 0; }
 
 .slider__member .member__description { margin-bottom: 5vh; }
+
+.slider__member .member__description br { display: flex; content: ""; margin-bottom: 2vh; }
 
 .slider__controls { height: 10vh; display: flex; justify-content: center; align-items: center; z-index: 10; }
 
