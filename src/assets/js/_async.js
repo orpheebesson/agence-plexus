@@ -280,6 +280,7 @@ barba.init({
             menu();
             membersCarousel();
             homeParallax();
+            window.scrollTo(0, 0);
         },
         async leave({
             next
