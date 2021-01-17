@@ -40,6 +40,22 @@ main {
     }
 
     @include xx-large {
-        height: 285px !important;
+        height: 275px !important;
+    }
+}
+
+.logo__baseline {
+    display: none;
+
+    @include xx-large {
+        z-index: 1 !important;
+        display: initial !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: calc(50% + 70px) !important;
+        transform: translateX(-50%) !important;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 8px;
     }
 }
