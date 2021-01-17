@@ -46,13 +46,13 @@
                     max-width: 35vw;
                 }
 
-                box-shadow: -10px 10px $white;
+                box-shadow: -7px 7px $white;
                 border: 1px solid $white;
                 margin: 3vh 0;
                 transition: all 0.25s ease-in-out;
 
                 &:focus {
-                    box-shadow: -10px 10px $beige;
+                    box-shadow: -7px 7px $beige;
                     color: $black;
                     background-color: $white;
                 }
@@ -62,7 +62,7 @@
                 margin: 3vh auto;
 
                 &:hover {
-                    box-shadow: -10px 10px $beige;
+                    box-shadow: -7px 7px $beige;
                 }
             }
         }
