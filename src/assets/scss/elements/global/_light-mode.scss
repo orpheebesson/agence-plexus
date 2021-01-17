@@ -125,13 +125,13 @@
             }
 
             .form__field {
-                box-shadow: -10px 10px $black !important;
+                box-shadow: -7px 7px $black !important;
                 border-color: $black !important;
                 color: $black !important;
                 background-color: $white;
 
                 &:focus {
-                    box-shadow: -10px 10px $beige !important;
+                    box-shadow: -7px 7px $beige !important;
                 }
             }
 
@@ -142,7 +142,7 @@
                 &:hover {
                     color: $white !important;
                     background-color: $black !important;
-                    box-shadow: -10px 10px $beige !important;
+                    box-shadow: -7px 7px $beige !important;
                 }
             }
         }
