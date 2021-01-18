@@ -51,11 +51,11 @@ main {
         z-index: 1 !important;
         display: initial !important;
         position: absolute !important;
-        left: 50% !important;
-        top: calc(50% + 70px) !important;
+        left: calc(50% + 5px) !important;
+        top: calc(50% + 80px) !important;
         transform: translateX(-50%) !important;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
-        letter-spacing: 8px;
+        letter-spacing: 11px;
     }
 }

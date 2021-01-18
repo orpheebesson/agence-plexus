@@ -304,7 +304,7 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 .logo__baseline { display: none; }
 
-@media screen and (min-width: 1500px) { .logo__baseline { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: calc(50% + 70px) !important; transform: translateX(-50%) !important; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 8px; } }
+@media screen and (min-width: 1500px) { .logo__baseline { z-index: 1 !important; display: initial !important; position: absolute !important; left: calc(50% + 5px) !important; top: calc(50% + 80px) !important; transform: translateX(-50%) !important; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 11px; } }
 
 .captions__list { padding: 4vh; position: inherit !important; display: inherit !important; left: inherit !important; top: inherit !important; background-image: url("./../img/accueil/illustration_accueil_1.png"), url("./../img/accueil/illustration_accueil_2.png"), url("./../img/accueil/illustration_accueil_3.png"), url("./../img/accueil/illustration_accueil_4.png"); background-position: top 10vh left, top 65vh right, bottom 65vh left, bottom 0vh right; background-size: 310px; background-repeat: no-repeat; }
 
