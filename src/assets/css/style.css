@@ -190,7 +190,7 @@ a, button { cursor: pointer; }
 
 .header { background-color: #111111; padding: 0 2vw; transition: 0.25s ease-in-out; }
 
-.header__item { z-index: 20; }
+.header__item:first-child, .header__item:nth-child(2) { z-index: 20; }
 
 .header__item--logo { width: 90px; transition: 0.25s ease-in-out; }
 
@@ -210,7 +210,7 @@ a, button { cursor: pointer; }
 
 .header__switcher .switcher__dark, .header__switcher .switcher__light { display: flex; align-items: center; color: #c4c4ac; cursor: pointer; }
 
-.header .menu__burger { height: 20px; width: 30px; position: relative; cursor: pointer; z-index: 20; transition: 0.5s ease-in-out; }
+.header .menu__burger { height: 20px; width: 30px; position: relative; cursor: pointer; z-index: 22; transition: 0.5s ease-in-out; }
 
 .header .menu__burger span { height: 2px; width: 100%; position: absolute; background: #f3f3f3; left: 0; opacity: 1; transition: .25s ease-in-out; }
 
@@ -226,7 +226,7 @@ a, button { cursor: pointer; }
 
 .header .menu__burger--open span:nth-child(3) { transform: rotate(-45deg); }
 
-.menuRight { display: flex; flex-direction: column; justify-content: space-between; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 10; transform: translateX(100%); transition-duration: 0.5s; overflow: hidden; width: 100vw; }
+.menuRight { display: flex; flex-direction: column; justify-content: space-between; height: 100vh; position: fixed; background: #333333; top: 0; right: 0; bottom: 0; z-index: 21; transform: translateX(100%); transition-duration: 0.5s; overflow: hidden; width: 100vw; }
 
 @media screen and (min-width: 480px) { .menuRight { width: 275px; } }
 
