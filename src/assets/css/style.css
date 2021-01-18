@@ -192,7 +192,7 @@ a, button { cursor: pointer; }
 
 @media screen and (min-width: 768px) { .header { padding: 0 2vw; } }
 
-.header__item:first-child, .header__item:nth-child(2) { z-index: 20; }
+.header__item:first-child, .header__item:nth-child(2) { z-index: 20; transition: 0.25s ease-in-out; }
 
 .header__item--logo { width: 90px; transition: 0.25s ease-in-out; }
 

@@ -11,6 +11,7 @@
     &__item:first-child,
     &__item:nth-child(2) {
         z-index: 20;
+        transition: 0.25s ease-in-out;
     }
 
     &__item--logo {
