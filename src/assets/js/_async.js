@@ -1,5 +1,4 @@
 function testrecall() {
-
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
     const mainContainer = document.querySelector('[data-barba="wrapper"]');
@@ -50,7 +49,6 @@ function testrecall() {
     // }
 
     // menuBurger.addEventListener("click", avoidFirstClick);
-
 }
 
 testrecall();
@@ -105,7 +103,6 @@ function lightAndDarkMode() {
 lightAndDarkMode();
 
 function menu() {
-
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
     const mainContainer = document.querySelector('[data-barba="wrapper"]');
@@ -258,6 +255,7 @@ function contentAnimation() {
 
 function pageTransition() {
     var tl = gsap.timeline();
+
     tl.to(".loadingScreen__overlay", {
         duration: 1.2,
         width: "100%",
@@ -274,11 +272,11 @@ function pageTransition() {
         backgroundColor: 'rgb(243, 243, 243)',
         delay: 0.3,
     });
+
     tl.set(".loadingScreen__overlay", {
         left: "-100%"
     });
 }
-
 
 barba.init({
     sync: true,
