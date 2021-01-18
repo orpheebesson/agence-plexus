@@ -188,7 +188,9 @@ a, button { cursor: pointer; }
 
 .preloader__animation { background-color: #111111; height: 100%; transform: translateX(-100%); position: fixed; top: 0; width: 100%; z-index: 9000; }
 
-.header { background-color: #111111; padding: 0 2vw; transition: 0.25s ease-in-out; }
+.header { background-color: #111111; padding: 0 5vw; transition: 0.25s ease-in-out; }
+
+@media screen and (min-width: 768px) { .header { padding: 0 2vw; } }
 
 .header__item:first-child, .header__item:nth-child(2) { z-index: 20; }
 

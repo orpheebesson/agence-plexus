@@ -1,6 +1,11 @@
 .header {
     background-color: $black;
-    padding: 0 2vw;
+    padding: 0 5vw;
+
+    @include medium {
+        padding: 0 2vw;
+    }
+
     transition: 0.25s ease-in-out;
 
     &__item:first-child,
