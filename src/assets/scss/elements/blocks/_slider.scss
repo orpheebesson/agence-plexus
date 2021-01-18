@@ -41,8 +41,12 @@
 
                 @include medium {
                     padding: 0;
-                    height: 50%;
+                    height: 40%;
                     width: unset;
+                }
+
+                @include large {
+                    height: 50%;
                 }
             }
 

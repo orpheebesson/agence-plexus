@@ -414,7 +414,9 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 576px) { .slider__member .member__image { padding-top: 10vh; width: 60vw; } }
 
-@media screen and (min-width: 768px) { .slider__member .member__image { padding: 0; height: 50%; width: unset; } }
+@media screen and (min-width: 768px) { .slider__member .member__image { padding: 0; height: 40%; width: unset; } }
+
+@media screen and (min-width: 992px) { .slider__member .member__image { height: 50%; } }
 
 .slider__member .member__article { padding: 5vh 4vh; transition: 0.5s; }
 
