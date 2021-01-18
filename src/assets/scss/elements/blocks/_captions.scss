@@ -99,7 +99,7 @@
             }
 
             @include x-large {
-                margin: initial;
+                margin: auto;
             }
         }
 
@@ -125,10 +125,6 @@
         @include x-large {
             margin: auto;
             max-width: 375px;
-        }
-
-        .title>a {
-            transition: 0.5s ease-in-out !important;
         }
 
         &__pretitle {
