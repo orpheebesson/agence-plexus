@@ -128,7 +128,7 @@ a, button { cursor: pointer; }
 
 .body--light .button:hover, .body--light .button:focus, .body--light .button:active { color: #f3f3f3; }
 
-.body--light .caption .title > a { color: #111111; }
+.body--light .caption .title, .body--light .caption__pretitle, .body--light .caption__description { color: #111111; }
 
 .body--light .caption__button { color: #111111; }
 
@@ -332,7 +332,7 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 768px) { .captions__list .caption__item:nth-child(even) { margin: 16vh 0 16vh auto; } }
 
-@media screen and (min-width: 1200px) { .captions__list .caption__item:nth-child(even) { margin: initial; } }
+@media screen and (min-width: 1200px) { .captions__list .caption__item:nth-child(even) { margin: auto; } }
 
 @media screen and (min-width: 576px) { .captions__list .caption__item { width: 75%; margin: 16vh auto; } }
 
@@ -341,8 +341,6 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 @media screen and (min-width: 1200px) { .captions__list .caption__item { width: initial; margin: auto; } }
 
 @media screen and (min-width: 1200px) { .captions__list .caption { margin: auto; max-width: 375px; } }
-
-.captions__list .caption .title > a { transition: 0.5s ease-in-out !important; }
 
 .captions__list .caption__pretitle { font-family: "CrimsonText-Italic", serif; font-size: 1.5rem; display: inline-flex; margin-bottom: 1vh; }
 

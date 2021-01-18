@@ -53,7 +53,9 @@
 
     .caption {
 
-        .title>a {
+        .title,
+        &__pretitle,
+        &__description {
             color: $black;
         }
 
