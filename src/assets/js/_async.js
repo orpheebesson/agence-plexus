@@ -28,6 +28,8 @@ function testrecall() {
             menuBurger.classList.remove('menu__burger--open');
             menuRight.classList.remove('menuRight--open');
             mainContainer.classList.remove('blur');
+            headerItemOne.classList.toggle('blur');
+            headerItemTwo.classList.toggle('blur');
             document.body.classList.remove('body--freeze');
         }
     }
@@ -112,15 +114,22 @@ function menu() {
     const menuBurger = document.querySelector('.menu__burger');
     const menuRight = document.querySelector('.menuRight');
     const mainContainer = document.querySelector('[data-barba="wrapper"]');
-
+    const headerItemOne = document.querySelector('.header__item:first-child');
+    const headerItemTwo = document.querySelector('.header__item:nth-child(2)');
+    
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
     mainContainer.classList.remove('blur');
+    headerItemOne.classList.remove('blur');
+    headerItemTwo.classList.remove('blur');
+    document.body.classList.remove('body--freeze');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
         mainContainer.classList.toggle('blur');
+        headerItemOne.classList.toggle('blur');
+        headerItemTwo.classList.toggle('blur');
         document.body.classList.toggle('body--freese');
     }
 
@@ -131,6 +140,8 @@ function menu() {
             menuBurger.classList.remove('menu__burger--open');
             menuRight.classList.remove('menuRight--open');
             mainContainer.classList.remove('blur');
+            headerItemOne.classList.toggle('blur');
+            headerItemTwo.classList.toggle('blur');
             document.body.classList.remove('body--freeze');
         }
     }
