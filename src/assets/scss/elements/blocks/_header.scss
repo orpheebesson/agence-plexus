@@ -3,7 +3,8 @@
     padding: 0 2vw;
     transition: 0.25s ease-in-out;
 
-    &__item {
+    &__item:first-child,
+    &__item:nth-child(2) {
         z-index: 20;
     }
 
@@ -71,7 +72,7 @@
         width: 30px;
         position: relative;
         cursor: pointer;
-        z-index: 20;
+        z-index: 22;
         transition: 0.5s ease-in-out;
 
         span {
