@@ -7,13 +7,13 @@ function testrecall() {
     menuBurger.classList.remove('menu__burger--open');
     menuRight.classList.remove('menuRight--open');
     mainContainer.classList.remove('blur');
-    document.body.classList.remove('bodyMenu--open');
+    document.body.classList.remove('body--freeze');
 
     function openMenuBurger() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
         mainContainer.classList.toggle('blur');
-        document.body.classList.toggle('bodyMenu--open');
+        document.body.classList.toggle('body--freeze');
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
@@ -23,7 +23,7 @@ function testrecall() {
             menuBurger.classList.remove('menu__burger--open');
             menuRight.classList.remove('menuRight--open');
             mainContainer.classList.remove('blur');
-            document.body.classList.remove('bodyMenu--open');
+            document.body.classList.remove('body--freeze');
         }
     }
 
@@ -58,13 +58,22 @@ testrecall();
 function lightAndDarkMode() {
     const switcherDark = document.querySelector('.switcher__dark');
     const switcherLight = document.querySelector('.switcher__light');
+    const alert = document.querySelector('.alert');
+    const alertCaption = document.querySelector('.alert__caption');
+    const alertButton = document.querySelector('.alert__button');
+    const header = document.querySelector('.header');
+    const mainContainer = document.querySelector('[data-barba="wrapper"]');
 
     function dark_mode() {
         if (!document.body.classList.contains('body--dark')) {
             document.body.classList.remove('body--light');
             document.body.classList.add('body--dark');
         } else {
-            alert('Vous êtes dans la lune ! Vous êtes déjà en mode sombre.');
+            document.body.classList.add('body--freeze');
+            header.classList.add('blur');
+            mainContainer.classList.add('blur');
+            alert.classList.add('alert--toggle');
+            alertCaption.innerHTML = 'Vous êtes dans la lune ! Vous êtes déjà en mode sombre.';
         }
     }
 
@@ -73,12 +82,24 @@ function lightAndDarkMode() {
             document.body.classList.remove('body--dark');
             document.body.classList.add('body--light');
         } else {
-            alert('Le soleil brille déjà pour vous.');
+            document.body.classList.add('body--freeze');
+            header.classList.add('blur');
+            mainContainer.classList.add('blur');
+            alert.classList.add('alert--toggle');
+            alertCaption.innerHTML = 'Le soleil brille déjà pour vous.';
         }
+    }
+
+    function close_alert() {
+        document.body.classList.remove('body--freeze');
+        header.classList.remove('blur');
+        mainContainer.classList.remove('blur');
+        alert.classList.remove('alert--toggle');
     }
 
     switcherDark.addEventListener("click", dark_mode);
     switcherLight.addEventListener("click", light_mode);
+    alertButton.addEventListener("click", close_alert);
 }
 
 lightAndDarkMode();
@@ -97,7 +118,7 @@ function menu() {
         menuBurger.classList.toggle('menu__burger--open');
         menuRight.classList.toggle('menuRight--open');
         mainContainer.classList.toggle('blur');
-        document.body.classList.toggle('bodyMenu--open');
+        document.body.classList.toggle('body--freese');
     }
 
     menuBurger.addEventListener("click", openMenuBurger);
@@ -107,7 +128,7 @@ function menu() {
             menuBurger.classList.remove('menu__burger--open');
             menuRight.classList.remove('menuRight--open');
             mainContainer.classList.remove('blur');
-            document.body.classList.remove('bodyMenu--open');
+            document.body.classList.remove('body--freeze');
         }
     }
 

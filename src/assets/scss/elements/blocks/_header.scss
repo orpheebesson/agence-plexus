@@ -3,6 +3,10 @@
     padding: 0 2vw;
     transition: 0.25s ease-in-out;
 
+    &__item {
+        z-index: 20;
+    }
+
     &__item--logo {
         width: 90px;
         transition: 0.25s ease-in-out;

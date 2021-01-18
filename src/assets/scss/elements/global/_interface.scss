@@ -3,7 +3,7 @@ body {
     color: $white;
     transition: 0.25s ease-in-out;
 
-    &Menu--open {
+    &.body--freeze {
         overflow: hidden;
     }
 }
@@ -55,11 +55,11 @@ button {
 
 [data-barba="wrapper"] {
     transition: 0.25s ease-in-out;
+}
 
-    &.blur {
-        pointer-events: none;
-        filter: blur(10px);
-    }
+.blur {
+    pointer-events: none;
+    filter: blur(10px);
 }
 
 .loadingScreen {
