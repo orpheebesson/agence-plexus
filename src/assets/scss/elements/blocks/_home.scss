@@ -40,7 +40,11 @@ main {
     }
 
     @include xx-large {
-        height: 275px !important;
+        height: 250px !important;
+    }
+
+    @include xxx-large {
+        height: 300px !important;
     }
 }
 
