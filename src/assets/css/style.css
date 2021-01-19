@@ -302,7 +302,7 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 1500px) { .logo__lines { height: 275px !important; } }
 
-.logo__baseline { display: none; }
+.logo__baseline { display: none !important; }
 
 @media screen and (min-width: 1500px) { .logo__baseline { z-index: 1 !important; display: initial !important; position: absolute !important; left: calc(50% + 5px) !important; top: calc(50% + 80px) !important; transform: translateX(-50%) !important; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 11px; } }
 
