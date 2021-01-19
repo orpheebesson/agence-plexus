@@ -300,7 +300,9 @@ main { animation: fadeUp 2s ease-in-out 0s forwards 1; }
 
 @media screen and (min-width: 1200px) { .logo__lines { z-index: 1 !important; display: initial !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translateX(-50%) translateY(-50%) !important; height: 200px !important; } }
 
-@media screen and (min-width: 1500px) { .logo__lines { height: 275px !important; } }
+@media screen and (min-width: 1500px) { .logo__lines { height: 250px !important; } }
+
+@media screen and (min-width: 1800px) { .logo__lines { height: 300px !important; } }
 
 .logo__baseline { display: none !important; }
 

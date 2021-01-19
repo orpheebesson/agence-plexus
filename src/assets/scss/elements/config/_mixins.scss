@@ -40,6 +40,12 @@
     }
 }
 
+@mixin xxx-large {
+    @media screen and (min-width: #{$xxxl}) {
+        @content;
+    }
+}
+
 @mixin split {
     display: grid !important;
     grid-template-columns: 50% 50% !important;
