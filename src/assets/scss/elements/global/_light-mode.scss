@@ -105,22 +105,15 @@
             }
         }
 
-        &__link {
+        &__title {
             color: $black;
-
-            @include medium {
-                color: transparent;
-                -webkit-text-stroke: 1px $black;
-            }
-        }
-
-        &__image {
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
         }
 
         .repeat {
-            color: $black;
-            mix-blend-mode: inherit;
+            &__item {
+                color: transparent;
+                -webkit-text-stroke: 1px $black;
+            }
         }
     }
 

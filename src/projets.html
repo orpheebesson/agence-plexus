@@ -69,11 +69,21 @@
     <div class="menuRight">
         <nav>
             <ul class="menuRight__list">
-                <li class="menuRight__item"><div><a href="index.html">Accueil</a></div></li>
-                <li class="menuRight__item"><div><a href="agence.html">L'agence</a></div></li>
-                <li class="menuRight__item"><div><a href="membres.html">Les membres</a></div></li>
-                <li class="menuRight__item"><div><a href="projets.html">Les projets</a></div></li>
-                <li class="menuRight__item"><div><a href="contact.html">Contact</a></div></li>
+                <li class="menuRight__item">
+                    <div><a href="index.html">Accueil</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="agence.html">L'agence</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="membres.html">Les membres</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="projets.html">Les projets</a></div>
+                </li>
+                <li class="menuRight__item">
+                    <div><a href="contact.html">Contact</a></div>
+                </li>
             </ul>
         </nav>
         <footer class="menuRight__footer">
@@ -107,8 +117,10 @@
                 <nav>
                     <ul class="projects__list">
                         <li class="projects__item">
-                            <a class="projects__link" href="https://agence-plexus.lpmiaw.univ-lr.fr/judo" target="_blank">Judo Club La Rochelle</a>
-                            <img class="projects__image" src="assets/img/projets/larochelle_judo.jpg" alt="Projet site web Judo Club La Rochelle">
+                            <input type="radio" id="project1" name="project">
+                            <label class="projects__title" for="project1">
+                                <h2>Judo Club La Rochelle</h2>
+                            </label>
                             <div class="repeat">
                                 <ul class="repeat__list">
                                     <li class="repeat__item">Judo Club La Rochelle</li>
@@ -117,10 +129,23 @@
                                     <li class="repeat__item">Judo Club La Rochelle</li>
                                 </ul>
                             </div>
+                            <div class="projects__content">
+                                <div class="projects__information">
+                                    <h3 class="projects__subtitle">Refonte site web</h3>
+                                    <p class="projects__caption">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                    <a class="button" href="https://agence-plexus.lpmiaw.univ-lr.fr/judo" target="_blank">Voir le projet</a>
+                                </div>
+                                <img class="projects__image" src="assets/img/projets/larochelle_judo.jpg"
+                                    alt="Projet site web Judo Club La Rochelle">
+                            </div>
                         </li>
                         <li class="projects__item">
-                            <a class="projects__link" href="assets/medias/etude_ux_design_hw_lr.pdf" target="_blank">UX Design HW-LR</a>
-                            <img class="projects__image" src="assets/img/projets/ux_design_hw_lr.jpg" alt="Projet UX Design Homework-LR">
+                            <input type="radio" id="project2" name="project">
+                            <label class="projects__title" for="project2">
+                                <h2>UX Design HW-LR</h2>
+                            </label>
                             <div class="repeat">
                                 <ul class="repeat__list">
                                     <li class="repeat__item">UX Design HW-LR</li>
@@ -128,6 +153,17 @@
                                     <li class="repeat__item">UX Design HW-LR</li>
                                     <li class="repeat__item">UX Design HW-LR</li>
                                 </ul>
+                            </div>
+                            <div class="projects__content">
+                                <div class="projects__information">
+                                    <h3 class="projects__subtitle">Étude UX</h3>
+                                    <p class="projects__caption">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                                    <a class="button" href="assets/medias/etude_ux_design_hw_lr.pdf" target="_blank">Voir le projet</a>
+                                </div>
+                                <img class="projects__image" src="assets/img/projets/ux_design_hw_lr.jpg"
+                                    alt="Projet UX Design Homework-LR">
                             </div>
                         </li>
                     </ul>
