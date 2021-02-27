@@ -2,7 +2,7 @@
 
 # :arrow_down: Installation
 
-`git clone https://gitlab.univ-lr.fr/obesso01/agence-plexus.git`
+`git clone https://github.com/orpheebesson/agence-plexus.git`
 
 # :warning: Dependencies
 
